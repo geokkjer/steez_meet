@@ -1,6 +1,7 @@
 function updateView() {
-    model.app.html.innerHTML = /*html*/ `
-        ${header()}
+    let html = document.getElementById('app');
+    html.innerHTML += /*html*/ `
+        Hoved side
+        <li>${model.data.events[1].name}</li>
     `;
-    console.log(model.app.html, "hello");
 }
