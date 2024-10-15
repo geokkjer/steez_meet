@@ -1,13 +1,10 @@
 function header() {
-    model.app.html.innerHTML = '<h1>Hello</h1>'
-}
-function updateView(){
-    let page = model.app.currentPage;
-    if (page == "home") {
-        viewHome();
-    } else if (page == "login"){
-        viewLogin();
-    } else {
-        document.getElementById('app').innerHTML = 'Error!!'
-    }
+    document.getElementById('app').innerHTML = /*HTML*/`
+    <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>`
 }
