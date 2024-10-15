@@ -13,7 +13,7 @@ const model = {
         },
         registerUser: {
             userName: null,
-            name: null,
+            firstName: null,
             lastName: null,
             email: null,
             password: null,
