@@ -19,14 +19,21 @@ function createGoal(){
     document.getElementById('app').innerHTML += /*HTML */ `
     <img src= "${model.data.users[0].profilePicture}">
     <div>Personalia:</div>
-    <div>Events:</div>
-    <div>Goals:</div>
+    <div>Navn: ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
+    <div>Epost: ${model.data.users[0].email}</div>
+    <div>Adresse: ${model.data.users[0].address}</div>
+    <div>Mobil: ${model.data.users[0].phoneNumber}</div>
+    <div>Dine arrangementer:</div>
+    <div>${model.data.users[0].myEvents}</div>
+    <div>Påmeldte arrangementer:</div>
+    <div>${model.data.users[0].eventsAttending}</div>
     <div>Ditt mål:</div>
     <input type="text" placeholder="Skriv inn ditt mål">
     <div>Beskrivelse:</div>
-    <input type="text">
+    <textarea type="text" placeholder="Beskriv ditt mål"></textarea>
     <div>Antall utførelser:</div>
     <input type="number">
+    <button onclick="saveGoal()">Lagre</button>
     `
     ; 
 }
