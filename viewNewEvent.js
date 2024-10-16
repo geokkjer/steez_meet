@@ -22,12 +22,29 @@ function viewNewEvent(){
     
 }
 
-
-
-
-
-
-
 function eventAnswer(){
+
+
+
+
+
+
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//Vi trenger: Visning av arrangementer.
+//Ja/Nei funksjon.
+//Deltaker oversikt på arrangementer.
+//Sidevisning av bakker med arrangementer.
+//Påmeldte arrange - innlogget.
