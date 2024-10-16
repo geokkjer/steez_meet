@@ -10,7 +10,7 @@ function viewNewEvent(){
     <div>Dato:</div>
     <input type="date" onchange="datesArrangement()">
     <div>Bakke:</div>
-    <input type="text" onchange="datesArrangement()">
+    <input type="search" onchange="slopeArrangement()">
     <div>Kommentar:</div>
     <textarea type="text" onchange="commentsArrangement()"></textarea>
     
