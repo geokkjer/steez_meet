@@ -7,6 +7,6 @@ function header() {
         <a href="#profile" onclick="model.app.currentPage = 'profile';updateView()">🛈 Din Profil</a>
         <a href="#slopes" onclick="model.app.currentPage = 'slopes';updateView()">⛰ Bakker</a>
         <a href="#" id="login" onclick="model.app.currentPage = 'login';updateView()">⎆ Login</a>
-        <a href="#" id="newevent" onclick="model.app.currentPage = 'newevent';updateView()">⎆ Login</a>
+        <a href="#" id="newevent" onclick="model.app.currentPage = 'newevent';updateView()">Legg til Event</a>
    </div>`
 }
