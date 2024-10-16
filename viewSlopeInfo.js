@@ -8,7 +8,7 @@ function viewSlopeInfo(){
    <h1>Bakke Informasjon:</h1>
    <h2>Rangering:<h2>
    <div id="rateMe"></div>
-   <input id='textInput' type='number' min=0 max= 5 onchange="rating=this.value"/>
+   <input id='textInput' type='number' min=0 max= 5 onchange="rating=this.value" placeholder="0/5"/>
    <button onclick="ratings(rating)">Legg til rating</button>
    
     <h2>Legg til kommentar</h2>
