@@ -12,7 +12,8 @@ function viewNewEvent(){
     <div>Bakke:</div>
     <input type="text" onchange="datesArrangement()">
     <div>Kommentar:</div>
-    <input type="text" onchange="commentsArrangement()">
+    <textarea type="text" onchange="commentsArrangement()"></textarea>
+    
     <button onclick="commentSubmit()">Submit</button>
     `;
     
