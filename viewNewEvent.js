@@ -22,7 +22,7 @@ function viewNewEvent(){
     
 }
 
-function eventAnswer(){
+function Submit(){
 
 
 
