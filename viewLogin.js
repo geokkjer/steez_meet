@@ -15,7 +15,7 @@ function login(user,pass){
     for (modeluser of model.data.users){
         console.log(modeluser.firstName, modeluser.password)
         if (modeluser.userName == user && modeluser.password == pass){
-            console.log('Hello', modeluser.firstName, model.password)
+            console.log('Hello', modeluser.firstName, modeluser.password)
         }
     }
     // if (user = model.data.users){
