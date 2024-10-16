@@ -8,6 +8,8 @@ function updateView() {
         viewSlopeInfo();
     } else if (page == "profile") {
         viewProfile();
+    } else if (page == "newevent") {
+        viewNewEvent();
     }
     else {
         document.getElementById('app').innerHTML = 'Error!!'
