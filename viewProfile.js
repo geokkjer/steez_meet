@@ -7,7 +7,10 @@ function viewProfile() {
     <div>Epost: ${model.data.users[0].email}</div>
     <div>Adresse: ${model.data.users[0].address}</div>
     <div>Mobil: ${model.data.users[0].phoneNumber}</div>
-    <div>Arrangementer:</div>
+    <div>Dine arrangementer:</div>
+    <div>${model.data.users[0].myEvents}</div>
+    <div>Påmeldte arrangementer:</div>
+    <div>${model.data.users[0].eventsAttending}</div>
     <div>Mål:</div>
     <button onclick="createGoal()">+</button>
     `
