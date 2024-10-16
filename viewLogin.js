@@ -12,5 +12,13 @@ function viewLogin(){
 
 function login(user,pass){
     console.log(user,pass);
+    for (modeluser of model.data.users){
+        if (modeluser == user){
+            console.log('Hello')
+        }
+    }
+    // if (user = model.data.users){
+    //     model.data.users
+    // }
 }
 
