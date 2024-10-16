@@ -64,7 +64,6 @@ const model = {
             address: "Saltosvingen 23",
             phoneNumber: 48356902,
             goals: {
-                id: 3,
                 title: "Ta salto",
                 description: "Jeg skal lære meg å ta salto",
                 amount: 5,
@@ -85,7 +84,6 @@ const model = {
             address: "Bartedalen 1",
             phoneNumber: 44116902,
             goals: {
-                id: 2,
                 title: "Ta 360 backflip",
                 description: "Jeg skal lære meg å ta 360 backflip",
                 amount: 3,

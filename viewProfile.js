@@ -18,6 +18,9 @@ function viewProfile() {
 }
 
 function createGoal(){
+    let goalName = '';
+    let goalDescription = '';
+    let goalAmount = null;
     header();
     document.getElementById('app').innerHTML += /*HTML */ `
     <img src= "${model.data.users[0].profilePicture}">
@@ -31,12 +34,12 @@ function createGoal(){
     <div>Påmeldte arrangementer:</div>
     <div>${model.data.users[0].eventsAttending}</div>
     <div>Ditt mål:</div>
-    <input type="text" placeholder="Skriv inn ditt mål">
+    <input type="text" placeholder="Skriv inn ditt mål" onchange="goalName=this.value">
     <div>Beskrivelse:</div>
-    <textarea type="text" placeholder="Beskriv ditt mål"></textarea>
+    <textarea type="text" placeholder="Beskriv ditt mål" onchange="goalDescription=this.value"></textarea>
     <div>Antall utførelser:</div>
-    <input type="number">
-    <button onclick="saveGoal()">Lagre</button>
+    <input type="number" onchange="goalAmount=this.value">
+    <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
     `
     ; 
 }
