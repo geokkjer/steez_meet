@@ -8,7 +8,7 @@ function viewNewEvent(){
     <input type="text" onchange="nameArrangement()">
 
     <div>Dato:</div>
-    <input type="text" onchange="datesArrangement()">
+    <input type="date" onchange="datesArrangement()">
     <div>Bakke:</div>
     <input type="text" onchange="datesArrangement()">
     <div>Kommentar:</div>
