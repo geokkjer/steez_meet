@@ -4,7 +4,13 @@ function updateView() {
         viewHome();
     } else if (page == "login") {
         viewLogin();
-    } else {
+    }else if (page == "slopes"){
+        viewSlopeInfo();
+    } else if (page == "profile")
+        {
+            viewProfile();
+        }
+    else {
         document.getElementById('app').innerHTML = 'Error!!'
     }
     
