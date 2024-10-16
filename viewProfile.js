@@ -1,27 +1,35 @@
 function viewProfile() {
     header();
     document.getElementById('app').innerHTML += /*HTML */ `
-    <img src= "${model.data.users[0].profilePicture}">
-    <div>Personalia:</div>
-    <div>Navn: ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
-    <div>Epost: ${model.data.users[0].email}</div>
-    <div>Adresse: ${model.data.users[0].address}</div>
-    <div>Mobil: ${model.data.users[0].phoneNumber}</div>
-    <div>Dine arrangementer:</div>
-    <div>${model.data.events[0].name}</div>
-    <div>Påmeldte arrangementer:</div>
-    <div>${model.data.events[0].name}</div>
-    <div>Mål:</div>
-    <div>${model.data.users[0].goals.title}</div>
-    <div>${model.data.users[0].goals.description}</div>
+
+        <img src= "${model.data.users[0].profilePicture}">
     <div>
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
-    <input type="checkbox">
+        <div><b>Navn:</b> ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
+        <div><b>Epost:</b> ${model.data.users[0].email}</div>
+        <div><b>Adresse:</b> ${model.data.users[0].address}</div>
+        <div><b>Mobil:</b> ${model.data.users[0].phoneNumber}</div>
     </div>
-    <button onclick="createGoal()">+</button>
+    <br>
+
+    <div><b>Dine arrangementer:</b>
+        <div>${model.data.events[0].name}</div>
+        <b>Påmeldte arrangementer:</b>
+        <div>${model.data.events[0].name}</div>
+    </div>
+    <br>
+
+    <b>Mål:</b>
+        <div>${model.data.users[0].goals.title}</div>
+        <div>${model.data.users[0].goals.description}</div>
+        <br>
+        <div>
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+            <input type="checkbox">
+        ${model.data.users[0].goals.amount}</div>
+        <button onclick="createGoal()">+</button>
     `
     ; 
 }
