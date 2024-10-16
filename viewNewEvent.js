@@ -5,16 +5,16 @@ function viewNewEvent(){
     
     <h2>Nytt arrangement:</h2>
     <div>navn:</div>
-    <input type="text" onchange="nameArrangement()">
+    <input type="text" onchange="nameArrangement(this.value)">
 
     <div>Dato:</div>
-    <input type="date" onchange="datesArrangement()">
+    <input type="date" onchange="datesArrangement(this.value)">
     <div>Bakke:</div>
-    <input type="search" onchange="slopeArrangement()">
+    <input type="search" onchange="slopeArrangement(this.value)">
     <div>Kommentar:</div>
-    <textarea type="text" onchange="commentsArrangement()"></textarea>
+    <textarea type="text" onchange="commentsArrangement(this.value)"></textarea>
     
-    <button onclick="commentSubmit()">Submit</button>
+    <button onclick="Submit()">Submit</button>
     `;
     
     
@@ -23,7 +23,7 @@ function viewNewEvent(){
 }
 
 function Submit(){
-
+    
 
 
 
