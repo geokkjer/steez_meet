@@ -13,13 +13,11 @@ function viewLogin(){
 function login(user,pass){
     console.log(user,pass);
     for (modeluser of model.data.users){
-        console.log(modeluser.firstName, modeluser.password)
         if (modeluser.userName == user && modeluser.password == pass){
-            console.log('Hello', modeluser.firstName, modeluser.password)
+            updateView();
+        } else if (modeluser.userName != user || modeluser.password != pass){
+            console.log('Feil brukernavn eller passord :-P')
         }
     }
-    // if (user = model.data.users){
-    //     model.data.users
-    // }
 }
 
