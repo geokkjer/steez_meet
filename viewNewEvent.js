@@ -13,10 +13,10 @@ function viewNewEvent(){
     <input type="text" onchange="datesArrangement()">
     <div>Kommentar:</div>
     <input type="text" onchange="commentsArrangement()">
-    
-    
-    
+    <button onclick="commentSubmit()">Submit</button>
     `;
+    
+    
     
     
 }
