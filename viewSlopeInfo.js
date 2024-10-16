@@ -31,3 +31,4 @@ function ratings(rating){
                 textInput.value = "";
             }
         });
+        function submitCommentary(){}
