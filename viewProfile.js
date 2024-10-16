@@ -8,10 +8,19 @@ function viewProfile() {
     <div>Adresse: ${model.data.users[0].address}</div>
     <div>Mobil: ${model.data.users[0].phoneNumber}</div>
     <div>Dine arrangementer:</div>
-    <div>${model.data.users[0].myEvents}</div>
+    <div>${model.data.events[0].name}</div>
     <div>Påmeldte arrangementer:</div>
-    <div>${model.data.users[0].eventsAttending}</div>
+    <div>${model.data.events[0].name}</div>
     <div>Mål:</div>
+    <div>${model.data.users[0].goals.title}</div>
+    <div>${model.data.users[0].goals.description}</div>
+    <div>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    </div>
     <button onclick="createGoal()">+</button>
     `
     ; 
