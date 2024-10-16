@@ -55,6 +55,7 @@ const model = {
         users: [{
             id: 1,
             isAdmin: true,
+            userName: "kjasalt",
             firstName: "Kjartan",
             lastName: "Salto",
             password: "passOrd!23",
@@ -74,6 +75,7 @@ const model = {
         {
             id: 2,
             isAdmin: false,
+            userName: "barrein",
             firstName: "Bart",
             lastName: "Reindal",
             password: "pass123",
