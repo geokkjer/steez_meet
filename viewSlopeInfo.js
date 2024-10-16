@@ -1,4 +1,7 @@
 function viewSlopeInfo(){
     header();
-    document.getElementById('app').innerHTML += '<h1>Hello from SlopesInfo</h1>';
-}
+    document.getElementById('app').innerHTML += /*HTML*/` 
+    <h1>Bakke Info:</h1>
+    <div>Rangeringer</div>
+    `;
+   }
