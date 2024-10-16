@@ -18,9 +18,6 @@ function viewProfile() {
 }
 
 function createGoal(){
-    let goalName = '';
-    let goalDescription = '';
-    let goalAmount = null;
     header();
     document.getElementById('app').innerHTML += /*HTML */ `
     <img src= "${model.data.users[0].profilePicture}">
