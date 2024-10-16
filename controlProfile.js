@@ -7,7 +7,7 @@ function saveGoal(name, description, amount){
 }
 
 function createGoalAmount(){
-    for(i = 0, i<model.data.users[0].goals.amount, i++)
+    for(i = 0; i<model.data.users[0].goals.amount; i++)
         {
         document.getElementById('goalCheckboxes').innerHTML = /*HTML*/`
         <input type="checkbox">
