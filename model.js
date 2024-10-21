@@ -30,6 +30,10 @@ const model = {
             comment: null,
             deadLine: null,
         },
+        slope: {
+            rating: 0,
+            comment: '';
+        },
         addSlope: {
             name: null,
             location: null,

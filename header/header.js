@@ -12,7 +12,7 @@ function header() {
                 <option>Bakke 1</option>
             </select>
         </li>
-        <li id="login">⎆ Login</li>
+        <li id="login" onmousedown="viewLogin()">⎆ Login</li>
         <li>Legg til Event</li>
         </ul>
    </div>`
