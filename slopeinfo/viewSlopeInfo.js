@@ -1,7 +1,4 @@
 
-
-
-
 function viewSlopeInfo(){
     
     let rating = model.input.slope.rating; 
