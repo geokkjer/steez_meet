@@ -22,13 +22,8 @@ function viewProfile() {
         <div>${model.data.users[0].goals.title}</div>
         <div>${model.data.users[0].goals.description}</div>
         <br>
-        <div id="goalCheckboxes">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-            <input type="checkbox">
-        ${model.data.users[0].goals.amount}</div>
+        <div id="goalCheckboxes"></div>
+        <div>${model.data.users[0].goals.amount}</div>
         <button onclick="createGoal()">+</button>
     `
     ; 

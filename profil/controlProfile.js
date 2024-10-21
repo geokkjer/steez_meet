@@ -7,10 +7,12 @@ function saveGoal(name, description, amount){
 }
 
 function createGoalAmount(){
+    let goalAmount; 
     for(i = 0; i<model.data.users[0].goals.amount; i++)
         {
-        document.getElementById('goalCheckboxes').innerHTML = /*HTML*/`
-        <input type="checkbox">
+        goalAmount = document.getElementById('goalCheckboxes').innerHTML += /*HTML*/`
+        <input type="checkbox"/>
         `
+        return goalAmount;
     }
 }
