@@ -3,7 +3,7 @@
 
 function viewSlopeInfo(){
     
-    let rating = model.date.slope.rating; 
+    let rating = model.input.slope.rating; 
     header();
     document.getElementById('app').innerHTML += /*HTML*/` 
      <h1>Bakke Informasjon:</h1>
@@ -11,8 +11,6 @@ function viewSlopeInfo(){
      <div id="rateMe"></div>
      <input id='textInput' type='number' min=0 max= 5 onchange="rating=this.value" placeholder="0/5"/>
      <button onclick="ratings(rating)">Legg til rangering</button>
-    <br>
-    <div id="avgRating"></div
     <br>
     <h3>Rangeringer til bakken:</h3>
     
