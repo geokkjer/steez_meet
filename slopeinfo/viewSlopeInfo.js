@@ -21,9 +21,13 @@ function viewSlopeInfo(){
     <textarea rows="8" cols="35" type="text" id="inputCommentary" placeholder="Skriv din kommentar her..."></textarea>
     <br><button id="submitCommentary">Legg til kommentar!</button><p>
     <ul id="addCommentary"></ul>
+<<<<<<< Updated upstream
     <h3>Kommentarer til bakken:</h3>
  
     
+=======
+    <button onclick="viewAddSlope()">Legg til bakke</button>
+>>>>>>> Stashed changes
    `}
 
 function ratings(rating){
