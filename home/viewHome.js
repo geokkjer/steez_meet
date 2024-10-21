@@ -1,5 +1,4 @@
 function viewHome(){
-    header();
     document.getElementById('app').innerHTML += /*HTML*/`
         <h1>Arrangementer:</h1>
     `

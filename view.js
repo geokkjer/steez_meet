@@ -1,4 +1,6 @@
 function updateView() {
+    header()
+    document.getElementById('app').innerHTML = htmlHeader;
     let page = model.app.currentPage;
     if (page == "home") {
         viewHome();

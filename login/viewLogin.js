@@ -1,6 +1,6 @@
 function viewLogin(){
     header()
-    let username = '';
+    let username = model.input.logIn.userName;
     let password = '';
     document.getElementById('app').innerHTML += /*HTML*/ `<h1>Hello from Loginpage</h1>
     Brukernavn: <input type="text" id="username" placeholder="Brukernavn" onchange="username=this.value"><br>
