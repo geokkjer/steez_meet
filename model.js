@@ -32,7 +32,7 @@ const model = {
         },
         slope: {
             rating: 0,
-            comment: '';
+            comment: '',
         },
         addSlope: {
             name: null,
