@@ -10,7 +10,7 @@ function viewSlopeInfo(){
      <div id="rateMe"></div>
      <input id='textInput' type='number' min=0 max= 5 onchange="rating=this.value" placeholder="0/5"/>
      <button onclick="ratings(rating)">Legg til rangering</button>
-     <h1></h1>
+     <h1>Rangeringer</h1>
     <h2>Legg til kommentar</h2>
     <textarea rows="8" cols="35" type="text" id="inputCommentary" placeholder="Skriv din kommentar her..."></textarea>
     <br><button id="submitCommentary">Legg til kommentar!</button><p>
