@@ -44,13 +44,13 @@ function ratingData(){
     return avgRatings
 }
 
-        document.getElementById('submitCommentary').addEventListener('click', function() {
-            const textInput = document.getElementById('inputCommentary');
-            const output = document.getElementById('addCommentary');
-            const inputText = textInput.value;
-            if (inputText !== "") {
-                output.innerHTML += `<li>${inputText}</li>`;
-                textInput.value = "";
+        function addComment() {
+            let comment = document.getElementById('submitInput').value; // Her kommer kommentaren man har submitta.
+            if (comment) {
+                let item = `<li>${comment}</li>`; // Så kommer kommentaren hit.
+                document.getElementById('commentList').innerHTML += item; // Her blir ul'en/kommentarene synlig på siden.
+                document.getElementById('submitInput').value = ""; // Nullstiller teksten i tekstboksen etter man har submitta.
+            } else {
+                alert("Du har ikke skrevet inn noen kommentar");
             }
-        });
-        function submitCommentary(){}
+        }
