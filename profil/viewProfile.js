@@ -1,6 +1,5 @@
 function viewProfile() {
-    header();
-    document.getElementById('app').innerHTML += /*HTML */ `
+    profileHtml = /*HTML */ `
 
         <img src= "${model.data.users[0].profilePicture}" width="200px">
     <div>
@@ -26,7 +25,8 @@ function viewProfile() {
         <div>${model.data.users[0].goals.amount}</div>
         <button onclick="createGoal()">+</button>
     `
-    ; 
+    ;
+    document.getElementById('app').innerHTML = header() + profileHtml;
 }
 
 function createGoal(){
@@ -58,6 +58,8 @@ function createGoal(){
     `
     ; 
 }
+
+//Endre til at Html og header er riktig
 
 //Vi trenger
 

@@ -1,48 +1,6 @@
-// function addNewUser(userNameInput, firstNameInput, lastNameInput, homeAdressInput, phoneNumberInput){
-//     model.data.users.push(
-//         {
-//             userName: userNameInput,
-//             firstName: firstNameInput,
-//             lastName: lastNameInput,
-//             phoneNumber: phoneNumberInput,
-//             address: homeAdressInput,
-//         }
-//     )
-
-// }
-
-// function saveInput(emailAdress, password, password2){
-//     emailAdress = emailAdressInput
-//     password = passwordInput
-//     password2 = passwordInput2
-//     checkForEmail()
-//     checkCorrectPassword()
-// }
-
-//  function checkForEmail(){
-//      if(emailAdressInput.includes('@') && emailAdressInput.includes('.') && emailAdressInput.indexOf('@') < emailAdressInput.indexOf('.') && !emailAdressInput.includes(' ')){
-//         model.data.users.push(
-//             {
-//                 email: emailAdressInput,
-//             });
-//      }
-//      else{
-//         //incorrect;
-//      }
-// }
-
-// function checkCorrectPassword(){
-//     if(passwordInput == passwordInput2){
-//         model.data.users.push(
-
-//         )
-//     }
-//     else{
-//         //incorrect
-//     }
-// }
 
 let registerUser = model.input.registerUser;
+
 function checkUserData(){
 
     if(!registerUser.userName || !registerUser.firstName || !registerUser.lastName || !registerUser.email || !registerUser.password || !registerUser.confirmPassword || !registerUser.address || !registerUser.phoneNumber){
@@ -63,7 +21,7 @@ function checkUserData(){
 function sendUserData(){
     let newUser = {
         username: registerUser.userName,
-        userId: model.data.users.length + 1, //Dette må vi ha i modellen
+        userId: model.data.users.length + 1,
         firstName: registerUser.firstName,
         lastName: registerUser.lastName,
         email: registerUser.email,
@@ -77,11 +35,13 @@ function sendUserData(){
     model.app.currentPage = "login"
 
     registerUser.userName = '';
+    registerUser.firstName = '';
+    registerUser.lastName = '';
+    registerUser.address = '';
+    registerUser.phoneNumber = '';
     registerUser.email = '';
-            //etc
+    registerUser.password = '';
+    registerUser.confirmPassword = '';
 
     updateView();
 }
-
-//Andre ting som ikke er i skjermbilder, skal dette legges til?
-//input type password
