@@ -1,6 +1,6 @@
 function viewAddSlope(){
     header();
-    document.getElementById('app').innerHTML += /*HTML*/`
+    addSlopeHtml = /*HTML*/`
     
     <h2>Legg til bakke:<h2>
     <div>Navn:</div>
@@ -22,6 +22,7 @@ function viewAddSlope(){
 
     <button onclick="submitSlope()">Submit</button>
     `
+    document.getElementById('app').innerHTML = header() + addSlopeHtml;
 }
 
 function submitSlope(){
