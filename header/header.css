@@ -1,4 +1,4 @@
-#header ul {
+ #header ul {
   font-size: x-large;
   list-style-type: none;
   margin: 0;
@@ -18,9 +18,7 @@
 #header select:hover {
   color: blue;
 }
-.active {
-  background-color: #04AA6D;
-}
+
 .headerbar {
   height: 30px;
   background-color: black;
@@ -32,8 +30,7 @@
   height: 20px;
   margin-right: 0px;
   margin-top: 5px;
-}
-
+} 
 #login {
   float: right;
   margin-top: 5px;

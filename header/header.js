@@ -9,8 +9,8 @@ function header() {
         <li id="login" onmousedown="viewLogin()">⎆ Login</li>
         <li>Legg til Event</li>
 
-        <select id="bakker">
-                <option>---⛰Bakker---</option>
+        <select id="bakker" onchange="viewSlopeInfo()">
+                <option>⛰Velg Bakke</option>
                 <option onclick="viewSlopeInfo()">Bakke 1</option>
         </select>
         </ul>
