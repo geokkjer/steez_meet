@@ -14,6 +14,7 @@ function login(user,pass){
     console.log(user,pass);
     for (modeluser of model.data.users){
         if (modeluser.userName == user && modeluser.password == pass){
+            model.app.currentPage = "home";
             updateView();
         } else if (modeluser.userName != user || modeluser.password != pass){
             console.log('Feil brukernavn eller passord :-P')

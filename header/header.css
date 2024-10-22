@@ -18,6 +18,9 @@
 #header select:hover {
   color: blue;
 }
+.active {
+  background-color: #04AA6D;
+}
 .headerbar {
   height: 30px;
   background-color: black;
