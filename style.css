@@ -8,6 +8,7 @@
     /* gradiant ??@Steph  */
 }
 body {
+    overflow: hidden;
     margin: 0;
-    background: linear-gradient(80deg , #fff1eb 0%, #ace0f9 100%);
+    background: linear-gradient(45deg , #fff1eb 0%, #ace0f9 100%);
 }
