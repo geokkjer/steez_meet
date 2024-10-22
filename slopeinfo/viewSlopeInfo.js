@@ -23,6 +23,7 @@ function viewSlopeInfo() {
     
     <h2>Kommentarer til bakken:</h2>
     <ul id="commentList"></ul>
+    <button onclick="viewAddSlope()">Legg til bakke</button>
    `;
     document.getElementById('app').innerHTML = header() + slopeHTML;
 }
