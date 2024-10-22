@@ -18,12 +18,13 @@ function viewSlopeInfo(){
     <button onclick="ratingData()">Rangeringer på bakken</button>
      <div id="avgRating">${avgRatings}</div
     <br> 
-    <h2>Legg til kommentar</h2>
-    <textarea rows="8" cols="35" type="text" id="inputCommentary" placeholder="Skriv din kommentar her..."></textarea>
-    <br><button id="submitCommentary">Legg til kommentar!</button><p>
-    <ul id="addCommentary"></ul>
-<<<<<<< Updated upstream
-    <h3>Kommentarer til bakken:</h3>
+    
+    <h1>Legg til kommentar</h1>
+    <textarea rows="8" cols="35" id="submitInput" placeholder="Skriv din kommentar her..."></textarea><p>
+    <button onclick="addComment()">Send inn kommentar</button>
+    
+    <h2>Kommentarer til bakken:</h2>
+    <ul id="commentList"></ul>
  
     
 =======
