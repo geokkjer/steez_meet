@@ -24,9 +24,6 @@ function viewSlopeInfo(){
     <ul id="commentList"></ul>
  
     
-=======
-    <button onclick="viewAddSlope()">Legg til bakke</button>
->>>>>>> Stashed changes
    `}
 
 function ratings(rating){
