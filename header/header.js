@@ -6,14 +6,15 @@ function header() {
         <li><img class="logo" src="img/logo.png"/></a></li>
         <li class="active" onmousedown="viewHome()">🏠 Hjem</li>
         <li onclick="viewProfile()">🛈 Din Profil</li>
-        <li>⛰Bakker 
-            <ul class="drop">
-                <li onclick="viewSlopeInfo()">Bakke 1</li>
-            </ul>
-        </li>
         <li id="login" onmousedown="viewLogin()">⎆ Login</li>
         <li>Legg til Event</li>
+
+        <select id="bakker">
+                <option>---⛰Bakker---</option>
+                <option onclick="viewSlopeInfo()">Bakke 1</option>
+        </select>
         </ul>
+        
    </nav>`
    return htmlHeader
 }
