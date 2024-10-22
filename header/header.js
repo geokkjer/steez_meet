@@ -8,10 +8,10 @@ function header() {
         <li onclick="viewProfile()">🛈 Din Profil</li>
         <li id="login" onmousedown="viewLogin()">⎆ Login</li>
         <li>Legg til Event</li>
-        <select>⛰Bakker 
-            <ul class="drop">
-                <li onclick="viewSlopeInfo()">Bakke 1</li>
-            </ul>
+
+        <select id="bakker">
+                <option>---⛰Bakker---</option>
+                <option onclick="viewSlopeInfo()">Bakke 1</option>
         </select>
         </ul>
         
