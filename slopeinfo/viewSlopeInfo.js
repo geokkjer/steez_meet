@@ -1,19 +1,20 @@
 
+let avgRatings = model.data.slopes[0].avgRating;
 function viewSlopeInfo(){
-    
     let rating = model.input.slope.rating; 
-    header();
-    document.getElementById('app').innerHTML += /*HTML*/` 
+    let slopeHTML = /*HTML*/` 
      <h1>Bakke Informasjon:</h1>
      <h2>Rangering:<h2>
      <div id="rateMe"></div>
      <input id='textInput' type='number' min=1 max= 5 onchange="rating=this.value" placeholder="0/5"/>
-     <button onclick="ratings(rating)">Legg til rangering</button>
+     <button onclick="ratings(rating),ratingData()">Legg til rangering</button>
     <br>
     <h3>Rangeringer til bakken:</h3>
     
     <button onclick="ratingData()">Rangeringer på bakken</button>
-     <div id="avgRating">${avgRatings}</div
+     <div id="showAvgRating"><div>
+     
+       
     <br> 
     
     <h1>Legg til kommentar</h1>
@@ -24,19 +25,22 @@ function viewSlopeInfo(){
     <ul id="commentList"></ul>
  
     
-   `}
+   `; 
+   document.getElementById('app').innerHTML = header() + slopeHTML;
+}
 
 function ratings(rating){
     document.getElementById('rateMe').innerHTML = `<h2>${rating}/5<h2>`
     model.data.slopes[0].ratings.push(parseInt(rating))
 }
 function ratingData(){
-    let avgRatings = 0;
+    let avgRatingHTML = '';
+    let avgRating = 0;
     for(i = 0; i < model.data.slopes[0].ratings.length; i++){ 
-       avgRatings += model.data.slopes[0].ratings[i];
+       avgRating += model.data.slopes[0].ratings[i];
     }
-    avgRatings = avgRatings/model.data.slopes[0].ratings.length;
-    return avgRatings
+     avgRatings = avgRating/model.data.slopes[0].ratings.length;
+     document.getElementById('showAvgRating').innerHTML = `<h2>${avgRatings}/5<h2>`
 }
 
         function addComment() {
