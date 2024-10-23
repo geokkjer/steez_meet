@@ -1,56 +1,58 @@
-
 #app {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-        'header' 
-        'main' 
+    grid-template-areas:
+        'header'
+        'main'
         'footer';
     gap: 20px;
 }
-#app > header {
+
+#app>header {
     grid-area: header;
-} 
-#app > main {
+}
+
+#app>main {
     grid-area: main;
     padding: 15px 5px 10px 5px;
 }
-#app > footer {
+
+#app>footer {
     grid-area: footer;
     align-content: center;
 }
+
 body {
     /* overflow: hidden; */
     margin: 0;
-    background: rgb(255,255,255);
-background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(194,242,242,1) 17%, rgba(39,35,67,1) 100%);
-} 
+    background: rgb(255, 255, 255);
+    background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(194, 242, 242, 1) 17%, rgba(39, 35, 67, 1) 100%);
+}
+
 .login {
     justify-content: center;
     font-size: xx-large;
 }
 
 button {
-  background-color: rgba(51, 51, 51, 0.05);
-  border-radius: 8px;
-  border-width: 0;
-  color: #333333;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-  vertical-align: baseline;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    border-radius: 8px;
+    border-width: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
