@@ -1,41 +1,80 @@
-let eventText = "";
-function viewNewEvent() {
-  header();
+viewNewEvent()
+function viewNewEvent(){
+    header()
+    let html = /*html*/`
+    <h3>Nytt arrangement: </h3>
+    <div>${showAddEvent()}</div>
+    <div>${showEvent()}</div>
 
-  document.getElementById("app").innerHTML += /*html*/ `
-    
-    <h2>Nytt arrangement:</h2>
-    <div>navn:</div>
-    <input type="text" onchange="nameArrangement = this.value">
 
-    <div>Dato:</div>
-    <input type="date" onchange="datesArrangement = this.value">
-    <div>Bakke:</div>
-    <input type="text" onchange="slopeArrangement = this.value">
-    <div>Kommentar:</div>
-    <textarea type="text" onchange="commentsArrangement = this.value"></textarea>
-    
-    <button onclick="Submit(text)">Submit</button>
-    
-    <div>${eventText}</div>
     
     `;
+    document.getElementById('main').innerHTML =  html;   
 }
 
-function Submit() {
+function showEvent(){
 let html = "";
-for(let i = 0; i < model.input.newEvent.length; i++){
+for(let i = 0; i < model.data.events.length; i++){
     html += /*html*/`
-    
-    
+    <p>Navn: ${model.data.events[i].name}</p>
+    <p>Navn: ${model.data.events[i].date}</p>
+    <p>Navn: ${model.data.events[i].slope}</p>
+    <p>Navn: ${model.data.events[i].comment}</p>
+   
     
     `;
 }
+    
+    return html;
+    
+    
+}    
+
+function showAddEvent(){
+let html = "";
+html += /*html*/`
+<h3>Legg til arrangement</h3>
+<div>
+    <label>Navn:</label>
+    <input type="text" onchange="saveName(this.value)">
+
+</div>
+<div>
+    <label>Dato:</label>
+    <input type="date" onchange="saveDate(this.value)">
+
+</div>
+<div>
+    <label>bakke:</label>
+    <input type="text" onchange="saveSlope(this.value)">
+
+</div>
+<div>
+    <label>Kommentar:</label>
+    <input type="textarea" onchange="saveComments(this.value)">
+
+</div>
+<button onclick="addEvent()">Legg til</button>
 
 
-
-
+`;
+return html;
 }
+    
+
+
+
+
+    
+    
+    
+    
+    
+
+
+
+
+
 
 //Vi trenger: Visning av arrangementer.
 //Ja/Nei funksjon.
