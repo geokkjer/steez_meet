@@ -40,11 +40,10 @@ function viewProfile() {
     <ul id="friendList"></ul>
     `
     ;
-    document.getElementById('app').innerHTML = header() + profileHtml;
+    document.getElementById('main').innerHTML = profileHtml;
 }
 
 function createGoal(){
-    header();
     goalHtml= /*HTML */ `
 
     <div>Ditt mål:</div>
@@ -56,7 +55,7 @@ function createGoal(){
     <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
     `
     ;
-    document.getElementById('app').innerHTML = header() + profileHtml + goalHtml;
+    document.getElementById('main').innerHTML = profileHtml + goalHtml;
 }
 
 function createGoalAmount(){
