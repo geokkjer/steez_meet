@@ -26,27 +26,12 @@ function viewProfile() {
         <button onclick="createGoal()">+</button>
     `
     ;
-    document.getElementById('app').innerHTML = header() + profileHtml;
+    document.getElementById('app').innerHTML = header() + profileHtml + createGoalAmount();
 }
 
 function createGoal(){
     header();
-    document.getElementById('app').innerHTML += /*HTML */ `
-    <img src= "${model.data.users[0].profilePicture}" width="200px">
-    <div>
-        <div><b>Navn:</b> ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
-        <div><b>Epost:</b> ${model.data.users[0].email}</div>
-        <div><b>Adresse:</b> ${model.data.users[0].address}</div>
-        <div><b>Mobil:</b> ${model.data.users[0].phoneNumber}</div>
-    </div>
-    <br>
-
-    <div><b>Dine arrangementer:</b>
-        <div>${model.data.events[0].name}</div>
-        <b>Påmeldte arrangementer:</b>
-        <div>${model.data.events[0].name}</div>
-    </div>
-    <br>
+    goalHtml= /*HTML */ `
 
     <div>Ditt mål:</div>
     <input type="text" placeholder="Skriv inn ditt mål" onchange="goalName=this.value">
@@ -56,7 +41,8 @@ function createGoal(){
     <input type="number" onchange="goalAmount=this.value">
     <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
     `
-    ; 
+    ;
+    document.getElementById('app').innerHTML = header() + profileHtml + goalHtml;
 }
 
 //Endre til at Html og header er riktig
