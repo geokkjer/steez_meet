@@ -1,7 +1,7 @@
 let eventText ="";
 function viewNewEvent(){
     header()
-    let nameArrangement
+    
 
     document.getElementById('app').innerHTML += /*html*/`
     
@@ -24,17 +24,26 @@ function viewNewEvent(){
     
 }
 
-function Submit(name, dates, slope, comments){
+function Submit(){
+
+
+
+
+
+
+
     
-    eventText += name += dates += slope += comments
-    return eventText;
-
-
-
-    
-
-
 }
+
+
+
+
+
+
+    
+
+
+
 
 
 
