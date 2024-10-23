@@ -16,5 +16,5 @@ function header() {
         </ul>
         </div>
    </nav>`;
-   return document.getElementById('header').innerHTML = htmlHeader 
+   return document.getElementById('header').innerHTML = htmlHeader; 
 }

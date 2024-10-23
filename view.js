@@ -1,4 +1,5 @@
 function updateView() {
+    header();
     let page = model.app.currentPage;
     if (page == "home") {
         viewHome();
@@ -14,5 +15,5 @@ function updateView() {
     else {
         document.getElementById('app').innerHTML = 'Error!!'
     }
-
+    footer();
 }

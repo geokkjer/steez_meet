@@ -19,6 +19,7 @@
 }
 #app > footer {
     grid-area: footer;
+    align-content: center;
 }
 body {
     /* overflow: hidden; */
