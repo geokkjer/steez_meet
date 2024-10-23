@@ -27,10 +27,13 @@ function viewSlopeInfo() {
 }
 
 function ratings(rating) {
+    model.app.currentPage == "slopeInfo" 
     document.getElementById('rateMe').innerHTML = `<h2>${rating}/5<h2>`
     model.data.slopes[0].ratings.push(parseInt(rating))
+    updateView()
 }
 function ratingData() {
+     
     let avgRating = 0;
     for (i = 0; i < model.data.slopes[0].ratings.length; i++) {
         avgRating += model.data.slopes[0].ratings[i];
@@ -49,3 +52,4 @@ function addComment() {
         alert("Du har ikke skrevet inn noen kommentar");
     }
 }
+

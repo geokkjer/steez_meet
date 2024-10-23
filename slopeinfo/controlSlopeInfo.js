@@ -1,4 +1,3 @@
 function addNewRating(){
-   model.data.slopes[0].ratings.push({})
-   
+   model.data.slopes[0].ratings.push({}) 
 }
