@@ -16,16 +16,16 @@ function showEvent() {
   let html = "";
   for (let i = 0; i < model.data.events.length; i++) {
     html += /*html*/ `
-    <p>Navn: ${model.data.events[0].name}</p>
-    <p>Dato: ${model.data.events[0].date}</p>
-    <p>Bakke: ${model.data.events[0].slope}</p>
-    <p>Kommentar: ${model.data.events[0].comment}</p>
-   
-    
+    <p>Navn: ${model.data.events[i].name}</p>
+    <p>Dato: ${model.data.events[i].date}</p>
+    <p>Bakke: ${model.data.events[i].slope}</p>
+    <p>Kommentar: ${model.data.events[0].comment[0].comment}</p>
     `;
-  }
+}   
+   
 
-  return html;
+
+return html;
 }
 
 function showAddEvent() {
