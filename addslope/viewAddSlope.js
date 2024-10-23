@@ -5,7 +5,7 @@ function viewAddSlope(){
     <h2>Legg til bakke:<h2>
     <div>Navn: <input type="text" onchange="model.input.addSlope.name = this.value"></div>
     <div>Sted:<input type="text" onchange="model.input.addSlope.location = this.value"></div>
-    <div>Vanskelighetsgrad</div>
+    <div>Vanskelighetsgrad<input type="text" onchange="model.input.addSlope.difficulty = this.value"></div>
     <div>Beskrivelse:<input type="text" onchange="model.input.addSlope.description = this.value"></div>
     <div>Type: <input type="text" onchange="model.input.addSlope.type = this.value"></div>
     <div>Kommentar <input type="text" onchange="model.input.addSlope.comment = this.value"></div>
@@ -14,6 +14,7 @@ function viewAddSlope(){
     `
     document.getElementById('app').innerHTML = header() + addSlopeHtml;
 }
+
 let a = model.input.addSlope;
 function submitSlope(){
 let newSlope = {
@@ -21,6 +22,7 @@ let newSlope = {
     id: model.data.slopes.id+ 1,
     location: a.location,
     description: a.description,
+    difficulty: a.difficulty,
     comment: a.comment,
     photo: null,
 }
@@ -29,6 +31,7 @@ model.data.slopes.push(newSlope);
 a.name = ``;
 a.location = ``;
 a.description = ``;
+a.difficulty = ``;
 a.comment = ``;
 
 }
