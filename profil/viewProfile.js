@@ -21,12 +21,12 @@ function viewProfile() {
         <div>${model.data.users[0].goals.title}</div>
         <div>${model.data.users[0].goals.description}</div>
         <br>
-        <div id="goalCheckboxes"></div>
+        <div>${createGoalAmount()}</div>
         <div>${model.data.users[0].goals.amount}</div>
         <button onclick="createGoal()">+</button>
     `
     ;
-    document.getElementById('app').innerHTML = header() + profileHtml + createGoalAmount();
+    document.getElementById('app').innerHTML = header() + profileHtml;
 }
 
 function createGoal(){
@@ -43,6 +43,19 @@ function createGoal(){
     `
     ;
     document.getElementById('app').innerHTML = header() + profileHtml + goalHtml;
+}
+
+function createGoalAmount(){
+    let goalAmount = model.data.users[0].goals.amount;
+    let checkboxesHtml = ''; 
+    for(let i = 0; i<goalAmount; i++)
+        {
+        checkboxesHtml += /*HTML*/ `
+        <input type="checkbox"/>
+        `
+        ;
+    }
+    
 }
 
 //Endre til at Html og header er riktig
