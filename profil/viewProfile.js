@@ -52,9 +52,11 @@ function createGoalAmount(){
         {
         checkboxesHtml += /*HTML*/ `
         <input type="checkbox"/>
+        
         `
         ;
     }
+    return checkboxesHtml;
     
 }
 
