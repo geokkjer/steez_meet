@@ -4,14 +4,12 @@ function viewSlopeInfo() {
     let rating = model.input.slope.rating;
     let slopeHTML = /*HTML*/` 
      <h1>Bakke Informasjon:</h1>
-     <h2>Rangering:<h2>
+     <h1>Rangering:<h1>
      <div id="rateMe"></div>
      <input id='textInput' type='number' min=1 max= 5 onchange="rating=this.value" placeholder="0/5"/>
      <button onclick="ratings(rating),ratingData()">Legg til rangering</button>
     <br>
-    <h3>Rangeringer til bakken:</h3>
-    
-    <button onclick="ratingData()">Rangeringer på bakken</button>
+    <h2>Rangeringer til bakken:</h2>
      <div id="showAvgRating"><div>
      
        
