@@ -1,13 +1,14 @@
 function viewLogin(){
     let username = model.input.logIn.userName;
     let password = '';
-    loginHtml = /*HTML*/ `<div>
+    loginHtml = /*HTML*/ `
+    <div id="login">
     Brukernavn: <input type="text" id="username" placeholder="Brukernavn" onchange="username=this.value"><br>
     Passord: <input type="password" id="password" placeholder="Passord" onchange="password=this.value"><br>
     <button onclick="login(username,password)">Logg inn</button><br>
     <div>husk meg! glemt passord ? <button onclick="viewRegister()">registrere ny bruker </div></div>
+    </div>
     `;
-    header();
     document.getElementById('main').innerHTML =  loginHtml;
 }
 

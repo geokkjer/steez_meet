@@ -17,6 +17,7 @@
 }
 .headerbar li:hover{
   color: green;
+  cursor: pointer;
 }
 .headerbar select {
   font-size: large;
@@ -25,6 +26,7 @@
 }
 .headerbar select:hover {
   color: green;
+  cursor: pointer;
 }
 
 
