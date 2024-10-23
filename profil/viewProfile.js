@@ -46,14 +46,16 @@ function createGoal(){
 }
 
 function createGoalAmount(){
-    let goalAmount; 
-    for(i = 0; i<model.data.users[0].goals.amount; i++)
+    let goalAmount = model.data.users[0].goals.amount;
+    let checkboxesHtml = ''; 
+    for(let i = 0; i<goalAmount; i++)
         {
-        goalAmount = /*HTML*/ `
+        checkboxesHtml += /*HTML*/ `
         <input type="checkbox"/>
         `
-        return goalAmount;
+        ;
     }
+    
 }
 
 //Endre til at Html og header er riktig
