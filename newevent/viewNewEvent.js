@@ -1,9 +1,8 @@
-let eventText ="";
-function viewNewEvent(){
-    header()
-    let nameArrangement
+let eventText = "";
+function viewNewEvent() {
+  header();
 
-    document.getElementById('app').innerHTML += /*html*/`
+  document.getElementById("app").innerHTML += /*html*/ `
     
     <h2>Nytt arrangement:</h2>
     <div>navn:</div>
@@ -21,31 +20,22 @@ function viewNewEvent(){
     <div>${eventText}</div>
     
     `;
-    
 }
 
-function Submit(name, dates, slope, comments){
+function Submit() {
+let html = "";
+for(let i = 0; i < model.input.newEvent.length; i++){
+    html += /*html*/`
     
-    eventText += name += dates += slope += comments
-    return eventText;
-
-
-
     
-
-
+    
+    `;
 }
 
 
 
 
-
-
-
-
-
-
-
+}
 
 //Vi trenger: Visning av arrangementer.
 //Ja/Nei funksjon.
