@@ -12,5 +12,5 @@ function viewRegister(){
     <button onclick="checkUserData()">Registrer</button>
     `
     ; 
-    document.getElementById('app').innerHTML = header() + registerHtml;
+    document.getElementById('main').innerHTML = registerHtml;
 }
