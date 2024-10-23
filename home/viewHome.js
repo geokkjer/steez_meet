@@ -1,5 +1,7 @@
 function viewHome(){
     htmlHome = /*HTML*/`
+        <script src="snow/pure-snow.js" defer></script>
+        <div id="snow" data-count="200"></div>
         <h1>Arrangementer:</h1>
         `;
     document.getElementById('app').innerHTML = header() + htmlHome + events();   
