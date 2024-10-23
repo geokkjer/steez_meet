@@ -1,5 +1,5 @@
 function footer() {
     let footerhtml = /*html*/ 
-    ` Brainiacs :-D`;
+    ` © Brainiacs :-D 2024`;
     return document.getElementById('footer').innerHTML = footerhtml
 }

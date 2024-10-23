@@ -24,6 +24,20 @@ function viewProfile() {
         <div>${createGoalAmount()}</div>
         <div>${model.data.users[0].goals.amount}</div>
         <button onclick="createGoal()">+</button>
+
+    <br>
+            <h1>Legg til venner her:</h1>
+    <select id="selectFriendName">
+        <option value="">Velg et navn:</option>
+        <option value="Kjartan Salto">Kjartan Salto</option>
+        <option value="Tor Snøplanke">Tor Snøplanke</option>
+        <option value="Hoppalong Sprettnes">Hoppalong Sprettnes</option>
+        <option value="Beate Leifsen">Beate Leifsen</option>
+    </select>
+    <button onclick="pickFriend()">Legg til venn</button>
+    
+    <h2>Venner du har lagt til:</h2>
+    <ul id="friendList"></ul>
     `
     ;
     document.getElementById('app').innerHTML = header() + profileHtml;
@@ -59,6 +73,16 @@ function createGoalAmount(){
     return checkboxesHtml;
     
 }
+
+    function pickFriend() {
+        let yourSelectedName = document.getElementById('selectFriendName').value;
+        if (yourSelectedName) {
+            let item = `<li>${yourSelectedName}</li>`;
+            document.getElementById('friendList').innerHTML += item;
+        } else {
+            alert("Du har ikke valgt noe navn");
+        }
+    }
 
 //Endre til at Html og header er riktig
 
