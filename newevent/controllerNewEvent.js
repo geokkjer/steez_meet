@@ -19,7 +19,7 @@ function addEvent(){
         comment: model.input.newEvent.comment,
     }
     model.data.events.push(newEvent)
-    emptyNewEventValues()
+    emptyNewEventValues();
     viewNewEvent()    
 }
 

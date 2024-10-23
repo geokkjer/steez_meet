@@ -17,9 +17,9 @@ let html = "";
 for(let i = 0; i < model.data.events.length; i++){
     html += /*html*/`
     <p>Navn: ${model.data.events[i].name}</p>
-    <p>Navn: ${model.data.events[i].date}</p>
-    <p>Navn: ${model.data.events[i].slope}</p>
-    <p>Navn: ${model.data.events[i].comment}</p>
+    <p>Dato: ${model.data.events[i].date}</p>
+    <p>Bakke: ${model.data.events[i].slope}</p>
+    <p>Kommentar: ${model.data.events[i].comment}</p>
    
     
     `;
