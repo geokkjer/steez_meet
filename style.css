@@ -2,13 +2,12 @@
 #app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     gap: 20px;
-    /* gradiant ??@Steph  */
 }
 body {
     /* overflow: hidden; */
     margin: 0;
     background: linear-gradient(45deg , #fff1eb 0%, #ace0f9 100%);
-}
+} 
