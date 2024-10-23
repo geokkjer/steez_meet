@@ -51,7 +51,7 @@ html += /*html*/`
 </div>
 <div>
     <label>Kommentar:</label>
-    <input type="textarea" onchange="saveComments(this.value)">
+    <input type="text" onchange="saveComments(this.value)">
 
 </div>
 <button onclick="addEvent()">Legg til</button>
