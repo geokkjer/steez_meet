@@ -1,8 +1,6 @@
 
 let avgRatings = model.data.slopes[0].avgRating;
-function viewSlopeInfo() {
-    let rating = model.input.slope.rating;
-    let slopeHTML = /*HTML*/` 
+let slopeHTML = /*HTML*/` 
      <h1>Bakke Informasjon:</h1>
      <h1>Rangering:<h1>
      <div id="rateMe"></div>
@@ -10,9 +8,8 @@ function viewSlopeInfo() {
      <button onclick="ratings(rating),ratingData()">Legg til rangering</button>
     <br>
     <h2>Rangeringer til bakken:</h2>
-     <div id="showAvgRating"><div>
+     <div id="showAvgRating"></div>
      
-       
     <br> 
     
     <h1>Legg til kommentar</h1>
@@ -23,14 +20,17 @@ function viewSlopeInfo() {
     <ul id="commentList"></ul>
     <button onclick="viewAddSlope()">Legg til bakke</button>
    `;
-    document.getElementById('app').innerHTML = header() + slopeHTML;
+function viewSlopeInfo() {
+    let rating = model.input.slope.rating;
+    
+    header()
+    footer()
+    document.getElementById('main').innerHTML = slopeHTML;
 }
 
 function ratings(rating) {
-    model.app.currentPage == "slopeInfo" 
     document.getElementById('rateMe').innerHTML = `<h2>${rating}/5<h2>`
     model.data.slopes[0].ratings.push(parseInt(rating))
-    updateView()
 }
 function ratingData() {
      
@@ -38,7 +38,7 @@ function ratingData() {
     for (i = 0; i < model.data.slopes[0].ratings.length; i++) {
         avgRating += model.data.slopes[0].ratings[i];
     }
-    avgRatings = avgRating / model.data.slopes[0].ratings.length;
+   avgRatings = avgRating / model.data.slopes[0].ratings.length;
     document.getElementById('showAvgRating').innerHTML = `<h2>${parseFloat(avgRatings).toFixed(1)}/5<h2>`
 }
 
