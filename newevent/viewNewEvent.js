@@ -19,7 +19,7 @@ function showEvent() {
     <p>Navn: ${model.data.events[i].name}</p>
     <p>Dato: ${model.data.events[i].date}</p>
     <p>Bakke: ${model.data.events[i].slope}</p>
-    <p>Kommentar: ${model.data.events[0].comment[0].comment}</p>
+    <p>Kommentar: ${PrintComment(model.data.events[i].comment)}</p>
     `;
 }   
    
@@ -58,6 +58,19 @@ function showAddEvent() {
 `;
   return html;
 }
+
+function PrintComment(input){
+  let showComment = ""
+  for(let i = 0; i < input.length; i++){
+    showComment += `${input[i].comment}`
+
+  }
+
+  return showComment;
+
+
+}
+
 
 //Vi trenger: Visning av arrangementer.
 //Ja/Nei funksjon.

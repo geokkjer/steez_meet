@@ -1,11 +1,17 @@
-let newEvent = model.input.newEvent;
 function addEvent() {
-  const myEvent = {
-    id: addEvent(),
+  let newEvent = model.input.newEvent;
+  let myEvent = {
+    id: addNewId(),
     name: newEvent.name,
     date: newEvent.date,
     slope: newEvent.slope,
-    comment: newEvent.comment,
+    comment: [
+      {
+        id: addNewId(),
+        userId: "",
+        comment: newEvent.comment
+      },
+    ] 
   };
   model.data.events.push(myEvent);
   newEvent.id = "";
