@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'first-snow-font';
+    src: 
+        url('fonts/Firstsnow-nRYmg.ttf') format('truetype'),
+}
+
+
 #app {
     height: 100vh;
     display: grid;
@@ -12,6 +19,7 @@
 
 #app>header {
     grid-area: header;
+    font-family: 'first-snow-font';
 }
 
 #app>main {

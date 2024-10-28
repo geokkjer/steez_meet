@@ -2,7 +2,7 @@ function viewLogin(){
     let username = model.input.logIn.userName;
     let password = '';
     loginHtml = /*HTML*/ `
-    <div id="login">
+    <div class="login">
     Brukernavn: <input type="text" id="username" placeholder="Brukernavn" onchange="username=this.value"><br>
     Passord: <input type="password" id="password" placeholder="Passord" onchange="password=this.value"><br>
     <button onclick="login(username,password)">Logg inn</button><br>
