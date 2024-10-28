@@ -62,3 +62,17 @@ button {
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+
+.progress{
+    background-color: gray;
+    border-radius: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+.progressDone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
