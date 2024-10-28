@@ -9,14 +9,15 @@ function viewAddSlope(){
     <div>Beskrivelse:<input type="text" onchange="model.input.addSlope.description = this.value"></div>
     <div>Type: <input type="text" onchange="model.input.addSlope.type = this.value"></div>
     <div>Kommentar <input type="text" onchange="model.input.addSlope.comment = this.value"></div>
-    
+    <div>Bilde: <input type="file" accept="image/*"></div>
     <button onclick="submitSlope()">Submit</button>
     `
     document.getElementById('app').innerHTML = header() + addSlopeHtml;
 }
 
-let a = model.input.addSlope;
+
 function submitSlope(){
+    let a = model.input.addSlope;
 let newSlope = {
     name: a.name,
     id: model.data.slopes.id+ 1,
@@ -24,7 +25,7 @@ let newSlope = {
     description: a.description,
     difficulty: a.difficulty,
     comment: a.comment,
-    photo: null,
+    photo: a.photo || null,
 }
 model.data.slopes.push(newSlope);
 
@@ -33,5 +34,6 @@ a.location = ``;
 a.description = ``;
 a.difficulty = ``;
 a.comment = ``;
+a.photo = null;
 
 }
