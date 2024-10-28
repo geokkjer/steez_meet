@@ -64,11 +64,11 @@ function createGoal(){
 
 function createGoalAmount(){
     let goalAmount = model.data.users[0].goals.amount;
-    let checkboxesHtml = ''; 
+    let checkboxesHtml = '';
     for(let i = 0; i<goalAmount; i++)
         {
         checkboxesHtml += /*HTML*/ `
-        <input id="myCheckBoxes" type="checkbox" onchange="progressBar()"/>
+        <input id="myCheckBoxes" type="checkbox" onclick="model.data.users[0].goals.progress[i] = this.value"/>
         
         `
         ;

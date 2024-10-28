@@ -8,7 +8,7 @@ function saveGoal(name, description, amount){
 
 function progressBar(){
 let totalProgress = 0;
-        if(document.getElementById('myCheckBoxes').checked){
+        if(document.querySelectorAll("#myCheckBoxes").checked){
             totalProgress++;
         }
         progressDone.style.width = `${totalProgress / model.data.users[0].goals.amount * 100}%`;
@@ -28,4 +28,5 @@ let totalProgress = 0;
 
 
     // progress.style.width = `${model.data.users[0].goals.amount.checked / model.data.users[0].goals * 100}`
+    //document.querySelectorAll("ul input");
 }

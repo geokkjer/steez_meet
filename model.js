@@ -71,6 +71,7 @@ const model = {
                 title: "Ta salto",
                 description: "Jeg skal lære meg å ta salto",
                 amount: 5,
+                progress: [],
             },
             eventsAttending: [7],
             myEvents: [7],
