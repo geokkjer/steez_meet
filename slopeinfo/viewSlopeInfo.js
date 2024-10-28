@@ -22,7 +22,6 @@ let slopeHTML = /*HTML*/`
    `;
 function viewSlopeInfo() {
     let rating = model.input.slope.rating;
-    
     header()
     footer()
     document.getElementById('main').innerHTML = slopeHTML;
