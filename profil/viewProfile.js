@@ -21,8 +21,12 @@ function viewProfile() {
         <div>${model.data.users[0].goals.title}</div>
         <div>${model.data.users[0].goals.description}</div>
         <br>
+        <div>Ganger utført:</div>
         <div>${createGoalAmount()}</div>
         <div>${model.data.users[0].goals.amount}</div>
+        <div class="progress">
+        <div class="progressDone"></div>
+        </div>
         <button onclick="createGoal()">+</button>
 
     <br>
@@ -64,7 +68,7 @@ function createGoalAmount(){
     for(let i = 0; i<goalAmount; i++)
         {
         checkboxesHtml += /*HTML*/ `
-        <input type="checkbox"/>
+        <input id="myCheckBoxes" type="checkbox" onchange="progressBar()"/>
         
         `
         ;
