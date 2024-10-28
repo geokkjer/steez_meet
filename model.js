@@ -24,6 +24,7 @@ const model = {
             phoneNumber: null,
         },
         newEvent: {
+            id: null,
             name: null,
             date: null,
             slope: null,
