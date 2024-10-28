@@ -1,7 +1,7 @@
 function viewAddSlope(){
     header();
     addSlopeHtml = /*HTML*/`
-    
+    <div class="mainView">
     <h2>Legg til bakke:<h2>
     <div>Navn: <input type="text" onchange="model.input.addSlope.name = this.value"></div>
     <div>Sted:<input type="text" onchange="model.input.addSlope.location = this.value"></div>
@@ -11,6 +11,7 @@ function viewAddSlope(){
     <div>Kommentar <input type="text" onchange="model.input.addSlope.comment = this.value"></div>
     <div>Bilde: <input type="file" accept="image/*"></div>
     <button onclick="submitSlope()">Submit</button>
+    </div>
     `
     document.getElementById('app').innerHTML = header() + addSlopeHtml;
 }

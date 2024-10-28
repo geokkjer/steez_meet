@@ -15,7 +15,8 @@
 .headerbar li {
   display: inline;
   float: left;
-  margin-top: 0px;
+  margin-top: 10px;
+  margin-left: 1%;
 }
 .headerbar li:hover{
   color: green;
@@ -23,6 +24,7 @@
 }
 .headerbar select {
   font-size: large;
+  font-family: first-snow-font;
   background-color: black;
   color: white;
 }
