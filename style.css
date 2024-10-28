@@ -1,9 +1,8 @@
 @font-face {
     font-family: 'first-snow-font';
-    src: 
+    src:
         url('fonts/Firstsnow-nRYmg.ttf') format('truetype');
 }
-
 
 #app {
     height: 100vh;
@@ -19,7 +18,6 @@
 
 #app>header {
     grid-area: header;
-    font-family: 'first-snow-font';
 }
 
 #app>main {
@@ -36,7 +34,7 @@ body {
     /* overflow: hidden; */
     margin: 0;
     background: rgb(255, 255, 255);
-    background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(194, 242, 242, 1) 17%, rgba(39, 35, 67, 1) 100%);
+    background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(186, 255, 240, 1) 33%, rgba(103, 210, 244, 1) 100%);
 }
 
 .login {
