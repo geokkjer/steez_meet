@@ -44,7 +44,7 @@ body {
 
 button {
     border-radius: 8px;
-    border-width: 0;
+    border-width: 1;
     cursor: pointer;
     display: inline-block;
     font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
