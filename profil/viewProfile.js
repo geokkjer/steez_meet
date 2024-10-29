@@ -31,13 +31,15 @@ function viewProfile() {
         <button onclick="createGoal()">+</button>
 
     <br>
-            <h1>Legg til venner her:</h1>
+    <h1>Legg til venner her:</h1>
     <select id="selectFriendName">
         <option value="">Velg et navn:</option>
         <option value="Kjartan Salto">Kjartan Salto</option>
         <option value="Tor Snøplanke">Tor Snøplanke</option>
         <option value="Hoppalong Sprettnes">Hoppalong Sprettnes</option>
-        <option value="Beate Leifsen">Beate Leifsen</option>
+        <option value="Terje Kolderup">Terje Kolderup</option>
+        <option value="Kong Harald">Kong Harald</option>
+        <option value="Lille Marius">Lille Marius</option>
     </select>
     <button onclick="pickFriend()">Legg til venn</button>
     
@@ -77,12 +79,19 @@ function createGoalAmount(){
     
 }
 
-    function pickFriend() {
-        let yourSelectedName = document.getElementById('selectFriendName').value;
-        if (yourSelectedName) {
-            let item = `<li>${yourSelectedName}</li>`;
-            document.getElementById('friendList').innerHTML += item;
-        } else {
-            alert("Du har ikke valgt noe navn");
-        }
+let friendsListArray = [];
+function pickFriend() {
+    let yourSelectedName = document.getElementById('selectFriendName').value;
+    let friendList = document.getElementById('friendList');
+
+    if (yourSelectedName === "") {
+        alert("Du har ikke valgt noe navn");
     }
+    else if (friendsListArray.includes(yourSelectedName)) {
+        alert("Du har allerede lagt til denne vennen");
+    }
+    else if (!friendsListArray.includes(yourSelectedName)) {
+        friendList.innerHTML += `<li>${yourSelectedName}</li>`;
+        friendsListArray.push(yourSelectedName);
+    }
+}
