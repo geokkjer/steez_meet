@@ -23,9 +23,10 @@ function viewProfile() {
         <br>
         <div>Ganger utført:</div>
         <div>${createGoalAmount()}</div>
+        <button onclick="checkboxesChecked()">Lagre utførelser</button>
         <div>${model.data.users[0].goals.amount}</div>
         <div class="progress">
-        <div class="progressDone"></div>
+        <div class="progressDone" id="progressDone"></div>
         </div>
         <button onclick="createGoal()">+</button>
 
@@ -68,8 +69,7 @@ function createGoalAmount(){
     for(let i = 0; i<goalAmount; i++)
         {
         checkboxesHtml += /*HTML*/ `
-        <input id="myCheckBoxes" type="checkbox" onclick="model.data.users[0].goals.progress[i] = this.value"/>
-        
+        <input id="myCheckBoxes" type="checkbox"/>
         `
         ;
     }
@@ -96,3 +96,5 @@ function createGoalAmount(){
 //Mulighet for å sette antall
 //Muligfhet for å måle progresjon
 //Mulighet for å checke av når man har utført en session
+
+//Ganger utført * hele antallet /100 

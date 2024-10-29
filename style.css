@@ -76,6 +76,9 @@ button {
     align-items: center;
     justify-content: center;
     background-color: aqua;
+    border-radius: 20px;
+    height: 30px;
+    width: 0%;
 }
 
 /* Navbar */

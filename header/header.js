@@ -1,7 +1,6 @@
 function header() {
     htmlHeader = /*HTML*/`
     <div id="header">
-    <link rel="stylesheet" href="header/header.css">
     <nav class="headerbar" id="header">
         <ul>
         <li><img class="logo" src="img/logo.png"/></li>
