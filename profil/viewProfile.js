@@ -21,7 +21,7 @@ function viewProfile() {
         <div>${model.data.users[0].goals.title}</div>
         <div>${model.data.users[0].goals.description}</div>
         <br>
-        <div>Ganger utført:</div>
+        <b>Ganger utført:<b>
         <div>${createGoalAmount()}</div>
         <button onclick="checkboxesChecked()">Lagre utførelser</button>
         <div>${model.data.users[0].goals.amount}</div>
@@ -86,15 +86,3 @@ function createGoalAmount(){
             alert("Du har ikke valgt noe navn");
         }
     }
-
-//Endre til at Html og header er riktig
-
-//Vi trenger
-
-//Inputfelt - tittel
-//Inputfelt - beskrivelse
-//Mulighet for å sette antall
-//Muligfhet for å måle progresjon
-//Mulighet for å checke av når man har utført en session
-
-//Ganger utført * hele antallet /100 

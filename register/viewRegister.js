@@ -8,7 +8,7 @@ function viewRegister(){
     <div>Epost: <input type="email" onchange="model.input.registerUser.email = this.value"/></div>
     <div>Passord: <input type="password" onchange="model.input.registerUser.password = this.value"/></div>
     <div>Bekreft passord: <input type="password" onchange="model.input.registerUser.confirmPassword = this.value"/></div>
-    <div>Last opp profilbilde</div> 
+    <button>Last opp profilbilde</button> 
     <button onclick="checkUserData()">Registrer</button>
     `
     ; 

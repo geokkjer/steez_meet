@@ -6,31 +6,6 @@ function saveGoal(name, description, amount){
     viewProfile()
 }
 
-function progressBar(){
-let totalProgress = 0;
-        if(document.querySelectorAll('input').checked){
-            totalProgress++;
-        }
-        progressDone.style.width = `${totalProgress / model.data.users[0].goals.amount * 100}%`;
-        updateView();
-
-
-
-
-
-
-    // let checkedBoxes = 0;
-    // for(let i = 0; i < model.data.users[0].goals.amount; i++){
-    //     checkedBoxes = model.data.users[0].goals.amount[i];
-    // }
-
-
-
-
-    // progress.style.width = `${model.data.users[0].goals.amount.checked / model.data.users[0].goals * 100}`
-    //document.querySelectorAll("ul input");
-}
-
 function checkboxesChecked(){
     let checkboxArray = document.querySelectorAll('input');
     let counter = 0;
@@ -56,8 +31,3 @@ function drawProgressBar(finalPercentage){
     progressDone.style.width = `${finalPercentage}%`;
     
 }
-
-//Vi må først tegne checkboxer x antall goal amount.
-//Vi må kunne krysse av disse checkboksene.
-//Vi må vite hvor mange ut av det totale antallet som er huket av.
-//Vi må finne prosenten av det som er huket av utofra den totale lengden.
