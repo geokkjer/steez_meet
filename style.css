@@ -73,9 +73,9 @@ input{
   margin: 2px;
 }
 
-input[type="checkbox"]{
+/* input[type="checkbox"]{
   
-}
+} */
 
 .progress{
     background-color: gray;
