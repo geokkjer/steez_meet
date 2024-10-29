@@ -73,6 +73,10 @@ input{
   margin: 2px;
 }
 
+input[type="checkbox"]{
+  
+}
+
 .progress{
     background-color: gray;
     border-radius: 20px;
