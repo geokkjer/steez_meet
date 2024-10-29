@@ -1,6 +1,5 @@
 function header() {
     htmlHeader = /*HTML*/`
-    <div id="header">
     <nav class="headerbar" id="header">
         <ul>
         <li><img class="logo" src="img/logo.png"/></li>
@@ -13,7 +12,6 @@ function header() {
                 <option onclick="viewSlopeInfo()">Bakke 1</option>
         </select>
         </ul>
-        </div>
    </nav>`;
    return document.getElementById('header').innerHTML = htmlHeader; 
 }

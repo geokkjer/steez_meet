@@ -1,22 +1,22 @@
 function viewHome(){
-    htmlHome = /*HTML*/`
+    let activities = model.data.events;
+    let htmlHome = /*HTML*/`
         <h1>Hei, ${'hello' || 'guest'}</h1>
-        <div id="events">${events()}</div>
-        <style>
-            #events{
-                height: 100vh;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr ;
-                grid-template-areas:
-                    'main1'
-                    'main2';
-                gap: 20px;
-            }
-        </style>
         `;
-   
-    document.getElementById('main').innerHTML =  htmlHome;
+    let activitiesHTML = activities.map(activity => /*HTML*/`
+        <div>
+            <h4>${activity.name}</h4>
+            <p><span>Vanskelig: </span>${activity.difficulty}</p>
+            <p><span>Når: </span>${activity.date}</p>
+            <p><span>Omtaler: </span>Ikke på plass enda..</p>
+            
+        </div>`
+    ).join('');
+    
+    document.getElementById('main').innerHTML =  htmlHome + activitiesHTML;
+    
 }
+
+
 
 
