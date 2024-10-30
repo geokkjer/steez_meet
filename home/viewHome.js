@@ -19,13 +19,7 @@ function viewHome() {
                 <h2>Deltakere</h2>
                 <p>${activity.members}</p>
                 <h4>Bli med ?</h4>
-<<<<<<< Updated upstream
-                <div></div>
-                <button value="ja" onclick="JoinAnswer(this.value)">Ja</button>
-                <button value="nei" onclick="JoinAnswer(this.value)">Nei</button>
-=======
                 <button onclick="" class="yes-noBtn">Ja</button><button onclick="" class="yes-noBtn">Nei</button>
->>>>>>> Stashed changes
             </div>
         </div>`
     ).join('');

@@ -1,16 +1,13 @@
-function events(){
-    
-    let users = [];
-    let eventsHtml = '';
-    for (let i = 0; i < model.data.events.length; i ++){
-        users.push(model.data.users[i].firstName);
-    }
-    for (let event of model.data.events){
-        eventsHtml += /*html*/ `
-            <li>Navn: ${event.name} Når: ${event.date} Kommenterer: ${users}</li>
-        `
-    }
-    return eventsHtml
+
+function getParticipantName(e){ 
+    let nameOfParticipants = model.data.users.find(x => x.id == e).firstName; 
+    return nameOfParticipants;
+}
+
+function getParticipantsOfEvent() {
+    let eventsID = model.data.events.find(x => x.id).members
+    let participants = []
+    participants.push(eventsID.forEach((e) => getParticipantName(e)));
 }
 
 function JoinAnswer(answer){
