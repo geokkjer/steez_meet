@@ -1,15 +1,34 @@
 function viewRegister(){
     registerHtml = /*HTML */ `
-    <div>Brukernavn: <input type="text" onchange="model.input.registerUser.userName = this.value"/></div>
-    <div>Fornavn: <input type="text" onchange="model.input.registerUser.firstName = this.value"/></div>
-    <div>Etternavn: <input type="text" onchange="model.input.registerUser.lastName = this.value"/></div>
-    <div>Adresse: <input type="text" onchange="model.input.registerUser.address = this.value"/></div>
-    <div>Telefonnummer: <input type="number" onchange="model.input.registerUser.phoneNumber = this.value"/></div>
-    <div>Epost: <input type="email" onchange="model.input.registerUser.email = this.value"/></div>
-    <div>Passord: <input type="password" onchange="model.input.registerUser.password = this.value"/></div>
-    <div>Bekreft passord: <input type="password" onchange="model.input.registerUser.confirmPassword = this.value"/></div>
-    <button>Last opp profilbilde</button> 
-    <button onclick="checkUserData()">Registrer</button>
+
+    <div class="register-OutsideContainer">
+        <div class="register-Container">
+            <div class="register-InfoField">
+                <div>Brukernavn: </div>
+                <div>Fornavn: </div>
+                <div>Etternavn: </div>
+                <div>Adresse: </div>
+                <div>Telefonnummer: </div>
+                <div>Epost: </div>
+                <div>Passord: </div>
+                <div>Bekreft passord: </div>
+            </div>
+            <div class="register-InputField">
+                <input class="register-InputFieldText" placeholder="Eks. Kari123" type="text" onchange="model.input.registerUser.userName = this.value"/>
+                <input class="register-InputFieldText" placeholder="Eks. Kari" type="text" onchange="model.input.registerUser.firstName = this.value"/>
+                <input class="register-InputFieldText" placeholder="Eks. Nordmann" type="text" onchange="model.input.registerUser.lastName = this.value"/>
+                <input class="register-InputFieldText" placeholder="Eks. Storgata 1" type="text" onchange="model.input.registerUser.address = this.value"/>
+                <input class="register-InputFieldText" placeholder="Eks. 12345678" type="number" onchange="model.input.registerUser.phoneNumber = this.value"/>
+                <input class="register-InputFieldText" placeholder="Eks. karinordmann@email.com" type="email" onchange="model.input.registerUser.email = this.value"/>
+                <input class="register-InputFieldText" placeholder="Eks. passord123" type="password" onchange="model.input.registerUser.password = this.value"/>
+                <input class="register-InputFieldText" placeholder="Gjenta passord" type="password" onchange="model.input.registerUser.confirmPassword = this.value"/>
+            </div>
+            <div class="register-ButtonRegister">
+                <u>Allerede bruker?</u>
+                <button class="register-ButtonRegisterPage" onclick="checkUserData()">Registrer</button>
+            </div>
+        </div>
+    </div>
     `
     ; 
     document.getElementById('main').innerHTML = registerHtml;
