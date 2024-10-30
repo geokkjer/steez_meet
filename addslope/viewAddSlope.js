@@ -1,5 +1,5 @@
 function viewAddSlope(){
-   
+
     addSlopeHtml = /*HTML*/`
     <div class="mainView">
     <h2>Legg til bakke:<h2>
@@ -13,7 +13,7 @@ function viewAddSlope(){
     <button onclick="submitSlope()">Submit</button>
     </div>
     `
-    document.getElementById('app').innerHTML = header() + addSlopeHtml;
+    document.getElementById('main').innerHTML =  addSlopeHtml;
 }
 function handleFileUpload(event) {
     const file = event.target.files[0];
@@ -23,6 +23,7 @@ function handleFileUpload(event) {
             model.input.addSlope.photo = e.target.result;  
         };
         reader.readAsDataURL(file);
+        
     }}
 
 function submitSlope(){
