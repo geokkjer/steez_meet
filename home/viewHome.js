@@ -19,7 +19,9 @@ function viewHome() {
                 <h2>Deltakere</h2>
                 <p>${activity.members}</p>
                 <h4>Bli med ?</h4>
-                <button onclick="">Ja</button><button onclick="">Nei</button>
+                <div></div>
+                <button value="ja" onclick="JoinAnswer(this.value)">Ja</button>
+                <button value="nei" onclick="JoinAnswer(this.value)">Nei</button>
             </div>
         </div>`
     ).join('');
