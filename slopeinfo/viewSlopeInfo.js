@@ -3,7 +3,9 @@ let avgRatings = model.data.slopes[0].avgRating;
 
 function viewSlopeInfo() {
 let slopeHTML = /*HTML*/` 
-     <h1>Bakke Informasjon:</h1>
+<h1>Bakke Informasjon:</h1>
+<h1>BLEFJELL</h1>
+<img src="/img/slopeBlefjell.png" width="250px">
      <h1>Rangering:<h1>
      <div id="rateMe"></div>
      <input id='textInput' type='number' min=1 max= 5 onchange="rating=this.value" placeholder="0/5"/>
