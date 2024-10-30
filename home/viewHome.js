@@ -19,28 +19,11 @@ function viewHome() {
                 <h2>Deltakere</h2>
                 <p>${activity.members}</p>
                 <h4>Bli med ?</h4>
-                <button onclick="" class="yes-noBtn">Ja</button><button onclick="" class="yes-noBtn">Nei</button>
+                <button value="ja" onclick="joinAnswer(this.value)" class="yes-noBtn">Ja</button>
+                <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
             </div>
         </div>`
     ).join('');
-
     document.getElementById('main').innerHTML = htmlHome + activitiesHTML;
-    getParticipantsOfEvent();
+
 }
-
-
-function getParticipantsOfEvent(){
-    let participants = [];
-    let events = model.data.events
-    for (e of events){
-        document.getElementById('main').innerHTML += `${e.members}`;
-    }
-}
-
-{/* <div>
-            
-<p><span>Vanskelig: </span>${activity.difficulty}</p>
-
-<p><span>Omtaler: </span>Ikke på plass enda..</p>
-
-</div> */}
