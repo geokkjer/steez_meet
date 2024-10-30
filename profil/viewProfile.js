@@ -88,10 +88,10 @@ function pickFriend() {
         alert("Du har ikke valgt noe navn");
     }
     else if (friendsListArray.includes(yourSelectedName)) {
-        alert("Du har allerede lagt til denne vennen");
+        alert("Du har allerede lagt til denne personen");
     }
     else if (!friendsListArray.includes(yourSelectedName)) {
-        friendList.innerHTML += `<ol>${yourSelectedName}</oi>`;
+        friendList.innerHTML += `<li>${yourSelectedName}</li>`;
         friendsListArray.push(yourSelectedName);
     }
 }

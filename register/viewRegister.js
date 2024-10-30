@@ -24,7 +24,7 @@ function viewRegister(){
                 <input class="register-InputFieldText" placeholder="Gjenta passord" type="password" onchange="model.input.registerUser.confirmPassword = this.value"/>
             </div>
             <div class="register-ButtonRegister">
-                <u>Allerede bruker?</u>
+                <u onclick="viewLogin()">Allerede bruker?</u>
                 <button class="register-ButtonRegisterPage" onclick="checkUserData()">Registrer</button>
             </div>
         </div>
