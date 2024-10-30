@@ -75,10 +75,6 @@ input {
   margin: 2px;
 }
 
-/* input[type="checkbox"]{
-  
-} */
-
 .progress {
   background-color: gray;
   border-radius: 20px;
@@ -213,4 +209,108 @@ input {
 
 
 
+}
+
+
+/* LOGIN*/
+
+.login-OutsideContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-Container{
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr;
+  grid-template-rows: 8fr 1fr 4fr;
+  grid-template-areas:
+  "info input empty"
+  "buttonRegisterField buttonOtherField empty"
+  "empry buttonLoginField empty"
+  ;
+
+  grid-column-gap: 10px;
+  margin: 40px;
+  align-content: center;
+  justify-content: center;
+  height: 40vh;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #272343 solid 3px;
+  border-radius: 20px;
+  padding: 70px;
+  width: 85vh;
+  background-color: #e3f6f5;
+}
+
+.login-InfoField{
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+  justify-content: end;
+  justify-items: stretch;
+  align-content: stretch;
+  align-items: end;
+
+  font-size: x-large;
+  grid-gap: 12px;
+  padding-bottom: 17px;
+  padding-right: 5px;
+}
+
+.login-InputField{
+  grid-area: input;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.login-buttonToRegister{
+  grid-area: buttonRegisterField;
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  grid-gap: 5px;
+  margin-top: 5px;
+}
+
+.login-buttonOther{
+  grid-area: buttonOtherField;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+
+  margin-top: 5px;
+  grid-gap: 10px;
+}
+
+.login-buttonLogin{
+  grid-area: buttonLoginField;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: end;
+  grid-gap: 75px;
+}
+
+/*Dette er kun stil på denne knappen foreløpig. Endres når universal stil for knapper er satt*/
+.login-buttonToLogin{
+  background-color: #f6fdfd;
+  border: #272343 solid 2px;
+}
+
+/*Dette er kun stil på diss inputfeltene foreløpig. Endres når universal stil for knapper er satt*/
+.login-InputFieldText{
+  border-radius: 6px;
+  line-height: 1.5;
+  border: 2px solid #272343;
+  background-color: #f6fdfd;
+  padding: 10px;
+  margin: 2px;
+}
+
+::placeholder{
+  color: #272343;
+  opacity: 0.8;
 }
