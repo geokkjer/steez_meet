@@ -44,6 +44,7 @@ function viewProfile() {
     <button onclick="pickFriend()">Legg til venn</button>
     
     <h2>Venner du har lagt til:</h2>
+    <button onclick="sortFriends()">Sortèr navn alfabetisk</button>
     <ul id="friendList"></ul>
     `
     ;
@@ -91,7 +92,19 @@ function pickFriend() {
         alert("Du har allerede lagt til denne vennen");
     }
     else if (!friendsListArray.includes(yourSelectedName)) {
-        friendList.innerHTML += `<ol>${yourSelectedName}</oi>`;
+        friendList.innerHTML += `<li>${yourSelectedName}</li>`;
         friendsListArray.push(yourSelectedName);
     }
+}
+function sortFriends() {
+        friendsListArray.sort(); // .sort() sorterer alfabestisk by default
+        renderFriendsList();     
+}
+function renderFriendsList() {
+    let friendList = document.getElementById('friendList');
+        friendList.innerHTML = ""; 
+        
+        friendsListArray.forEach(friend => {
+        friendList.innerHTML += `<li>${friend}</li>`;
+    });
 }

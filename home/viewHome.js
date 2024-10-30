@@ -1,5 +1,6 @@
 function viewHome() {
     let activities = model.data.events;
+    let members = model.data.events[0].members
     let htmlHome = /*HTML*/`
         <h1>Hei, ${'hello' || 'guest'}</h1>
         <h2>Kommende turer: </h2>
@@ -24,11 +25,17 @@ function viewHome() {
     ).join('');
 
     document.getElementById('main').innerHTML = htmlHome + activitiesHTML;
-
+    getParticipantsOfEvent();
 }
 
 
-
+function getParticipantsOfEvent(){
+    let participants = [];
+    let events = model.data.events
+    for (e of events){
+        document.getElementById('main').innerHTML += `${e.members}`;
+    }
+}
 
 {/* <div>
             
