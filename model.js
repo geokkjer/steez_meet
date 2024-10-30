@@ -3,7 +3,7 @@ const model = {
         pages: ["home", "profile", "slopeInfo", "addSlope", "register", "login", "newEvent"],
         currentPage: "home",
         html: document.getElementById("app"),
-        loggedInId: null,
+        loggedInId: 1,
     },
 
     input: {
