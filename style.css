@@ -65,6 +65,7 @@ button {
   white-space: nowrap;
   user-select: none;
   -webkit-user-select: none;
+  width: auto;
   touch-action: manipulation;
 }
 
@@ -162,10 +163,12 @@ input {
   padding-left: 10%;
   padding-right: 10%;
   
+  
 }
 #grid img{
  border-radius: 5%;
  width: auto;
+
  
 }
 /* #grid {
@@ -177,7 +180,10 @@ input {
   padding: 2px 0;
   font-size: 23px;
   margin-top: 20;
-  border-radius: 1%;
+  border-radius: 2rem;
+  border: solid, black, 3px;
+  
+  
 }
 
 .column1 {
@@ -185,7 +191,7 @@ input {
   width: 80%;
   padding: 15px;
   height: 300px;
-  border: solid, black, 2px;
+ 
 
 
 
@@ -196,7 +202,7 @@ input {
   width: 80%;
   padding: 15px;
   height: 300px;
-  border: solid, black, 2px;
+  
 
 
 
@@ -207,10 +213,48 @@ input {
   width: 80%;
   padding: 15px;
   height: 300px;
-  border: solid, black, 2px;
+  
 
 
 
+}
+.yes-noBtn{
+  background-color: #e3f6f5;
+  width:50px;
+  transition: ease-out 0.3s;
+  outline:none;
+  border: hsla(0, 0%, 0%, 0.801), 3px, solid;
+  z-index: 1;
+  position: relative;
+  
+
+
+}
+.yes-noBtn:hover{
+  border: #93d8d5, 3px, solid;
+  
+
+
+}
+.yes-noBtn:before{
+ transition: 0.5s all ease;
+ position: absolute;
+ top:0;
+ left: 50%;
+ right: 50%;
+ bottom: 0%;
+ opacity: 0%;
+ content: "";
+ background-color: #bafff0;
+ border-radius: 4px;
+}
+
+.yes-noBtn:hover:before{
+transition: 0.5s all ease;
+left:0; 
+right: 0;
+opacity: 1;
+z-index: -1;
 }
 
 
