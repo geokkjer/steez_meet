@@ -100,7 +100,7 @@ const model = {
         },
         ],
         slopes: [{
-            id: 22,
+            id: 1,
             name: "Blefjell",
             location: "Telemark",
             description: "Not for the Danes",
@@ -114,7 +114,7 @@ const model = {
                 {id: 2, userId: 2, comment: "Meh!! :p"}],
         },
         {
-            id: 23,
+            id: 2,
             name: "Hovden",
             location: "Agder",
             description: "Maybe for the Danes",

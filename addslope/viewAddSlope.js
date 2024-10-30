@@ -30,7 +30,7 @@ function submitSlope(){
     let a = model.input.addSlope;
 let newSlope = {
     name: a.name,
-    id: model.data.slopes.id+ 1,
+    id: model.data.slopes.length+ 1,
     location: a.location,
     description: a.description,
     difficulty: a.difficulty,
@@ -45,5 +45,5 @@ a.description = ``;
 a.difficulty = ``;
 a.comment = ``;
 a.photo = null;
-
+viewSlopeInfo();
 }

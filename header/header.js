@@ -1,5 +1,4 @@
 function header() {
-   
     const slopeOptions = model.data.slopes.map(slope => 
         `<option value="${slope.id}">${slope.name}</option>`
     ).join('');
