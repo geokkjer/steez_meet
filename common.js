@@ -1,16 +1,6 @@
 
 
 
-function getParticipantName(e){ 
-    let nameOfParticipants = model.data.users.find(x => x.id == e).firstName; 
-    return nameOfParticipants;
-}
-
-function getParticipantsOfEvent() {
-    let eventsID = model.data.events.find(x => x.id).members
-    let participants = []
-    participants.push(eventsID.forEach((e) => getParticipantName(e)));
-}
 
 function JoinAnswer(answer){
     if(answer == "ja"){
