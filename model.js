@@ -60,6 +60,7 @@ const model = {
         users: [{
             id: 1,
             isAdmin: true,
+            image:null,
             userName: "kjasalt",
             firstName: "Kjartan",
             lastName: "Salto",
@@ -81,6 +82,7 @@ const model = {
         {
             id: 2,
             isAdmin: false,
+            image:null,
             userName: "barrein",
             firstName: "Bart",
             lastName: "Reindal",
@@ -103,6 +105,7 @@ const model = {
         {
             id: 3,
             isAdmin: false,
+            image:null,
             userName: "torsno",
             firstName: "Tor",
             lastName: "Snøplanke",
@@ -125,6 +128,7 @@ const model = {
         {
             id: 4,
             isAdmin: false,
+            image:null,
             userName: "hopsprett",
             firstName: "Hoppalong",
             lastName: "Sprettnes",

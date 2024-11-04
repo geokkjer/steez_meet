@@ -17,8 +17,20 @@ function checkUserData(){
         alert('Du har ikke skrevet inn en gyldig epost adresse')
     }
 }
+function handleFileUploadRegister(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            model.input.registerUser.image = e.target.result;  
+        };
+        reader.readAsDataURL(file);
+        
+    }}
+
 
 function sendUserData(){
+    
     let newUser = {
         username: registerUser.userName,
         userId: model.data.users.length + 1,
@@ -26,7 +38,7 @@ function sendUserData(){
         lastName: registerUser.lastName,
         email: registerUser.email,
         password: registerUser.password,
-        image: null,
+        image:  model.input.registerUser.image || null,
         personalBio: '',
         address: registerUser.address,
         phoneNumber: registerUser.phoneNumber,
@@ -42,6 +54,7 @@ function sendUserData(){
     registerUser.email = '';
     registerUser.password = '';
     registerUser.confirmPassword = '';
+    registerUser.image = null,
 
     updateView();
 }

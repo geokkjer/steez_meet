@@ -22,6 +22,7 @@ function viewRegister(){
                 <input class="register-InputFieldText" placeholder="Eks. karinordmann@email.com" type="email" onchange="model.input.registerUser.email = this.value"/>
                 <input class="register-InputFieldText" placeholder="Eks. passord123" type="password" onchange="model.input.registerUser.password = this.value"/>
                 <input class="register-InputFieldText" placeholder="Gjenta passord" type="password" onchange="model.input.registerUser.confirmPassword = this.value"/>
+               <input type="file" accept="image/*" onchange="handleFileUploadRegister(event)">
             </div>
             <div class="register-ButtonRegister">
                 <u onclick="viewLogin()">Allerede bruker?</u>
