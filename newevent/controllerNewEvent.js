@@ -4,7 +4,7 @@ function addEvent() {
     id: addNewId(),
     name: newEvent.name,
     date: newEvent.date,
-    slope: newEvent.slope,
+    slope: model.data.slopes,
     comment: [
       {
         id: addNewId(),
@@ -21,8 +21,8 @@ function addEvent() {
   newEvent.comment = "";
   console.log(model.data.events)
   viewNewEvent();
+  showEvent() 
 }
-
 function addNewId(){
   let newId = Math.floor(Math.random()*9999)
   for(let i = 0; i < model.data.events.length; i++){

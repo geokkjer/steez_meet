@@ -4,6 +4,7 @@ function viewNewEvent() {
   let html = /*html*/ `
     <h2>Nytt arrangement: </h2>
     <div>${showAddEvent()}</div>
+    <h2>sist lagt inn:</h2>
     <div>${showEvent()}</div>
 
 
@@ -13,15 +14,15 @@ function viewNewEvent() {
 }
 
 function showEvent() {
+  let events = model.data.events;
   let html = "";
-  for (let i = 0; i < model.data.events.length; i++) {
     html += /*html*/ `
-    <p>Navn: ${model.data.events[i].name}</p>
-    <p>Dato: ${model.data.events[i].date}</p>
-    <p>Bakke: ${model.data.events[i].slope}</p>
-    <p>Kommentar: ${PrintComment(model.data.events[i].comment)}</p>
+    <p>Navn: ${events[events.length-1].name}</p>
+    <p>Dato: ${events[events.length-1].date}</p>
+    <p>Bakke: ${events[events.length-1].slope}</p>
+    <p>Kommentar: ${PrintComment(events[events.length-1].comment)}</p>
     `;
-}   
+ 
    
 
 
@@ -29,6 +30,9 @@ return html;
 }
 
 function showAddEvent() {
+  const slopeOptions = model.data.slopes.map(slope =>
+    `<option onclick="viewSlopeInfo(this.value)" value="${slope.id}">${slope.name}</option>`
+).join('');
   let html = "";
   html += /*html*/ `
 <h3>Legg til arrangement</h3>
@@ -43,8 +47,11 @@ function showAddEvent() {
 
 </div>
 <div>
-    <label>bakke:</label>
-    <input type="text" onchange="model.input.newEvent.slope = this.value">
+  <label>Bakke:</label>  
+  <select onchange="model.input.newEvent.slope = this.value">
+  <option value=""> Velg Bakke</option>
+  ${slopeOptions}
+</select>
 
 </div>
 <div>
