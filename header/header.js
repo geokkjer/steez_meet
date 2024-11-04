@@ -1,12 +1,12 @@
 function header() {
     const slopeOptions = model.data.slopes.map(slope =>
-        `<option value="${slope.id}">${slope.name}</option>`
+        `<div onclick="viewSlopeInfo(this.value)" value="${slope.id}">${slope.name}</div>`
     ).join('');
 
     let htmlHeader = /*HTML*/`
         <style>
         .dropdown {
-            float: left;
+            float: center;
             overflow: hidden;
         }
           
@@ -22,14 +22,14 @@ function header() {
         }
         .dropdown-content {
             display: none;
-            position: absolute;
+            position: auto;
             background-color: black;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
         }
 
-        .dropdown-content a {
+        .dropdown-content li {
             float: none;
             color: black;
             padding: 12px 16px;
@@ -38,7 +38,7 @@ function header() {
             text-align: left;
         }
 
-        .dropdown-content a:hover {
+        .dropdown-content li:hover {
             background-color: #ddd;
         }
 
@@ -55,7 +55,7 @@ function header() {
                 <li onmousedown="viewNewEvent()"> | Legg til Event</li>
                 <li>
                 <div class="dropdown">
-                    <button class="dropbtn" onchange="viewSlopeInfo(this.value)"> | ⛰ Velg Bakk </button>
+                    <button class="dropbtn"> | ⛰ Velg Bakke </button>
                     <div class="dropdown-content">
                     ${slopeOptions}
                     </div>
