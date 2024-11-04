@@ -17,16 +17,24 @@ function showEvent() {
   let events = model.data.events;
   let html = "";
     html += /*html*/ `
+    <div class="newEventInput-container">
     <p>Navn: ${events[events.length-1].name}</p>
     <p>Dato: ${events[events.length-1].date}</p>
-    <p>Bakke: ${events[events.length-1].slope}</p>
+    <p>Bakke: ${findSlopes(events[events.length-1].slope)}</p>
     <p>Kommentar: ${PrintComment(events[events.length-1].comment)}</p>
+    </div>
     `;
  
    
 
+    
+
 
 return html;
+}
+function findSlopes(slopeId){
+  const slope = model.data.slopes.find(slope => slope.id == slopeId);
+  return slope ? slope.name : `Slope with ID ${slopeId} not found`;
 }
 
 function showAddEvent() {
@@ -36,30 +44,32 @@ function showAddEvent() {
   let html = "";
   html += /*html*/ `
 <h3>Legg til arrangement</h3>
+<div class="newEvent-container">
 <div>
-    <label>Navn:</label>
-    <input type="text" onchange="model.input.newEvent.name = this.value">
+<label>Navn:</label>
+<input type="text" onchange="model.input.newEvent.name = this.value">
 
 </div>
 <div>
-    <label>Dato:</label>
-    <input type="date" onchange="model.input.newEvent.date = this.value">
+<label>Dato:</label>
+<input type="date" onchange="model.input.newEvent.date = this.value">
 
 </div>
 <div>
-  <label>Bakke:</label>  
-  <select onchange="model.input.newEvent.slope = this.value">
-  <option value=""> Velg Bakke</option>
-  ${slopeOptions}
+<label>Bakke:</label>  
+<select onchange="model.input.newEvent.slope = this.value">
+<option value=""> Velg Bakke</option>
+${slopeOptions}
 </select>
 
 </div>
 <div>
-    <label>Kommentar:</label>
-    <input type="text" onchange= "model.input.newEvent.comment = this.value">
+<label>Kommentar:</label>
+<input type="text" onchange= "model.input.newEvent.comment = this.value">
 
 </div>
 <button onclick="addEvent()">Legg til</button>
+</div>
 
 
 `;

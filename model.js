@@ -183,7 +183,7 @@ const model = {
         events: [{
             id: 7,
             name: "Slippery Slope",
-            slope: 22,
+            slope: 1,
             date: "01/11/2024",
             comment: [{
                 id: 5,
@@ -196,7 +196,7 @@ const model = {
         {
             id: 7,
             name: "Slippery New Years",
-            slope: 22,
+            slope: 2,
             date: "31/12/2024",
             comment: [{
                 id: 6,
