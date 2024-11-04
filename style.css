@@ -213,14 +213,16 @@ input {
   width: 80%;
   padding: 15px;
   height: 300px;
-  
+
+}
+.yes-noBtn{
+  width: 50px;
 
 
 
 }
-.yes-noBtn{
+button {
   background-color: #e3f6f5;
-  width:50px;
   transition: ease-out 0.3s;
   outline:none;
   border: hsla(0, 0%, 0%, 0.801), 3px, solid;
@@ -230,13 +232,13 @@ input {
 
 
 }
-.yes-noBtn:hover{
+button:hover{
   border: #93d8d5, 3px, solid;
   
 
 
 }
-.yes-noBtn:before{
+button:before{
  transition: 0.5s all ease;
  position: absolute;
  top:0;
@@ -249,7 +251,7 @@ input {
  border-radius: 4px;
 }
 
-.yes-noBtn:hover:before{
+button:hover:before{
 transition: 0.5s all ease;
 left:0; 
 right: 0;
