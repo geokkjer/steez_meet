@@ -1,6 +1,8 @@
 
 function getParticipantName(e){ 
     let nameOfParticipants = model.data.users.find(x => x.id == e).firstName; 
+    console.log(nameOfParticipants)
+    
     return nameOfParticipants;
 }
 
@@ -8,10 +10,10 @@ function getParticipantsOfEvent() {
     let eventsID = model.data.events.find(x => x.id).members
     let participants = []
     participants.push(eventsID.forEach((e) => getParticipantName(e))); /* bruke id til å hente navn*/
-    console.log(participants)
-}
 
-function JoinAnswer(answer){
+}  
+
+function joinAnswer(answer){
     if(answer == "ja"){
         model.data.events[0].members.push(model.data.users[0].id) /* Finn bruker navn + sjekk om brukeren er logget inn */
     } else if(answer == "nei"){

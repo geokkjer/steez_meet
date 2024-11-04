@@ -16,7 +16,7 @@ function viewHome() {
             </div>
             <div class="column3">
                 <h2>Deltakere</h2>
-                <p>${activity.members}</p>
+                <p>${getParticipantsOfEvent()}</p>
                 <h4>Bli med ?</h4>
                 <button value="ja" onclick="joinAnswer(this.value)" class="yes-noBtn">Ja</button>
                 <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
