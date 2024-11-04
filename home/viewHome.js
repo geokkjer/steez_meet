@@ -1,6 +1,5 @@
 function viewHome() {
-    let activities = model.data.events;
-    let members = model.data.events[0].members
+    let activities = model.data.events; 
     let htmlHome = /*HTML*/`
         <h1>Hei, ${'hello' || 'guest'}</h1>
         <h2>Kommende turer: </h2>
