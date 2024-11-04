@@ -2,7 +2,7 @@ function updateView() {
     header();
     let page = model.app.currentPage;
     if (page == "home") {
-        viewHome();
+        drawHome();
     } else if (page == "login") {
         viewLogin();
     } else if (page == "slopes") {

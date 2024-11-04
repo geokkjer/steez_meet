@@ -49,7 +49,7 @@ function header() {
         <nav class="headerbar" id="header">
             <ul>
                 <li><img class="logo" src="img/logo.png"/></li>
-                <li onmousedown="viewHome()"> Hjem </li>
+                <li onmousedown="drawHome()"> Hjem </li>
                 <li onclick="viewProfile()"> | Din Profil </li>
                 <li id="login" onmousedown="viewLogin()">⎆ Login</li>
                 <li onmousedown="viewNewEvent()"> | Legg til Event</li>
