@@ -6,16 +6,15 @@ let slopeHTML = /*HTML*/`
 <h1>Bakke Informasjon:</h1>
 <h1>BLEFJELL</h1>
 <img src="/img/slopeBlefjell.png" width="250px">
+<h1>Bakkerangering:</h1>
+<div id="showAvgRating"></div>
+<br>
      <h1>Din rangering:<h1>
      <div id="rateMe"></div>
      <input id='textInput' type='number' min=1 max= 5 onchange="rating=this.value" placeholder="0/5"/>
      <button onclick="ratings(rating),ratingData()">Legg til rangering</button>
     <br>
-    <h2>Rangering på denne bakken:</h2>
-     <div id="showAvgRating"></div>
-     
-    <br> 
-    
+
     <h1>Legg til kommentar:</h1>
     <textarea rows="8" cols="35" id="submitInput" placeholder="Skriv din kommentar her..."></textarea><p>
     <button onclick="addComment()">Send inn kommentar:</button>
