@@ -98,6 +98,52 @@ const model = {
             myEvents: [],
             slopesAdded: [],
         },
+
+
+        {
+            id: 3,
+            isAdmin: false,
+            userName: "torsno",
+            firstName: "Tor",
+            lastName: "Snøplanke",
+            email: "torsnoplanke@gmail.com",
+            password: "pazz0rd333",
+            profilePicture: "img/profile.png",
+            address: "Snødalen 12",
+            phoneNumber: 40536011,
+            goals: {
+                title: "Utføre bigjump",
+                description: "Jeg skal ta en bigjump hver dag",
+                amount: 7,
+                progress: [],
+            },
+            eventsAttending: [5],
+            myEvents: [2],
+            slopesAdded: [],
+        },
+
+        {
+            id: 4,
+            isAdmin: false,
+            userName: "hopsprett",
+            firstName: "Hoppalong",
+            lastName: "Sprettnes",
+            email: "hsprettnes@gmail.com",
+            password: "ThePasswordSnow",
+            profilePicture: "img/profile.png",
+            address: "Kaninveien 34",
+            phoneNumber: 49123944,
+            goals: {
+                title: "Utføre vanskelig bakke",
+                description: "Fullføre den vanskeligste bakken i Blefjell",
+                amount: 7,
+                progress: [],
+            },
+            eventsAttending: [11],
+            myEvents: [1],
+            slopesAdded: [],
+        },
+
         ],
         slopes: [{
             id: 1,
