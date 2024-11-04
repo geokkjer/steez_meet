@@ -175,6 +175,8 @@ input {
 /* #grid {
   display: inline;
 } */
+
+/* HOME */
 #grid div {
   width:auto;
   text-align: center;
@@ -194,8 +196,6 @@ input {
   height: 300px;
  
 
-
-
 }
 
 .column2 {
@@ -204,8 +204,6 @@ input {
   padding: 15px;
   height: 300px;
   
-
-
 
 }
 
@@ -260,7 +258,60 @@ opacity: 1;
 z-index: -1;
 }
 
+/* BAKKE */
 
+
+#gridInfo{
+  width: 39%;
+  height: 50%;
+  text-align: center;
+  padding: 2px 0;
+  margin:20px;
+  float: right;
+  font-size: 23px;
+  border-radius: 2rem;  
+  border: solid, black, 3px;
+}
+
+
+.slopePhoto{
+  padding: 2px 0;
+  height: 80%;
+  width: 28%;
+  margin: 20px;
+  float: left; 
+  border: solid, black, 3px;
+}
+
+#GridSlopeInfo{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: 400px;
+  column-gap: 10%;
+  
+  
+}
+#GridSlopeInfo div{
+  position: relative;
+  top: 100%;
+  margin-top: 20px;
+}
+ .mySlope{
+  float: right;
+  width: 80%;
+  padding: 15px;
+  height: 300px;
+  border: solid, black, 3px;
+}   
+.publicInfo{
+  border-radius: 2rem; 
+  float: left;
+  width: 80%;
+  padding: 15px;
+  height: 300px;
+  border: solid, black, 3px;  
+
+}
 /* LOGIN*/
 
 .login-OutsideContainer{
@@ -436,3 +487,4 @@ z-index: -1;
   padding: 14px;
   margin: 2px;
 }
+
