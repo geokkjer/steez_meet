@@ -35,6 +35,7 @@
 /* Gradient */
 body {
   /* overflow: hidden; */
+  height: 300vh;
   margin: 0;
   background: rgb(255, 255, 255);
   background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(186, 255, 240, 1) 33%, rgba(103, 210, 244, 1) 100%);
