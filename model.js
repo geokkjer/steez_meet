@@ -3,7 +3,7 @@ const model = {
         pages: ["home", "profile", "slopeInfo", "addSlope", "register", "login", "newEvent"],
         currentPage: "home",
         html: document.getElementById("app"),
-        loggedInId: 1,
+        loggedInId: 0,
     },
 
     input: {
@@ -203,7 +203,7 @@ const model = {
                 userId: 2,
                 comment: "It's gonna be wet",
             }],
-            members: [1, 2],
+            members: [1,3],
             deadLine: "29/12/2024",
         },
         ],
