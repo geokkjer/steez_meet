@@ -73,27 +73,10 @@ button {
 input {
   border-radius: 6px;
   line-height: 1.5;
-  border: 1px solid #272343;
-  background-color: #e3f6f5;
+  border: 2px outset #272343;
+  background-color: #f6fdfd;
   padding: 3px;
   margin: 2px;
-}
-
-.progress {
-  background-color: gray;
-  border-radius: 20px;
-  height: 30px;
-  width: 300px;
-}
-
-.progressDone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aqua;
-  border-radius: 20px;
-  height: 30px;
-  width: 0%;
 }
 
 /* Navbar */
@@ -410,11 +393,6 @@ z-index: -1;
   margin: 2px;
 }
 
-::placeholder{
-  color: #272343;
-  opacity: 0.8;
-}
-
 
 /*REGISTER*/
 
@@ -637,13 +615,15 @@ z-index: -1;
 }
 
 .profile-goalsDescriptionContainer{
+  display: flex;
+  flex-direction: column;
   align-self: center;
   justify-content: center;
   align-items: center;
   border: #272343 2px outset;
   border-radius: 10px;
-  padding: 5px;
-  background-color: #C6F2F2;
+  padding: 7px;
+  background-color: #D2ECEA;
 }
 
 .profile-goalsDoneTitleContainer{
@@ -696,4 +676,25 @@ z-index: -1;
   padding: 20px;
   justify-content: center;
   align-items: center;
+}
+
+
+/*FELLES*/
+textarea{
+  background-color: #f6fdfd;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #272343 2px outset;
+  border-radius: 5px;
+}
+
+select{
+  background-color: #f6fdfd;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #272343 2px outset;
+  border-radius: 5px;
+}
+
+::placeholder{
+  color: #272343;
+  opacity: 0.8;
 }
