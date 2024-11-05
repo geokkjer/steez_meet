@@ -38,7 +38,6 @@ body {
   margin: 0;
   background: rgb(255, 255, 255);
   background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(186, 255, 240, 1) 33%, rgba(103, 210, 244, 1) 100%);
-  background-attachment: fixed;
 }
 
 .login {
@@ -73,12 +72,90 @@ button {
 input {
   border-radius: 6px;
   line-height: 1.5;
-  border: 2px outset #272343;
-  background-color: #f6fdfd;
+  border: 1px solid #272343;
+  background-color: #e3f6f5;
   padding: 3px;
   margin: 2px;
 }
 
+<<<<<<< Updated upstream
+=======
+.progress {
+  background-color: gray;
+  border-radius: 20px;
+  height: 30px;
+  width: 300px;
+}
+
+.progressDone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  border-radius: 20px;
+  height: 30px;
+  width: 0%;
+}
+
+/* Navbar */
+.headerbar {
+  height: 60px;
+  background-color: black;
+  color: white;
+}
+
+.headerbar ul {
+  font-size: x-large;
+  font-family: first-snow-font;
+  list-style-type: none;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.headerbar li {
+  display: inline;
+  float: left;
+  margin-top: 10px;
+  margin-left: 1%;
+}
+
+.headerbar li:hover {
+  color: aquamarine;
+  cursor: pointer;
+}
+
+.headerbar select {
+  margin-left: 1%;
+  height: 50px;
+  font-size: x-large;
+  font-family: first-snow-font;
+  background-color: black;
+  color: white;
+}
+
+.headerbar select:hover {
+  color: aquamarine;
+  cursor: pointer;
+}
+
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  height: 50px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#login {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+>>>>>>> Stashed changes
 
 /* Forside */
 #grid {
@@ -185,14 +262,17 @@ z-index: -1;
 
 /* BAKKE */
 
+#gridSlopeSite{
+ display:grid;
+ grid-template-columns: repeat(2,1fr);
+ grid-template-rows: auto;
 
-#gridInfo{
-  width: 39%;
+}
+ .gridInfo{
+   margin: 20px;
+  width: 80%;
   height: 50%;
   text-align: center;
-  padding: 2px 0;
-  margin:20px;
-  float: right;
   font-size: 23px;
   border-radius: 2rem;  
   border: solid, black, 3px;
@@ -200,40 +280,27 @@ z-index: -1;
 
 
 .slopePhoto{
-  padding: 2px 0;
-  height: 80%;
-  width: 28%;
   margin: 20px;
+  width: 70%;
+  height: 70%;
   float: left; 
   border: solid, black, 3px;
-}
 
-#GridSlopeInfo{
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  grid-template-rows: 400px;
-  column-gap: 10%;
-  
-  
 }
-#GridSlopeInfo div{
+.gridSlopeInfo{
   position: relative;
   top: 100%;
   margin-top: 20px;
+ 
 }
  .mySlope{
-  float: right;
-  width: 80%;
+  float: righ;
   padding: 15px;
-  height: 300px;
   border: solid, black, 3px;
 }   
 .publicInfo{
   border-radius: 2rem; 
-  float: left;
-  width: 80%;
   padding: 15px;
-  height: 300px;
   border: solid, black, 3px;  
 
 }
@@ -335,6 +402,11 @@ z-index: -1;
   margin: 2px;
 }
 
+::placeholder{
+  color: #272343;
+  opacity: 0.8;
+}
+
 
 /*REGISTER*/
 
@@ -408,6 +480,7 @@ z-index: -1;
   margin: 2px;
 }
 
+<<<<<<< Updated upstream
 
 /*PROFILE*/
 
@@ -742,3 +815,5 @@ select{
   margin-top: 5px;
   margin-right: 20px;
 }
+=======
+>>>>>>> Stashed changes
