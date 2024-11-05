@@ -5,9 +5,8 @@ function header() {
 
     let htmlHeader = /*HTML*/`
 
-        <nav class="new-header" id="header">
-        <div class="innerHeader">
-            <ul class="header-navigation">
+        <nav class="headerbar" id="header">
+            <ul>
                 <li><img class="logo" src="img/logo.png"/></li>
                 <li onmousedown="drawHome()"> Hjem </li>
                 <li onclick="viewProfile()"> | Din Profil </li>
@@ -19,10 +18,9 @@ function header() {
                     ${slopeOptions}
                     </div>
                 </div>
-                </li> 
                 <li id="login" onmousedown="viewLogin()">⎆ Login</li>
+                </li> 
             </ul>
-            </div>
         </nav>`;
 
     document.getElementById('header').innerHTML = htmlHeader;
