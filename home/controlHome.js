@@ -2,23 +2,23 @@ let nameOfParticipants = [];
 function getParticipantName(e) {
     nameOfParticipants.push(model.data.users.find(x => x.id == e).firstName);
 }
-function getParticipantsOfEvent(memebers) {
-    if (memebers == null) {
+function getParticipantsOfEvent(members) {
+    if (members == null) {
         return /*HTML*/ `Ingen Deltakere Ennå`
     } else {
         nameOfParticipants = [];
-        memebers.forEach((e) => getParticipantName(e));
+        members.forEach((e) => getParticipantName(e));
         return /*HTML*/ `${nameOfParticipants}`
     }
 }
 
 
 function joinAnswer(answer) {
-    let event = model.data.events.find((x) => x.id = x) /* Finn event id ?? onclick??*/
+
     if (answer == "ja") {
         if (model.app.isLoggedIn) {
             let id = model.app.loggedInId
-            model.data.events[event].members.push(id)
+            model.data.events[0].members.push(id)
         } else {
             viewLogin();
         }

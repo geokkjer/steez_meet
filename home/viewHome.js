@@ -19,7 +19,7 @@ function drawActivities() {
         <div id="grid">
             <div class="column1">
                 <h4>${activity.name}</h4>
-                <img src="${model.data.slopes[0].photo}">
+                <img src="${getSlopePhotoById(activity.id)}">
                 </div>
             <div class="column2">
                 <p><span>Når: </span>${activity.date}</p>
@@ -29,7 +29,7 @@ function drawActivities() {
                 <h2>Deltakere</h2>
                 <p id="part"> ${getParticipantsOfEvent(activity.members)}</p>
                 <h4>Bli med ?</h4>
-                <button value="ja" onclick="joinAnswer(this.value)" class="yes-noBtn">Ja</button>
+                <button value="ja" onclick="joinAnswer(this.value) model.app.currentEventId=activity.id" class="yes-noBtn">Ja</button>
                 <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
             </div>
         </div>`
