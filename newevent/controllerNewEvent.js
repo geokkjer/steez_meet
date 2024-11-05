@@ -4,7 +4,7 @@ function addEvent() {
     id: addNewId(),
     name: newEvent.name,
     date: newEvent.date,
-    slope: model.data.slopes,
+    slope: newEvent.slope,
     comment: [
       {
         id: addNewId(),
