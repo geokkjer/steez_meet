@@ -1,3 +1,7 @@
+function drawProfile(){
+
+}
+
 function viewProfile() {
     profileHtml = /*HTML */ `
 
@@ -33,7 +37,7 @@ function viewProfile() {
             </div>
         </div>
 
-        <div class="profile-goals">
+        <div class="profile-goals" id="profileGoal">
             <div class="profile-goalsTitleContainer">
                 <b>Mål:</b>
                 <button class="profile-addButton" onclick="createGoal()">+</button>
@@ -103,7 +107,7 @@ function createGoal(){
     </div>
     `
     ;
-    document.getElementById('main').innerHTML = profileHtml + goalHtml;
+    document.getElementById('profileGoal').innerHTML = goalHtml;
 }
 
 function createGoalAmount(){
