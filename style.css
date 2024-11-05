@@ -78,84 +78,6 @@ input {
   margin: 2px;
 }
 
-<<<<<<< Updated upstream
-=======
-.progress {
-  background-color: gray;
-  border-radius: 20px;
-  height: 30px;
-  width: 300px;
-}
-
-.progressDone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aqua;
-  border-radius: 20px;
-  height: 30px;
-  width: 0%;
-}
-
-/* Navbar */
-.headerbar {
-  height: 60px;
-  background-color: black;
-  color: white;
-}
-
-.headerbar ul {
-  font-size: x-large;
-  font-family: first-snow-font;
-  list-style-type: none;
-  position: sticky;
-  top: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.headerbar li {
-  display: inline;
-  float: left;
-  margin-top: 10px;
-  margin-left: 1%;
-}
-
-.headerbar li:hover {
-  color: aquamarine;
-  cursor: pointer;
-}
-
-.headerbar select {
-  margin-left: 1%;
-  height: 50px;
-  font-size: x-large;
-  font-family: first-snow-font;
-  background-color: black;
-  color: white;
-}
-
-.headerbar select:hover {
-  color: aquamarine;
-  cursor: pointer;
-}
-
-
-.logo {
-  display: inline-block;
-  vertical-align: top;
-  height: 50px;
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
-#login {
-  float: right;
-  margin-top: 5px;
-  margin-right: 20px;
-}
->>>>>>> Stashed changes
 
 /* Forside */
 #grid {
@@ -480,7 +402,6 @@ z-index: -1;
   margin: 2px;
 }
 
-<<<<<<< Updated upstream
 
 /*PROFILE*/
 
@@ -815,5 +736,3 @@ select{
   margin-top: 5px;
   margin-right: 20px;
 }
-=======
->>>>>>> Stashed changes
