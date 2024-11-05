@@ -1,51 +1,89 @@
 function viewProfile() {
     profileHtml = /*HTML */ `
 
-        <img src= "${model.data.users[0].profilePicture}" width="200px">
-    <div>
-        <div><b>Navn:</b> ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
-        <div><b>Epost:</b> ${model.data.users[0].email}</div>
-        <div><b>Adresse:</b> ${model.data.users[0].address}</div>
-        <div><b>Mobil:</b> ${model.data.users[0].phoneNumber}</div>
-    </div>
-    <br>
+    <div class="profile-outsideContainer">
+        <div class="profile-container">
+            <div class="profile-profilePic">
+                <img class="profile-imageClass" src= "${model.data.users[0].profilePicture}">
+            </div>
 
-    <div><b>Dine arrangementer:</b>
-        <div>${model.data.events[0].name}</div>
-        <b>Påmeldte arrangementer:</b>
-        <div>${model.data.events[0].name}</div>
-    </div>
-    <br>
+            <div class="profile-bio">
+                <div>
+                    <div><b>Navn:</b> ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
+                    <div><b>Epost:</b> ${model.data.users[0].email}</div>
+                    <div><b>Adresse:</b> ${model.data.users[0].address}</div>
+                    <div><b>Mobil:</b> ${model.data.users[0].phoneNumber}</div>
+                </div>
+                    <div class="profile-editUserButton">
+                        <button>Rediger profil</button>
+                    </div>
+            </div>
 
-    <b>Mål:</b>
-        <div>${model.data.users[0].goals.title}</div>
-        <div>${model.data.users[0].goals.description}</div>
-        <br>
-        <b>Ganger utført:<b>
-        <div>${createGoalAmount()}</div>
-        <button onclick="checkboxesChecked()">Lagre utførelser</button>
-        <div>${model.data.users[0].goals.amount}</div>
-        <div class="progress">
-        <div class="progressDone" id="progressDone"></div>
+        <div class="profile-events">
+            <div class="profile-eventsAddButtonContainer">
+                <button>Nytt arrangement</button>
+            </div>
+            <div class="profile-eventsYourEvents">
+                <b>Dine arrangementer:</b>
+                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer">Endre</button></div>
+            </div>
+            <div class="profile-eventsAttending">
+                <b>Påmeldte arrangementer:</b>
+                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer">Avmeld</button></div>
+            </div>
         </div>
-        <button onclick="createGoal()">+</button>
 
-    <br>
-    <h1>Legg til venner her:</h1>
-    <select id="selectFriendName">
-        <option value="">Velg et navn:</option>
-        <option value="Kjartan Salto">Kjartan Salto</option>
-        <option value="Tor Snøplanke">Tor Snøplanke</option>
-        <option value="Hoppalong Sprettnes">Hoppalong Sprettnes</option>
-        <option value="Terje Kolderup">Terje Kolderup</option>
-        <option value="Kong Harald">Kong Harald</option>
-        <option value="Lille Marius">Lille Marius</option>
-    </select>
-    <button onclick="pickFriend()">Legg til venn</button>
-    
-    <h2>Venner du har lagt til:</h2>
-    <button onclick="sortFriends()">Sortèr navn alfabetisk</button>
-    <ul id="friendList"></ul>
+        <div class="profile-goals">
+            <div class="profile-goalsTitleContainer">
+                <b>Mål:</b>
+                <button class="profile-addButton" onclick="createGoal()">+</button>
+            </div>
+
+            <div class="profile-goalsDescriptionContainer">
+                <div>${model.data.users[0].goals.title}</div>
+                <div>${model.data.users[0].goals.description}</div>
+            </div>
+
+            <div class="profile-goalsDoneTitleContainer">
+                <b>Ganger utført:<b>
+            </div>
+
+            <div class="profile-goalsCheckboxContainer">
+                <div>${model.data.users[0].goals.amount}</div>
+                <div>${createGoalAmount()}</div>
+                <button onclick="checkboxesChecked()">✔</button>
+            </div>
+
+            <div class="profile-goalsProgressbarContainer">
+                <div class="progress">
+                    <div class="progressDone" id="progressDone"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-friends">
+            <div class="profile-friendsSelection">
+                <select id="selectFriendName">
+                    <option value="">Velg et navn:</option>
+                    <option value="Kjartan Salto">Kjartan Salto</option>
+                    <option value="Tor Snøplanke">Tor Snøplanke</option>
+                    <option value="Hoppalong Sprettnes">Hoppalong Sprettnes</option>
+                    <option value="Terje Kolderup">Terje Kolderup</option>
+                    <option value="Kong Harald">Kong Harald</option>
+                    <option value="Lille Marius">Lille Marius</option>
+                </select>
+                <button class="profile-addButton" onclick="pickFriend()">+</button>
+            </div>
+            
+            <div>
+                <div class="profile-myFriendsHeader">
+                    <b>Mine venner:</b>
+                    <button onclick="sortFriends()">A - Z</button>
+                </div>
+                <ul id="friendList"></ul>
+            </div>
+        </div>
+    </div>
     `
     ;
     document.getElementById('main').innerHTML = profileHtml;
@@ -54,13 +92,15 @@ function viewProfile() {
 function createGoal(){
     goalHtml= /*HTML */ `
 
-    <div>Ditt mål:</div>
-    <input type="text" placeholder="Skriv inn ditt mål" onchange="goalName=this.value">
-    <div>Beskrivelse:</div>
-    <textarea type="text" placeholder="Beskriv ditt mål" onchange="goalDescription=this.value"></textarea>
-    <div>Antall utførelser:</div>
-    <input type="number" onchange="goalAmount=this.value">
-    <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
+    <div class="profile-createNewGoal">
+        <input type="text" placeholder="Ditt mål" onchange="goalName=this.value">
+        <textarea type="text" placeholder="Beskrivelse..." onchange="goalDescription=this.value"></textarea>
+            <div class="profile-newGoalAmount">
+                <div>Antall utførelser:</div>
+                <input type="number" onchange="goalAmount=this.value">
+                <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
+            </div>
+    </div>
     `
     ;
     document.getElementById('main').innerHTML = profileHtml + goalHtml;
