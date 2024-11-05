@@ -2,18 +2,27 @@ let nameOfParticipants = [];
 function getParticipantName(e) {
     nameOfParticipants.push(model.data.users.find(x => x.id == e).firstName);
 }
-function getParticipantsOfEvent() {
-    nameOfParticipants = [];
-    let eventsID = model.data.events.find(x => x.id).members;
-    let participants = [];
-    participants.push(eventsID.forEach((e) => getParticipantName(e))); /* bruke id til å hente navn*/
-    return /*HTML*/ `${nameOfParticipants}`
+function getParticipantsOfEvent(members) {
+    if (members == null) {
+        return /*HTML*/ `Ingen Deltakere Ennå`
+    } else {
+        nameOfParticipants = [];
+        members.forEach((e) => getParticipantName(e));
+        return /*HTML*/ `${nameOfParticipants}`
+    }
 }
 
 
 function joinAnswer(answer) {
+
     if (answer == "ja") {
-        model.data.events[0].members.push(model.data.users[0].id) /* Finn bruker navn + sjekk om brukeren er logget inn */
+        if (model.app.isLoggedIn) {
+            let id = model.app.loggedInId
+            model.data.events[0].members.push(id)
+        } else {
+            viewLogin();
+        }
+        /* Finn bruker navn + sjekk om brukeren er logget inn */
     } else if (answer == "nei") {
         alert("You are a traitor of the free world")
     }

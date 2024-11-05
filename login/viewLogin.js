@@ -30,11 +30,12 @@ function viewLogin(){
 }
 
 function login(user,pass){
-    console.log(user,pass);
+    console.log(user,pass)
     for (modeluser of model.data.users){
         if (modeluser.userName == user && modeluser.password == pass){
             model.app.currentPage = "home";
-            /*  loginId = model.data.users.find((x) => x.id == user).id Finne ID på brukeren */
+            model.app.loggedInId = modeluser.id 
+            console.log(model.app.loggedInId)
             updateView();
         } else if (modeluser.userName != user || modeluser.password != pass){
             console.log('Feil brukernavn eller passord :-P')

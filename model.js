@@ -3,7 +3,8 @@ const model = {
         pages: ["home", "profile", "slopeInfo", "addSlope", "register", "login", "newEvent"],
         currentPage: "home",
         html: document.getElementById("app"),
-        loggedInId: 1,
+        loggedInId: 0,
+        currentEventId: 0,
     },
 
     input: {
@@ -53,14 +54,14 @@ const model = {
     data: {
 
         slopeTypes: [
-            {id: 1, type: "off-Piste"}, 
-            {id: 2, type: "Park"},
+            { id: 1, type: "off-Piste" },
+            { id: 2, type: "Park" },
         ],
 
         users: [{
             id: 1,
             isAdmin: true,
-            image:null,
+            image: null,
             userName: "kjasalt",
             firstName: "Kjartan",
             lastName: "Salto",
@@ -77,12 +78,12 @@ const model = {
             },
             eventsAttending: [7],
             myEvents: [7],
-            slopesAdded: [22,23],
+            slopesAdded: [22, 23],
         },
         {
             id: 2,
             isAdmin: false,
-            image:null,
+            image: null,
             userName: "barrein",
             firstName: "Bart",
             lastName: "Reindal",
@@ -105,7 +106,7 @@ const model = {
         {
             id: 3,
             isAdmin: false,
-            image:null,
+            image: null,
             userName: "torsno",
             firstName: "Tor",
             lastName: "Snøplanke",
@@ -128,7 +129,7 @@ const model = {
         {
             id: 4,
             isAdmin: false,
-            image:null,
+            image: null,
             userName: "hopsprett",
             firstName: "Hoppalong",
             lastName: "Sprettnes",
@@ -160,8 +161,8 @@ const model = {
             type: [1],
             photo: "img/slope1.png",
             comment: [
-                {id: 1, userId: 1, comment: "Denne var fin!"}, 
-                {id: 2, userId: 2, comment: "Meh!! :p"}],
+                { id: 1, userId: 1, comment: "Denne var fin!" },
+                { id: 2, userId: 2, comment: "Meh!! :p" }],
         },
         {
             id: 2,
@@ -174,8 +175,8 @@ const model = {
             type: [2],
             photo: "img/slope2.png",
             comment: [
-                {id: 3, userId: 1, comment: "Ikke så vanskelig"}, 
-                {id: 4, userId: 2, comment: "Veldig vanskelig"},
+                { id: 3, userId: 1, comment: "Ikke så vanskelig" },
+                { id: 4, userId: 2, comment: "Veldig vanskelig" },
             ],
         },
         ],
@@ -203,7 +204,7 @@ const model = {
                 userId: 2,
                 comment: "It's gonna be wet",
             }],
-            members: [1, 2],
+            members: [1, 3],
             deadLine: "29/12/2024",
         },
         ],
