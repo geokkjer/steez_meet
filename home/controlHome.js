@@ -11,14 +11,6 @@ function getParticipantsOfEvent() {
 }
 
 
-
-function showParticipants(part){
-    let html ='';
-    // document.getElementById('part').innerHTML = /*html*/ `<h1> ${part}</h1>`;
-    return html = /*html*/ `<h1> ${part}</h1>`
-   
-}
-
 function joinAnswer(answer) {
     if (answer == "ja") {
         model.data.events[0].members.push(model.data.users[0].id) /* Finn bruker navn + sjekk om brukeren er logget inn */
