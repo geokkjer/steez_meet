@@ -5,8 +5,9 @@ function header() {
 
     let htmlHeader = /*HTML*/`
 
-        <nav class="headerbar" id="header">
-            <ul>
+        <nav class="new-header" id="header">
+        <div class="innerHeader">
+            <ul class="header-navigation">
                 <li><img class="logo" src="img/logo.png"/></li>
                 <li onmousedown="drawHome()"> Hjem </li>
                 <li onclick="viewProfile()"> | Din Profil </li>
@@ -21,6 +22,7 @@ function header() {
                 </li> 
                 <li id="login" onmousedown="viewLogin()">⎆ Login</li>
             </ul>
+            </div>
         </nav>`;
 
     document.getElementById('header').innerHTML = htmlHeader;

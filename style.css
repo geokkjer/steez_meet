@@ -687,8 +687,8 @@ select{
 /* NAVBAR */
 .headerbar {
   height: 100%;
-  background-color: black;
-  color: white;
+  background-color: #1A1A1A;
+  color: #f6fdfd;
 }
 
 .headerbar ul {
@@ -709,7 +709,7 @@ select{
 }
 
 .headerbar li:hover {
-  color: aquamarine;
+  color: #96D4D4;
   cursor: pointer;
 }
 
@@ -741,4 +741,33 @@ select{
   float: right;
   margin-top: 5px;
   margin-right: 20px;
+}
+
+/*HEADER NEW*/
+
+.new-header{
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-color: red;
+}
+
+.innerHeader{
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.header-navigation{
+  float: right;
+  height: 100%;
+}
+
+.header-navigation li{
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: #8DCACA;
 }
