@@ -173,7 +173,7 @@ const model = {
             avgRating: 4.5,
             difficulty: 2,
             type: [2],
-            photo: "img/slope2.png",
+            photo: "img/slopeBlefjell.png",
             comment: [
                 { id: 3, userId: 1, comment: "Ikke så vanskelig" },
                 { id: 4, userId: 2, comment: "Veldig vanskelig" },
@@ -195,7 +195,7 @@ const model = {
             deadLine: "31/10/2024",
         },
         {
-            id: 7,
+            id: 8,
             name: "Slippery New Years",
             slope: 2,
             date: "31/12/2024",
