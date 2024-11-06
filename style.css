@@ -185,6 +185,11 @@ z-index: -1;
 
 /* BAKKE */
 
+.slopeInfo-mainContainer{
+  height: 90vh;
+  
+}
+
 #gridSlopeSite{
  display:grid;
  grid-template-columns: repeat(2,1fr);
@@ -206,7 +211,6 @@ z-index: -1;
   margin: 20px;
   width: 70%;
   height: 70%;
-  float: left; 
   border: solid, black, 3px;
 
 }
@@ -721,9 +725,9 @@ select{
   margin: 5px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  gap: 3%;
+  gap: 2%;
   /* position: sticky;
   top: 0;
   margin: 0;
@@ -735,7 +739,7 @@ select{
   padding: 0;
 }
 .headerbar ul li:not(:first-child) {
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
 .headerbar ul li:last-child {

@@ -24,18 +24,18 @@ function viewSlopeInfo(slopeId) {
   const slopeComments = slope.comment;
 
   let slopeHTML = /*HTML*/ ` 
-<h1>Bakke Informasjon:</h1>
+
+<div class="slopeInfo-mainContainer">
 <div id="gridSlopeSite">
     <div class="slopePhoto">
     <img src="${slopeImage}" width="250px">
-</div>
+    </div>
 <div>
 <div class="gridInfo">
     <h1>Bakkenavn: ${slopeName}</h1>
     <h2>Vanskelighetsgrad: 3/5</h2>
     <h1>Beskrivelse:${slopeDescription}</h1>
 </div>
-
 <div id="gridSlopeInfo">
  <div class="publicInfo">
     <h1>Bakkerangering:</h1>
