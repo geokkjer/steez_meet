@@ -21,9 +21,7 @@ function drawActivities() {
           <div class="column1">
               <h4>${activities[i].name}</h4>
               <img src="${getSlopePhotoById(activities[i].id)}">
-              <p><span>Kommentar: </span>${getCommentById(
-                activities[i].id
-              )}</p>
+              <p><span>Kommentar: </span>${getCommentById(activities[i].id)}</p>
           </div>
           <div class="column2">
               <p><span>Når: </span>${activities[i].date}</p>
@@ -50,7 +48,7 @@ function getSlopePhotoById(id) {
   let imgLink = "";
   imgLink = model.data.slopes.find((x) => x.id === slopeId).photo;
   console.log(imgLink);
-  return imgLink;
+ 
 }
 
 function getCommentById(id) {
@@ -59,8 +57,8 @@ function getCommentById(id) {
   let slopeComments = model.data.slopes.find((x) => (x.id = slope)).comment;
   for (let i = 0; i < slopeComments.length; i++) {
     html += /*HTML*/ `<p>${slopeComments[i].comment}</p>`;
-     }
-     return html
+  }
+  return html;
 }
 
-function getDescriptionById(){}
+function getDescriptionById() {}
