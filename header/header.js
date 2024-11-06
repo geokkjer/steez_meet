@@ -1,6 +1,6 @@
 function header() {
     const slopeOptions = model.data.slopes.map(slope =>
-        `<div onclick="viewSlopeInfo(this.value)" value="${slope.id}">${slope.name}</div>`
+        `<div onclick="viewSlopeInfo(${slope.id})" value="${slope.id}">${slope.name}</div>`
     ).join('');
 
     let htmlHeader = /*HTML*/`

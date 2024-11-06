@@ -1,3 +1,4 @@
+let avgRatings = model.data.slopes[0].avgRating;
 function addNewRating(){
    model.data.slopes[0].ratings.push({}) 
 }
