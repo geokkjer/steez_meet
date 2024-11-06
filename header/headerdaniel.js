@@ -27,7 +27,3 @@ function header() {
     document.getElementById('header').innerHTML = htmlHeader;
 }
 
-function loginStatus(){
-    let html = document.getElementById('login');
-    
-}

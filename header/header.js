@@ -18,8 +18,8 @@ function header() {
                     ${slopeOptions}
                     </div>
                 </div>
-                <li id="login" onmousedown="viewLogin()"> Login</li>
-                </li> 
+                </li>
+                ${checkLogInStatus()} 
             </ul>
         </header>`;
 
