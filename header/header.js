@@ -5,15 +5,15 @@ function header() {
 
     let htmlHeader = /*HTML*/`
 
-        <nav class="headerbar" id="header">
+        <header class="headerbar" id="header">
             <ul>
                 <li><img class="logo" src="img/logo.png"/></li>
-                <li onmousedown="drawHome()"> Hjem </li>
-                <li onclick="viewProfile()"> | Din Profil </li>
-                <li onmousedown="viewNewEvent()"> | Legg til Event</li>
+                <li onmousedown="drawHome()">Hjem</li>
+                <li onclick="viewProfile()">Din Profil</li>
+                <li onmousedown="viewNewEvent()">Legg til Event</li>
                 <li>
                 <div class="dropdown">
-                    <button class="dropbtn"> | ⛰ Velg Bakke </button>
+                    <button class="dropbtn">Velg Bakke</button>
                     <div class="dropdown-content">
                     ${slopeOptions}
                     </div>
@@ -21,7 +21,7 @@ function header() {
                 <li id="login" onmousedown="viewLogin()">⎆ Login</li>
                 </li> 
             </ul>
-        </nav>`;
+        </header>`;
 
     document.getElementById('header').innerHTML = htmlHeader;
 }
