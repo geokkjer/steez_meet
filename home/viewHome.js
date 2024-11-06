@@ -6,8 +6,9 @@ function drawHome() {
     `;
 }
 function drawGreeting() {
+
   return (htmlHome = /*HTML*/ `
-          <h1>Hei, ${"hello" || "guest"}</h1>
+    ${greetingByName()}
           <h2>Kommende turer: </h2>
           `);
 }
@@ -68,5 +69,27 @@ function getCommentsById(id) {
   for (let i = 0; i < slopeComments.length; i++) {
     html += /*html*/ `${slopeComments[i].comment}`;
   }
+  return html;
+}
+  
+  function getDescriptionById(id){
+    let html = '';
+    let slope = model.data.events.find((x) => (x.id == id)).slope;
+    console.log(`slope found ${slope}`)
+  }
+
+function greetingByName(){
+  if(model.app.isLoggedIn){
+   let id = model.app.loggedInId 
+   let name = model.data.users.find(x => x.id == id).firstName
+   return /*html*/`<h1>Hei, ${name}</h1>`
+  }else{
+    return /*html*/`<h1>Hei, gjest. Vennligst logg inn er du snill</h1>`
+  }
+  
+
+}
+
+
   return html;
 }

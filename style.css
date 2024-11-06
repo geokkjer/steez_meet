@@ -185,6 +185,11 @@ z-index: -1;
 
 /* BAKKE */
 
+.slopeInfo-mainContainer{
+  height: 90vh;
+  
+}
+
 #gridSlopeSite{
  display:grid;
  grid-template-columns: repeat(2,1fr);
@@ -192,7 +197,7 @@ z-index: -1;
 
 }
  .gridInfo{
-   margin: 20px;
+  margin: 20px;
   width: 80%;
   height: 50%;
   text-align: center;
@@ -206,22 +211,21 @@ z-index: -1;
   margin: 20px;
   width: 70%;
   height: 70%;
-  float: left; 
   border: solid, black, 3px;
 
 }
-.gridSlopeInfo{
-  position: relative;
-  top: 100%;
-  margin-top: 20px;
+#gridSlopeInfo{
+ display: flex;
+ gap: 20%
  
 }
  .mySlope{
-  float: righ;
   padding: 15px;
   border: solid, black, 3px;
+
 }   
 .publicInfo{
+  
   border-radius: 2rem; 
   padding: 15px;
   border: solid, black, 3px;  
