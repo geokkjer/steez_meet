@@ -5,15 +5,19 @@ function viewSlopeInfo(slopeId) {
     return; 
   }
 
-  console.log( slopeId);
-  console.log( model.data.slopes);
+  console.log("Sjekker slopeId:", slopeId);
+  console.log("Sjekker model.data.slopes:", model.data.slopes);
 
+  
   const slope = model.data.slopes.find(s => s.id === slopeId);
+
+  
   if (!slope) {
     console.error(`Fant ikke bakke med ID ${slopeId}`);
     return; 
   }
-  console.log(slope);
+
+  console.log("Slope funnet:", slope);
 
   
   const slopeName = slope.name;
@@ -21,7 +25,7 @@ function viewSlopeInfo(slopeId) {
   const slopeDescription = slope.description;
   const slopeAvgRating = slope.avgRating;
   const slopeRatings = slope.ratings;
-  const slopeComments = slope.comment.comment;
+  const slopeComments = slope.comment;
 
 let slopeHTML = /*HTML*/` 
 <h1>Bakke Informasjon:</h1>
@@ -33,7 +37,7 @@ let slopeHTML = /*HTML*/`
 <div class="gridInfo">
 <h1>Bakkenavn: ${slopeName}</h1>
 <h1>Vanskelighetsgrad: 3/5</h1>
-<h1>Beskrivelse:${slopeDescription}</h1>
+<h1>Type bakke:${slopeDescription}</h1>
 </div>
 <div id="ridSlopeInfo">
 <div class="publicInfo">
@@ -57,7 +61,12 @@ let slopeHTML = /*HTML*/`
 
 </div>
 </div>
+
+
 </div>
+
+
+
    `;
     header()
     footer()
