@@ -5,6 +5,7 @@ const model = {
         html: document.getElementById("app"),
         loggedInId: 0,
         currentEventId: 0,
+        isLoggedIn: false,
     },
 
     input: {

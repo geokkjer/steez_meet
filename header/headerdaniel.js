@@ -18,10 +18,12 @@ function header() {
                     ${slopeOptions}
                     </div>
                 </div>
-                </li>
-                ${checkLogInStatus()} 
+                ${checkLogInStatus()}                
+                
+                </li> 
             </ul>
         </header>`;
 
     document.getElementById('header').innerHTML = htmlHeader;
 }
+
