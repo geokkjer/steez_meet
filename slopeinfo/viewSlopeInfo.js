@@ -1,25 +1,21 @@
-
 function viewSlopeInfo(slopeId) {
   if (!slopeId) {
     console.error("slopeId er undefined!");
-    return; 
+    return;
   }
 
   console.log("Sjekker slopeId:", slopeId);
   console.log("Sjekker model.data.slopes:", model.data.slopes);
 
-  
-  const slope = model.data.slopes.find(s => s.id === slopeId);
+  const slope = model.data.slopes.find((s) => s.id === slopeId);
 
-  
   if (!slope) {
     console.error(`Fant ikke bakke med ID ${slopeId}`);
-    return; 
+    return;
   }
 
   console.log("Slope funnet:", slope);
 
-  
   const slopeName = slope.name;
   const slopeImage = slope.photo;
   const slopeDescription = slope.description;
@@ -27,7 +23,7 @@ function viewSlopeInfo(slopeId) {
   const slopeRatings = slope.ratings;
   const slopeComments = slope.comment;
 
-let slopeHTML = /*HTML*/` 
+  let slopeHTML = /*HTML*/ ` 
 <h1>Bakke Informasjon:</h1>
 <div id="gridSlopeSite">
 <div class="slopePhoto">
@@ -44,9 +40,7 @@ let slopeHTML = /*HTML*/`
 <h1>Bakkerangering:</h1>
 <div id="showAvgRating">${slopeAvgRating}</div>
 <h2>Kommentarer til bakken:</h2>
-<ul id="commentList">
-${slopeComments.map(comment => `<li> ${comment.comment}</li>`).join('')}
-</ul>
+<ul id="commentList">${slopeComments}</ul>
 <div class="mySlope">
  <h1>Din rangering:<h1>
      <div id="rateMe">${slopeRatings}</div>
@@ -70,10 +64,7 @@ ${slopeComments.map(comment => `<li> ${comment.comment}</li>`).join('')}
 
 
    `;
-    header()
-    footer()
-    document.getElementById("main").innerHTML = slopeHTML;
+  header();
+  footer();
+  document.getElementById("main").innerHTML = slopeHTML;
 }
-
-
-
