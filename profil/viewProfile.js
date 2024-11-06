@@ -81,9 +81,9 @@ function viewProfile() {
             
             <div>
                 <div class="profile-myFriendsHeader">
-                    <b>Mine venner:</b>
                     <button onclick="sortFriends()">A - Z</button>
                 </div>
+                    <b>Mine venner:</b>
                 <ul id="friendList"></ul>
             </div>
         </div>
