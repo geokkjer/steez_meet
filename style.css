@@ -187,6 +187,7 @@ z-index: -1;
 
 .slopeInfo-mainContainer{
   height: 90vh;
+  
 }
 
 #gridSlopeSite{
@@ -210,7 +211,6 @@ z-index: -1;
   margin: 20px;
   width: 70%;
   height: 70%;
-  float: left; 
   border: solid, black, 3px;
 
 }
