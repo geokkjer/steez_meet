@@ -1,0 +1,13 @@
+.blink {
+    animation: blinker 0.2s linear infinite;
+    color: red;
+    font-size: 2.5em;
+    /* Larger, responsive font size */
+    margin-bottom: 20px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

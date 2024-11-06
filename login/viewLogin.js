@@ -2,7 +2,7 @@ function viewLogin(){
     let username = model.input.logIn.userName;
     let password = '';
     loginHtml = /*HTML*/ `
-    <div class="login-OutsideContainer">
+    <div  class="login-OutsideContainer">
         <div class="login-Container">
             <div class="login-InfoField">
                 <div>Brukernavn:</div>
@@ -23,7 +23,8 @@ function viewLogin(){
             <div class="login-buttonLogin">
                 <button class="login-buttonToLogin" onclick="login(username,password)">Logg inn</button>
             </div>
-        </div>
+            <div id="wrongInput"></div>
+            </div>
     </div>
     `;
     document.getElementById('main').innerHTML =  loginHtml;
@@ -31,6 +32,7 @@ function viewLogin(){
 
 function login(user,pass){
     console.log(user,pass)
+    
     for (modeluser of model.data.users){
         if (modeluser.userName == user && modeluser.password == pass){
             model.app.currentPage = "home";
@@ -38,8 +40,22 @@ function login(user,pass){
             console.log(model.app.loggedInId)
             updateView();
         } else if (modeluser.userName != user || modeluser.password != pass){
+          
+            drawWrongInput()
+            
             console.log('Feil brukernavn eller passord :-P')
         }
     }
+    
+    
 }
 
+function drawWrongInput(){
+let html = document.getElementById('wrongInput');
+  html.innerHTML = /*html*/`
+ <p class="blink">Feil brukernavn eller passord</p>
+ 
+ 
+ `;
+
+}
