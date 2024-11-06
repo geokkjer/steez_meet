@@ -37,7 +37,7 @@ function login(user,pass){
         if (modeluser.userName == user && modeluser.password == pass){
             model.app.currentPage = "home";
             model.app.loggedInId = modeluser.id 
-            console.log(model.app.loggedInId)
+            model.app.isLoggedIn = true
             updateView();
         } else if (modeluser.userName != user || modeluser.password != pass){
           
