@@ -6,11 +6,10 @@ function drawHome() {
     `;
 }
 function drawGreeting() {
-
   return (htmlHome = /*HTML*/ `
-    ${greetingByName()}
-          <h2>Kommende turer: </h2>
-          `);
+        ${greetingByName()}
+        <h2>Kommende turer: </h2>
+      `);
 }
 function drawActivities() {
   let html = "";
@@ -19,7 +18,7 @@ function drawActivities() {
     console.log(activities[i].id);
     html += /*html*/ `
             <div class="column1">
-                <h4>${activities[i].name}</h4>
+                <h4>${activities[i].name} eventid: ${activities[i].id}</h4>
                 <img src="${getSlopePhotoById(activities[i].id)}">
                 <p><span>Kommentar: </span>${getCommentById(
                   activities[i].id
@@ -37,7 +36,7 @@ function drawActivities() {
                       activities[i].members
                     )}</p>
                 <h4>Bli med ?</h4>
-                   <button value="ja" onclick="joinAnswer(this.value)" class="yes-noBtn">Ja</button>
+                   <button value="ja" onclick="joinAnswer(this.value), model.app.currentEventId = ${activities[i].id}" class="yes-noBtn">Ja</button>
                    <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
             </div> `;
   }
@@ -71,22 +70,19 @@ function getCommentsById(id) {
   }
   return html;
 }
-  
-  function getDescriptionById(id){
-    let html = '';
-    let slope = model.data.events.find((x) => (x.id == id)).slope;
-    console.log(`slope found ${slope}`)
-  }
 
-function greetingByName(){
-  if(model.app.isLoggedIn){
-   let id = model.app.loggedInId 
-   let name = model.data.users.find(x => x.id == id).firstName
-   return /*html*/`<h1>Hei, ${name}</h1>`
-  }else{
-    return /*html*/`<h1>Hei, gjest. Vennligst logg inn er du snill</h1>`
-  }
-  
-
+function getDescriptionById(id) {
+  let html = "";
+  let slope = model.data.events.find((x) => x.id == id).slope;
+  console.log(`slope found ${slope}`);
 }
 
+function greetingByName() {
+  if (model.app.isLoggedIn) {
+    let id = model.app.loggedInId;
+    let name = model.data.users.find((x) => x.id == id).firstName;
+    return /*html*/ `<h1>Hei, ${name}</h1>`;
+  } else {
+    return /*html*/ `<h1>Hei, gjest. Vennligst logg inn er du snill</h1>`;
+  }
+}
