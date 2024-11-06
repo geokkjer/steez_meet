@@ -44,7 +44,9 @@ let slopeHTML = /*HTML*/`
 <h1>Bakkerangering:</h1>
 <div id="showAvgRating">${slopeAvgRating}</div>
 <h2>Kommentarer til bakken:</h2>
-<ul id="commentList">${slopeComments}</ul>
+<ul id="commentList">
+${slopeComments.map(comment => `<li> ${comment.comment}</li>`).join('')}
+</ul>
 <div class="mySlope">
  <h1>Din rangering:<h1>
      <div id="rateMe">${slopeRatings}</div>
