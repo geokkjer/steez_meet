@@ -24,7 +24,8 @@ function viewSlopeInfo(slopeId) {
   const slopeComments = slope.comment;
 
   let slopeHTML = /*HTML*/ ` 
-<h1>Bakke Informasjon:</h1>
+
+<div class="slopeInfo-mainContainer">
 <div id="gridSlopeSite">
     <div class="slopePhoto">
     <img src="${slopeImage}" width="250px">
