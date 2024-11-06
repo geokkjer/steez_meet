@@ -38,5 +38,5 @@ function addUserToEvent(id) {
       .find((x) => x.id == eventId)
       .members.push(model.app.loggedInId);
   }
-  console.log(model.data.events.find((x) => x.id == eventId).members);
+  updateView()
 }
