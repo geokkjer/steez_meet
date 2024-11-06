@@ -18,7 +18,7 @@ function header() {
                     ${slopeOptions}
                     </div>
                 </div>
-                <li id="login" onmousedown="viewLogin()">⎆ Login</li>
+                <li id="login" onmousedown="viewLogin()"> Login</li>
                 </li> 
             </ul>
         </header>`;
