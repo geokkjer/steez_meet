@@ -90,6 +90,3 @@ function greetingByName(){
 
 }
 
-
-  return html;
-}
