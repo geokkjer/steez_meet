@@ -14,5 +14,5 @@ function checkLogInStatus(){
 function logOut(){
 
     model.app.isLoggedIn = false
-    header()
+    updateView()
 }
