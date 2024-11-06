@@ -59,7 +59,5 @@ function viewSlopeInfo(slopeId) {
 </div>
 <button onclick="viewAddSlope()">Legg til bakke</button>
    `;
-  header();
-  footer();
   document.getElementById("main").innerHTML = slopeHTML;
 }
