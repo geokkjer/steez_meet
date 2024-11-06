@@ -14,5 +14,5 @@ function updateView() {
   } else {
     document.getElementById("app").innerHTML = "Error!!";
   }
-  footer();
+  // footer();
 }
