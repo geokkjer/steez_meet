@@ -33,7 +33,7 @@ function showEvent() {
 return html;
 }
 function findSlopes(slopeId){
-  const slope = model.data.slopes.find(slope => slope.id == slopeId);
+  const slope = model.data.slopes.find((x) => x.id == slopeId);
   return slope ? slope.name : `Slope with ID ${slopeId} not found`;
 }
 

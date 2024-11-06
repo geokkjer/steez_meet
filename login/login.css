@@ -1,7 +1,7 @@
 .blink {
-    animation: blinker 0.2s linear infinite;
+    animation: blinker 0.9s linear infinite;
     color: red;
-    font-size: 2.5em;
+    font-size: 1.em;
     /* Larger, responsive font size */
     margin-bottom: 20px;
 }

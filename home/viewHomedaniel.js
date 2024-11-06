@@ -20,11 +20,12 @@ function drawActivities() {
       html += /*html*/ `
           <div class="column1">
               <h4>${activities[i].name}</h4>
+              <b>${getSlopeNameById(activities[i].slope)}</b>
               <img src="${getSlopePhotoById(activities[i].id)}">
           </div>
           <div class="column2">
               <p><span>Når: </span>${activities[i].date}</p>
-              <p><span>Beskrivelse: </span>${getCommentById(activities[i].id)}</p>
+              <p><span>Beskrivelse: </span>${PrintComment(activities[i].comment)}</p>
           </div>
           <div class="column3">
               <h2>Deltakere</h2>
@@ -65,15 +66,31 @@ function getSlopePhotoById(id) {
     let slopeId = model.data.events.find((x) => x.id == id).slope;
     console.log(`slopeID ${slopeId}`)
     let imgLink = "";
-    imgLink = model.data.slopes.find((x) => (x.id === slopeId)).photo;
+    imgLink = model.data.slopes.find((x) => (x.id = slopeId)).photo;
     console.log(imgLink);
     return imgLink;
   }
+  function getSlopeNameById(slopeId) {
+    let id = parseInt(slopeId)
+    let slope = model.data.slopes.find((x) => x.id == id);
+    let slopeName = "";
+    if(slope.name){
+         slopeName = slope.name;
+    }
+   
+    
+    console.log("id: "+ id);
+    console.log("slope: "+slope);
+    
+    return slopeName;
+  }
 
   function getCommentById(id) {
-    // slope = model.data.events.find((x) = x.id = id).slope
-    // return /*html*/ `
-    //     ${model.data.slopes.find(x => x.id = slope).comment}
-    //     `
+    let slopeId = model.data.events.find((x) => x.id == id).slope;
+    console.log(`slopeID ${slopeId}`)
+    let slopeCommment = "";
+    slopeCommment = model.data.slopes.find((x) => (x.id = slopeId)).comment;
+    console.log(slopeCommment);
+    return slopeCommment;
   }
   
