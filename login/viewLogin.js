@@ -4,6 +4,7 @@ function viewLogin(){
     loginHtml = /*HTML*/ `
     <div  class="login-OutsideContainer">
         <div class="login-Container">
+        <div id="wrongInput"></div>
             <div class="login-InfoField">
                 <div>Brukernavn:</div>
                 <div>Passord:</div>
@@ -23,7 +24,6 @@ function viewLogin(){
             <div class="login-buttonLogin">
                 <button class="login-buttonToLogin" onclick="login(username,password)">Logg inn</button>
             </div>
-            <div id="wrongInput"></div>
             </div>
     </div>
     `;
