@@ -28,5 +28,5 @@ a.description = ``;
 a.difficulty = ``;
 a.comment = ``;
 a.photo = null;
-viewSlopeInfo();
+viewSlopeInfo(newSlope.id);
 }

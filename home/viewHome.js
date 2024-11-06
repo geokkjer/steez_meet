@@ -65,7 +65,7 @@ function getSlopePhotoById(id) {
     let slopeId = model.data.events.find((x) => x.id == id).slope;
     console.log(`slopeID ${slopeId}`)
     let imgLink = "";
-    imgLink = model.data.slopes.find((x) => (x.id = slopeId)).photo;
+    imgLink = model.data.slopes.find((x) => (x.id === slopeId)).photo;
     console.log(imgLink);
     return imgLink;
   }
