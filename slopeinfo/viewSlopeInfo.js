@@ -35,6 +35,7 @@ function viewSlopeInfo(slopeId) {
     <h2>Vanskelighetsgrad: 3/5</h2>
     <h1>Beskrivelse:${slopeDescription}</h1>
 </div>
+
 <div id="gridSlopeInfo">
  <div class="publicInfo">
     <h1>Bakkerangering:</h1>
