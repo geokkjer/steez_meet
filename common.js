@@ -5,3 +5,9 @@ function isLoggedInCheck(){
         return false
     }
 }
+
+function getUserdataByloggedInId(){
+    let id = model.app.loggedInId;
+    let user = model.data.users.find((x) => x.id == id)
+    return user
+}
