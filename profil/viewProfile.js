@@ -23,7 +23,7 @@ function viewProfile() {
             </div>
             <div class="profile-events">
                 <div class="profile-eventsAddButtonContainer">
-                    <button>Nytt arrangement</button>
+                    <button onclick="eventOnProfile()">Nytt arrangement</button>
             </div>
             <div class="profile-eventsYourEvents">
                 <b>Dine arrangementer:</b>
@@ -151,4 +151,10 @@ function renderFriendsList() {
         friendsListArray.forEach(friend => {
         friendList.innerHTML += `<li>${friend}</li>`;
     });
+}
+
+function eventOnProfile(){
+
+
+    
 }
