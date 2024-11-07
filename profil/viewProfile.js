@@ -3,14 +3,13 @@ function drawProfile(){
 }
 
 function viewProfile() {
-    profileHtml = /*HTML */ `
-
-    <div class="profile-outsideContainer">
-        <div class="profile-container">
-            <div class="profile-profilePic">
-                <img class="profile-imageClass" src= "${model.data.users[0].profilePicture}">
+    if(isLoggedInCheck()){
+        profileHtml = /*HTML */ `
+            <div class="profile-outsideContainer">
+                <div class="profile-container">
+                <div class="profile-profilePic">
+                    <img class="profile-imageClass" src= "${model.data.users[0].profilePicture}">
             </div>
-
             <div class="profile-bio">
                 <div>
                     <div><b>Navn:</b> ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
@@ -90,7 +89,9 @@ function viewProfile() {
     </div>
     `
     ;
-    document.getElementById('main').innerHTML = profileHtml;
+    document.getElementById('main').innerHTML = profileHtml;} else {
+        viewLogin();
+    }
 }
 
 function createGoal(){
