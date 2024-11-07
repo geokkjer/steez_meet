@@ -42,7 +42,7 @@ function viewSlopeInfo(slopeId) {
     <h1>Bakkerangering:</h1>
 <div id="showAvgRating">${slopeAvgRating}</div>
     <h2>Kommentarer til bakken:</h2>
-    <ul id="commentList">${slopeComments}</ul>
+    <ul id="commentList">${slopeComments.map(comment => `<li>${comment.comment}</li>`).join('')}</ul>
 </div>
 <div id="gridSlopeInfo">
 <div id="myRating">
