@@ -8,7 +8,7 @@ function viewProfile() {
         <div class="profile-outsideContainer">
         <div class="profile-container">
             <div class="profile-profilePic">
-                ${drawProfilePicture}
+                ${drawProfilePicture()}
             </div>
             <div class="profile-bio">
                 ${drawBio()}
