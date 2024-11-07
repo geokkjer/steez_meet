@@ -19,7 +19,7 @@ function viewProfile() {
             </div>
             <div class="profile-eventsYourEvents">
                 <b>Dine arrangementer:</b>
-                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer">Endre</button></div>
+                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer" onclick="function customizeEvent()">Endre</button></div>
             </div>
             <div class="profile-eventsAttending">
                 <b>Påmeldte arrangementer:</b>
@@ -170,6 +170,9 @@ function renderFriendsList() {
 
 function eventOnProfile(){
      viewNewEvent();
-
-
-}
+    }
+function customizeEvent(){
+    viewNewEvent();
+    
+    
+    }
