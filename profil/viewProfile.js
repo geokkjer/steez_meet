@@ -154,7 +154,7 @@ function renderFriendsList() {
 }
 
 function eventOnProfile(){
+     viewNewEvent();
 
 
-    
 }
