@@ -5,8 +5,8 @@ function drawProfile(){
 function viewProfile() {
     if(isLoggedInCheck()){
         profileHtml = /*HTML */ `
-            <div class="profile-outsideContainer">
-                <div class="profile-container">
+        <div class="profile-outsideContainer">
+            <div class="profile-container">
                 <div class="profile-profilePic">
                     <img class="profile-imageClass" src= "${model.data.users[0].profilePicture}">
             </div>
@@ -18,13 +18,12 @@ function viewProfile() {
                     <div><b>Mobil:</b> ${model.data.users[0].phoneNumber}</div>
                 </div>
                     <div class="profile-editUserButton">
-                        <button>Rediger profil</button>
+                        <button onclick="viewRegister()">Rediger profil</button>
                     </div>
             </div>
-
-        <div class="profile-events">
-            <div class="profile-eventsAddButtonContainer">
-                <button>Nytt arrangement</button>
+            <div class="profile-events">
+                <div class="profile-eventsAddButtonContainer">
+                    <button>Nytt arrangement</button>
             </div>
             <div class="profile-eventsYourEvents">
                 <b>Dine arrangementer:</b>

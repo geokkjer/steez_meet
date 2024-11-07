@@ -3,9 +3,9 @@ const model = {
         pages: ["home", "profile", "slopeInfo", "addSlope", "register", "login", "newEvent"],
         currentPage: "home",
         html: document.getElementById("app"),
-        loggedInId: 0,
+        loggedInId: 1,
         currentEventId: 0,
-        isLoggedIn: false,
+        isLoggedIn: true,
     },
 
     input: {
