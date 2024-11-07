@@ -6,6 +6,7 @@ const model = {
         loggedInId: 1,
         currentEventId: 0,
         isLoggedIn: true,
+        userData: {},
     },
 
     input: {
