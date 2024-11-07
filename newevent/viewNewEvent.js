@@ -2,13 +2,14 @@
 function viewNewEvent() {
   
   let html = /*html*/ `
-    <h2>Nytt arrangement: </h2>
-    <div>${showAddEvent()}</div>
-    <h2>sist lagt inn:</h2>
-    <div>${showEvent()}</div>
-
-
-    
+  <div class="newEvent-outsideContainer">
+    <div class="newEvent-container">
+      <div class="newEvent-titleContainer">
+        <h2>Nytt arrangement: </h2>
+      </div>
+      <div>${showAddEvent()}</div>
+    </div>
+  </div>
     `;
   document.getElementById("main").innerHTML = html;
 }
@@ -24,11 +25,6 @@ function showEvent() {
     <p>Kommentar: ${PrintComment(events[events.length-1].comment)}</p>
     </div>
     `;
- 
-   
-
-    
-
 
 return html;
 }
@@ -43,33 +39,33 @@ function showAddEvent() {
 ).join('');
   let html = "";
   html += /*html*/ `
-<h3>Legg til arrangement</h3>
-<div class="newEvent-container">
-<div>
-<label>Navn:</label>
-<input type="text" onchange="model.input.newEvent.name = this.value">
+  <div class="newEvent-inputContainer">
+    <div class="newEvent-name">
+      <label>Navn:</label>
+    </div>
+      <input class="newEvent-inputName" type="text" onchange="model.input.newEvent.name = this.value">
 
-</div>
-<div>
-<label>Dato:</label>
-<input type="date" onchange="model.input.newEvent.date = this.value">
+    <div class="newEvent-date">
+      <label>Dato:</label>
+    </div>
+      <input class="newEvent-inputDate" type="date" onchange="model.input.newEvent.date = this.value">
 
-</div>
-<div>
-<label>Bakke:</label>  
-<select onchange="model.input.newEvent.slope = this.value">
-<option value=""> Velg Bakke</option>
-${slopeOptions}
-</select>
+    <div class="newEvent-hill">
+      <label>Bakke:</label>  
+    </div>
+      <div class="newEvent-inputHill">
+        <select class="newEvent-select" onchange="model.input.newEvent.slope = this.value">
+        <option value=""> Velg Bakke</option>
+        ${slopeOptions}
+        </select>
+      </div>
 
-</div>
-<div>
-<label>Kommentar:</label>
-<input type="text" onchange= "model.input.newEvent.comment = this.value">
-
-</div>
-<button onclick="addEvent()">Legg til</button>
-</div>
+    <div class="newEvent-comment">
+      <label>Kommentar:</label>
+    </div>
+      <input class="newEvent-inputComment" type="text" onchange= "model.input.newEvent.comment = this.value">
+    <button class="newEvent-addButton" onclick="addEvent()">Legg til</button>
+  </div>
 
 
 `;
