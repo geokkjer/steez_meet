@@ -6,9 +6,9 @@ function viewProfile() {
     if(isLoggedInCheck()){
         profileHtml = /*HTML */ `
         <div class="profile-outsideContainer">
-            <div class="profile-container">
-                <div class="profile-profilePic">
-                    <img class="profile-imageClass" src= "${model.data.users[0].profilePicture}">
+        <div class="profile-container">
+            <div class="profile-profilePic">
+                ${drawProfilePicture}
             </div>
             <div class="profile-bio">
                 ${drawBio()}
@@ -83,6 +83,14 @@ function viewProfile() {
     document.getElementById('main').innerHTML = profileHtml;} else {
         viewLogin();
     }
+}
+function drawProfilePicture(){
+    let html = '';
+    getUserdataByloggedInId();
+    let user = model.app.userData;
+    html = /*html*/ `
+        <img class="profile-imageClass" src= "${user.profilePicture}">`;
+    return html
 }
 function drawBio(){
     getUserdataByloggedInId();
