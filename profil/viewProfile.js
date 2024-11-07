@@ -11,15 +11,7 @@ function viewProfile() {
                     <img class="profile-imageClass" src= "${model.data.users[0].profilePicture}">
             </div>
             <div class="profile-bio">
-                <div>
-                    <div><b>Navn:</b> ${model.data.users[0].firstName} ${model.data.users[0].lastName}</div>
-                    <div><b>Epost:</b> ${model.data.users[0].email}</div>
-                    <div><b>Adresse:</b> ${model.data.users[0].address}</div>
-                    <div><b>Mobil:</b> ${model.data.users[0].phoneNumber}</div>
-                </div>
-                    <div class="profile-editUserButton">
-                        <button onclick="viewRegister()">Rediger profil</button>
-                    </div>
+                ${drawBio()}
             </div>
             <div class="profile-events">
                 <div class="profile-eventsAddButtonContainer">
@@ -92,7 +84,22 @@ function viewProfile() {
         viewLogin();
     }
 }
-
+function drawBio(){
+    getUserdataByloggedInId();
+    let user = model.app.userData;
+    let html = ''
+    html = /*html*/ `
+        <div>
+            <div><b>Navn:</b> ${user.firstName} ${user.lastName}</div>
+            <div><b>Epost:</b> ${user.email}</div>
+            <div><b>Adresse:</b> ${user.address}</div>
+            <div><b>Mobil:</b> ${user.phoneNumber}</div>
+        </div>
+            <div class="profile-editUserButton">
+                <button onclick="viewRegister()">Rediger profil</button>
+            </div>`;
+    return html
+}
 function createGoal(){
     goalHtml= /*HTML */ `
 

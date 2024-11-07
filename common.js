@@ -7,6 +7,5 @@ function isLoggedInCheck(){
 }
 function getUserdataByloggedInId(){
     let id = model.app.loggedInId;
-    let userData = model.data.users.find((x) => x.id == id)
-    return userData
+    model.app.userData = model.data.users.find((x) => x.id == id)
 }
