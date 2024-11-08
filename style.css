@@ -96,46 +96,48 @@ input {
   column-gap: 2%;
   padding-left: 10%;
   padding-right: 10%;
-  padding-bottom: 5%;
-  gap: 2.5em;
-  }
   
-.homeHeader {
-  font-size: px;
-  margin: 3%
+  
 }
+#grid img{
+ border-radius: 5%;
+ width: auto;
 
+ 
+}
+/* #grid {
+  display: inline;
+} */
+
+/* HOME */
 #grid div {
   width:auto;
   text-align: center;
   padding: 2px 0;
   font-size: 23px;
+  margin-top: 20;
   border-radius: 2rem;
+  border: solid, black, 3px;
+  
   
 }
 
 .column1 {
   float: left;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   width: 80%;
+  padding: 15px;
   height: 300px;
-  border: solid, black, 3px;
-  img{
-   grid-area: left;
-   border: solid, black, 5px;
-   border-radius: 2%;
-   width: 100px;
-   height: 100px;
-  }
-  }
+ 
+
+}
 
 .column2 {
   float: right;
   width: 80%;
   padding: 15px;
   height: 300px;
-  border: solid, black, 3px;
+  
+
 }
 
 .column3 {
@@ -143,7 +145,7 @@ input {
   width: 80%;
   padding: 15px;
   height: 300px;
-  border: solid, black, 3px;  
+
 }
 .yes-noBtn{
   width: 50px;
@@ -264,13 +266,14 @@ z-index: -1;
   margin: 40px;
   align-content: center;
   justify-content: center;
-  height: 40vh;
+  height: 60%;
   font-family: Arial, Helvetica, sans-serif;
-  border: #272343 solid 3px;
+  border: #272343 3px outset;
   border-radius: 20px;
   padding: 70px;
-  width: 85vh;
+  width: 85%;
   background-color: #e3f6f5;
+  box-shadow: -2px 2px 31px 3px rgba(0, 0, 0, 0.3);
 }
 
 .login-InfoField{
@@ -368,13 +371,14 @@ z-index: -1;
   margin: 40px;
   align-content: center;
   justify-content: center;
-  height: 40vh;
+  height: 60%;
   font-family: Arial, Helvetica, sans-serif;
-  border: #272343 solid 3px;
+  border: #272343 3px outset;
   border-radius: 20px;
   padding: 70px;
-  width: 85vh;
+  width: 85%;
   background-color: #e3f6f5;
+  box-shadow: -2px 2px 31px 3px rgba(0, 0, 0, 0.3);
 }
 
 .register-InfoField{
@@ -660,8 +664,8 @@ z-index: -1;
 .newEvent-container{
   display: flex;
   flex-direction: column;
-  width: 90vw;
-  height: 60vh;
+  width: 85%;
+  height: 60%;
   border: #272343 3px outset;
   border-radius: 20px;
   justify-content: center;
