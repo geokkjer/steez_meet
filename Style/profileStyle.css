@@ -1,0 +1,226 @@
+/*PROFILE*/
+
+.profile-outsideContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 100%;
+  }
+  
+  .profile-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+    "image events goals"
+    "bio events friends"
+    ;
+    grid-gap: 20px;
+    grid-row-gap: 10px;
+    width: 90vw;
+    height: 75vh;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .profile-profilePic{
+    grid-area: image;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-imageClass{
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+    border: #272343 outset 4px;
+  }
+  
+  .profile-bio{
+    grid-area: bio;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #272343 outset 2px;
+    border-radius: 20px;
+    background-color: #e3f6f5;
+    font-size: 120%;
+    position: relative;
+  }
+  
+  .profile-editUserButton{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .profile-events{
+    grid-area: events;
+    display: flex;
+    flex-direction: column;
+    border: #272343 outset 2px;
+    border-radius: 20px;
+    background-color: #e3f6f5;
+    font-size: 120%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-eventsAddButtonContainer{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .profile-buttonPaddingContainer{
+    margin: 10px;
+  }
+  
+  .profile-eventsYourEvents{
+    margin: 10px;
+  }
+  
+  
+  .profile-eventsAttending{
+    margin: 10px;
+  }
+  
+  .profile-addButton{
+    background-color: #f6fdfd;
+    border: #272343 outset 2px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-friends{
+    grid-area: friends;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    
+    border: #272343 outset 2px;
+    border-radius: 20px;
+    background-color: #e3f6f5;
+    height: 100%;
+    div{
+  
+      padding: 5%;
+    }
+  
+    div select{
+      height: 100%;
+      min-height: 20px;
+      max-height: 50px;
+    }
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 99%;
+    padding-left: 10px;
+    gap: 10px; */
+  }
+  
+  .profile-friendsSelection{
+    display: flex;
+  }
+  
+  .profile-myFriendsHeader{
+    display: flex;
+  }
+  
+  .profile-goals{
+    grid-area: goals;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    border: #272343 2px outset;
+    background-color: #e3f6f5;
+    border-radius: 20px;
+    padding: 5px;
+    justify-content: center;
+    font-size: 120%;
+  }
+  
+  .profile-goalsTitleContainer{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+  }
+  
+  .profile-goalsAddButtonContainer{
+    align-self: flex-end;
+  }
+  
+  .profile-goalsDescriptionContainer{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border: #272343 2px outset;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #D2ECEA;
+  }
+  
+  .profile-goalsDoneTitleContainer{
+    align-self: center;
+  }
+  
+  .profile-goalsCheckboxContainer{
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    gap: 5px;
+    accent-color: #8DCACA;
+  }
+  
+  .profile-goalsProgressbarContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress{
+    background-color: #f6fdfd;
+    border-radius: 20px;
+    border: #272343 outset 2px;
+    height: 30px;
+    width: 260px;
+    margin: 5px;
+  }
+  
+  .progressDone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8DCACA;
+    box-shadow: 26px 2px 32px rgba(89, 159, 159, 0.3);
+    border-radius: 20px;
+    height: 30px;
+    width: 0%;
+  }
+  
+  .profile-createNewGoal{
+    grid-area: goals;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: #272343 2px outset;
+    background-color: #e3f6f5;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
