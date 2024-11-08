@@ -40,3 +40,4 @@ function addUserToEvent(eventId) {
   }
   updateView();
 }
+
