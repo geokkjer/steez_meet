@@ -18,13 +18,12 @@ function viewProfile() {
                     <button onclick="eventOnProfile()">Nytt arrangement</button>
             </div>
             <div class="profile-eventsYourEvents">
-                <b>Sist lagt til arrangementer:</b>
-                <div>${showEvent()}</div>
-                <div><button class="profile-buttonPaddingContainer" onclick="customizeEvent()">Endre</button></div>
+                <b>Dine arrangementer:</b>
+                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer" onclick="customizeEvent()">Endre</button></div>
             </div>
             <div class="profile-eventsAttending">
                 <b>Påmeldte arrangementer:</b>
-                <div>${showEventsTending()}<button class="profile-buttonPaddingContainer">Avmeld</button></div>
+                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer">Avmeld</button></div>
             </div>
         </div>
 
@@ -117,7 +116,7 @@ function createGoal(){
         <textarea type="text" placeholder="Beskrivelse..." onchange="goalDescription=this.value"></textarea>
             <div class="profile-newGoalAmount">
                 <div>Antall utførelser:</div>
-                <input type="number" onchange="goalAmount=this.value" min="1" max="10">
+                <input type="number" onchange="goalAmount=this.value">
                 <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
             </div>
     </div>

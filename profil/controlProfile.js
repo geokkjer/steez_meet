@@ -31,10 +31,3 @@ function drawProgressBar(finalPercentage){
     progressDone.style.width = `${finalPercentage}%`;
     
 }
-
-function showEventsTending(){
-
-
-
-    
-}
