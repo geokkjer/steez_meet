@@ -19,11 +19,12 @@ function drawActivities() {
   for (i = 0; i < activities.length; i++) {
     html += /*html*/ `
             <div class="column1">
+            <img src="${getSlopePhotoById(activities[i].id)}">
                 <h4>${activities[i].name}</h4>
-                <img src="${getSlopePhotoById(activities[i].id)}">
                 <p><span>Kommentar: </span>${getCommentById(
                   activities[i].id
                 )}</p>
+                
             </div>
             <div class="column2">
                 <p><span>Når: </span>${activities[i].date}</p>
@@ -46,7 +47,7 @@ function yesNoButtons(i){
   eventId = model.data.events[i].id;
   return /*html*/ `
       <h4>Bli med ?</h4>
-      <button value="ja" onclick="joinAnswer(this.value), model.app.currentEventId = ${eventId}" class="yes-noBtn">Ja</button>
+      <button value="ja" onclick="joinAnswer(this.value, model.app.currentEventId = ${eventId})" class="yes-noBtn">Ja</button>
       <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
       `;
 }
