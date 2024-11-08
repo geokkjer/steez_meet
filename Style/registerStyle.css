@@ -1,0 +1,72 @@
+/*REGISTER*/
+
+.register-OutsideContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 100%;
+  }
+  
+  .register-Container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 6fr 1fr;
+    grid-template-areas:
+    "info input"
+    "buttonRegister buttonRegister"
+    ;
+    grid-row-gap: 0px;
+    grid-column-gap: 10px;
+    margin: 40px;
+    align-content: center;
+    justify-content: center;
+    height: 40vh;
+    font-family: Arial, Helvetica, sans-serif;
+    border: #272343 solid 3px;
+    border-radius: 20px;
+    padding: 70px;
+    width: 85vh;
+    background-color: #e3f6f5;
+  }
+  
+  .register-InfoField{
+    display: grid;
+    grid-area: info;
+    justify-items: end;
+  
+    align-content: stretch;
+    align-items: center;
+  }
+  
+  .register-InputField{
+    grid-area: input;
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+  }
+  
+  .register-ButtonRegister{
+    grid-area: buttonRegister;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    grid-gap: 15px;
+  }
+  
+  /*Dette er kun stil på denne knappen foreløpig. Endres når universal stil for knapper er satt*/
+  .register-ButtonRegisterPage{
+    background-color: #f6fdfd;
+    border: #272343 solid 2px;
+    margin: 0px;
+  }
+  
+  /*Dette er kun stil på diss inputfeltene foreløpig. Endres når universal stil for knapper er satt*/
+  .register-InputFieldText{
+    border-radius: 6px;
+    line-height: 1.5;
+    border: 2px solid #272343;
+    background-color: #f6fdfd;
+    padding: 14px;
+    margin: 2px;
+  }
