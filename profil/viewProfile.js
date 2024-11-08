@@ -173,6 +173,6 @@ function eventOnProfile(){
     }
 function customizeEvent(){
     viewNewEvent();
+}
     
     
-    }
