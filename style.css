@@ -119,12 +119,25 @@ input {
   height: 300px;
   border: solid, black, 3px;
   img{
+  -webkit-filter: blur(2px);
+  filter:blur(2px);
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 2rem;
   }
+ .homeText{
+   background-color: transparent !important;
+   font-size: 23px !important;
+   position: relative !important;
+   bottom: 59% !important;
+   left: 50% !important;
+   transform: translate(-50%, -50%) !important;
+
+  }
 }
+
+
 .column2 {
   float: right;
   width: 80%;
