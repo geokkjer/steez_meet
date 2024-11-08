@@ -12,11 +12,10 @@ function getParticipantsOfEvent(members) {
   }
 }
 
-function joinAnswer(answer) {
+function joinAnswer(answer,eventId) {
   if (answer == "ja") {
     if (model.app.isLoggedIn) {
-      let id = model.app.loggedInId;
-      addUserToEvent(id);
+      addUserToEvent(eventId);
     } else {
       viewLogin();
     }
@@ -25,8 +24,7 @@ function joinAnswer(answer) {
   }
 }
 
-function addUserToEvent(id) {
-  let eventId = model.app.currentEventId;
+function addUserToEvent(eventId) {
   if (
     model.data.events
       .find((x) => x.id == eventId)
@@ -37,6 +35,8 @@ function addUserToEvent(id) {
     model.data.events
       .find((x) => x.id == eventId)
       .members.push(model.app.loggedInId);
+      console.log('Blir lagt til i lista');
+      updateView();
   }
   updateView();
 }
