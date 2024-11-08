@@ -3,6 +3,13 @@
   src:
     url('fonts/Firstsnow-nRYmg.ttf') format('truetype');
 }
+
+@import url(Style/addEventStyle.css);
+@import url(Style/addSlopeStyle.css);
+@import url(Style/logInStyle.css);
+@import url(Style/registerStyle.css);
+
+
 body,html{
   margin: 0;
   padding: 0;
