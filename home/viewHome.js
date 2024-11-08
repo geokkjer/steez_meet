@@ -19,11 +19,14 @@ function drawActivities() {
   for (i = 0; i < activities.length; i++) {
     html += /*html*/ `
             <div class="column1">
+               <img src="${getSlopePhotoById(activities[i].id)}"> 
+              <div class="homeText">
                 <h4>${activities[i].name}</h4>
-                <img src="${getSlopePhotoById(activities[i].id)}">
                 <p><span>Kommentar: </span>${getCommentById(
                   activities[i].id
                 )}</p>
+              </div>
+                
             </div>
             <div class="column2">
                 <p><span>Når: </span>${activities[i].date}</p>
