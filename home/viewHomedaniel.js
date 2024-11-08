@@ -8,10 +8,10 @@ function drawHome() {
 
 function drawGreeting() {
     return htmlHome = /*HTML*/`
-        <h1>Hei, ${'hello' || 'guest'}</h1>
-        <h2>Kommende turer: </h2>
+         <h1>Hei, ${'hello' || 'guest'}</h1>
+         <h2>Kommende turer: </h2>
         `;
-}
+}       
 function drawActivities() {
     let html = "";
     let activities = model.data.events;

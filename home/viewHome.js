@@ -7,8 +7,10 @@ function drawHome() {
 }
 function drawGreeting() {
   return (htmlHome = /*HTML*/ `
+        <div class="homeHeader">
         ${greetingByName()}
         <h2>Kommende turer: </h2>
+        </div>
       `);
 }
 function drawActivities() {
@@ -18,7 +20,7 @@ function drawActivities() {
     console.log(activities[i].id);
     html += /*html*/ `
             <div class="column1">
-                <h4>${activities[i].name} eventid: ${activities[i].id}</h4>
+                <h4>${activities[i].name}</h4>
                 <img src="${getSlopePhotoById(activities[i].id)}">
                 <p><span>Kommentar: </span>${getCommentById(
                   activities[i].id
