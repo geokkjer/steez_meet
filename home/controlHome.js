@@ -20,7 +20,7 @@ function joinAnswer(answer,eventId) {
       viewLogin();
     }
   } else if (answer == "nei") {
-    alert("You are a traitor of the free world");
+    alert("Okay");
   }
 }
 
@@ -40,3 +40,4 @@ function addUserToEvent(eventId) {
   }
   updateView();
 }
+
