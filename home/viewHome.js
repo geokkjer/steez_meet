@@ -15,7 +15,6 @@ function drawActivities() {
   let html = "";
   let activities = model.data.events;
   for (i = 0; i < activities.length; i++) {
-    console.log(activities[i].id);
     html += /*html*/ `
             <div class="column1">
                 <h4>${activities[i].name} eventid: ${activities[i].id}</h4>
@@ -35,12 +34,18 @@ function drawActivities() {
                     <p id="part"> ${getParticipantsOfEvent(
                       activities[i].members
                     )}</p>
-                <h4>Bli med ?</h4>
-                   <button value="ja" onclick="joinAnswer(this.value), model.app.currentEventId = ${activities[i].id}" class="yes-noBtn">Ja</button>
-                   <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
+                 ${yesNoButtons(i)}
             </div> `;
   }
   return html;
+}
+function yesNoButtons(i){
+  model.app.currentEventId = model.data.events[i].id;
+  return /*html*/ `
+      <h4>Bli med ?</h4>
+      <button value="ja" onclick="joinAnswer(this.value)" class="yes-noBtn">Ja</button>
+      <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
+      `;
 }
 function getSlopePhotoById(id) {
   let slopeId = parseInt(model.data.events.find((x) => x.id == id).slope);
