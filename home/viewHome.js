@@ -46,7 +46,7 @@ function yesNoButtons(i){
   eventId = model.data.events[i].id;
   return /*html*/ `
       <h4>Bli med ?</h4>
-      <button value="ja" onclick="joinAnswer(this.value), model.app.currentEventId = ${eventId}" class="yes-noBtn">Ja</button>
+      <button value="ja" onclick="joinAnswer(this.value, model.app.currentEventId = ${eventId})" class="yes-noBtn">Ja</button>
       <button value="nei" onclick="joinAnswer(this.value)" class="yes-noBtn">Nei</button>
       `;
 }
