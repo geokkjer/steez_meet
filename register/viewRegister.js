@@ -1,5 +1,5 @@
 function viewRegister() {
-  if (isLoggedInCheck == true) {
+  if (model.app.isLoggedIn == true) {
     registerHtml = /*HTML */ `
     <div class="register-OutsideContainer">
         <div class="register-Container">
