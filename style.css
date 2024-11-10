@@ -250,20 +250,6 @@ z-index: -1;
 }
 
 
-::placeholder{
-  color: #272343;
-  opacity: 0.8;
-}
-
-
-
-
-
-
-
-
-
-
 
 
 /*FELLES*/
@@ -272,6 +258,11 @@ textarea{
   font-family: Arial, Helvetica, sans-serif;
   border: #272343 2px outset;
   border-radius: 5px;
+  outline: none;
+  transition: 0.5s;
+}
+textarea:focus{
+  box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
 }
 
 select{
