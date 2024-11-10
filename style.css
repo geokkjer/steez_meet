@@ -13,6 +13,7 @@ body{
   background: rgb(255, 255, 255);
   background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(186, 255, 240, 1) 33%, rgba(103, 210, 244, 1) 100%);
   background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #app {
   height: 100%;
@@ -81,7 +82,7 @@ button {
 input {
   border-radius: 6px;
   line-height: 1.5;
-  border: 1px solid #272343;
+  border: 2px outset #272343;
   background-color: #e3f6f5;
   padding: 3px;
   margin: 2px;
@@ -159,10 +160,10 @@ input {
   width: 50px;
 }
 button {
-  background-color: #e3f6f5;
+  background-color: #f6fdfd;
   transition: ease-out 0.3s;
   outline:none;
-  border: hsla(0, 0%, 0%, 0.801), 3px, solid;
+  border: #272343 outset 2px;
   z-index: 1;
   position: relative;
   
