@@ -1,7 +1,7 @@
-function viewLogin(){
-    let username = model.input.logIn.userName;
-    let password = '';
-    loginHtml = /*HTML*/ `
+function viewLogin() {
+  let username = model.input.logIn.userName;
+  let password = "";
+  loginHtml = /*HTML*/ `
     <div  class="login-OutsideContainer">
         <div class="login-Container">
         <div id="wrongInput"></div>
@@ -22,40 +22,40 @@ function viewLogin(){
                 <u>Glemt passord</u>
             </div>
             <div class="login-buttonLogin">
-                <button class="login-buttonToLogin" onclick="login(username,password)">Logg inn</button>
+                <button class="login-buttonToLogin" popovertarget="pop-login">Logg inn</button>
+                <div popover id="pop-login">
+                Greetings, ${username}
+                <button onclick="login(username,password)">On</button>
+                </div>
             </div>
             </div>
     </div>
     `;
-    document.getElementById('main').innerHTML =  loginHtml;
+  document.getElementById("main").innerHTML = loginHtml;
 }
 
-function login(user,pass){
-    console.log(user,pass)
-    
-    for (modeluser of model.data.users){
-        if (modeluser.userName == user && modeluser.password == pass){
-            model.app.currentPage = "home";
-            model.app.loggedInId = modeluser.id 
-            model.app.isLoggedIn = true
-            updateView();
-        } else if (modeluser.userName != user || modeluser.password != pass){
-          
-            drawWrongInput()
-            
-            console.log('Feil brukernavn eller passord :-P')
-        }
+function login(user, pass) {
+  console.log(user, pass);
+
+  for (modeluser of model.data.users) {
+    if (modeluser.userName == user && modeluser.password == pass) {
+      model.app.currentPage = "home";
+      model.app.loggedInId = modeluser.id;
+      model.app.isLoggedIn = true;
+      updateView();
+    } else if (modeluser.userName != user || modeluser.password != pass) {
+      drawWrongInput();
+
+      console.log("Feil brukernavn eller passord :-P");
     }
-    
-    
+  }
 }
 
-function drawWrongInput(){
-let html = document.getElementById('wrongInput');
-  html.innerHTML = /*html*/`
+function drawWrongInput() {
+  let html = document.getElementById("wrongInput");
+  html.innerHTML = /*html*/ `
  <p class="blink">Feil brukernavn eller passord</p>
  
  
  `;
-
 }
