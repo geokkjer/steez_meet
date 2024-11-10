@@ -40,14 +40,14 @@ function viewSlopeInfo(slopeId) {
 <div id="gridSlopeInfo">
  <div class="publicInfo">
     <h1>Bakkerangering:</h1>
-<div id="showAvgRating">${slopeAvgRating}</div>
+<div id="showAvgRating"><h2>${slopeAvgRating}</h2></div>
     <h2>Kommentarer til bakken:</h2>
     <ul id="commentList">${slopeComments.map(comment => `<li>${comment.comment}</li>`).join('')}</ul>
 </div>
 <div id="gridSlopeInfo">
 <div id="myRating">
-<h1>Din rangering:<h1>
-<div id="rateMe">${slopeRatings}</div>
+<h1>Din rangering:</h1>
+<div id="rateMe"><h2>${slopeRatings}</h2></div>
      <input id='textInput' type='number' min=1 max= 5 onchange="rating=this.value" placeholder="0/5"/>
      <button onclick="ratings(rating),ratingData()">Legg til rangering</button>
 
