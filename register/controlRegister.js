@@ -44,7 +44,7 @@ function handleFileUploadRegister(event) {
 
 function sendUserData() {
   if (model.app.isLoggedIn) {
-    let newUser = {
+    let editUser = {
       username: registerUser.userName,
       userId: model.data.users.length + 1,
       firstName: registerUser.firstName,
@@ -56,7 +56,7 @@ function sendUserData() {
       address: registerUser.address,
       phoneNumber: registerUser.phoneNumber,
     };
-    model.data.users.push(newUser);
+    model.data.users.push(editUser);
     model.app.currentPage = "home";
     updateView();
   } else {
