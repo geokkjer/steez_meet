@@ -115,8 +115,7 @@ function createGoal(){
         <input type="text" placeholder="Ditt mål" onchange="goalName=this.value">
         <textarea type="text" placeholder="Beskrivelse..." onchange="goalDescription=this.value"></textarea>
             <div class="profile-newGoalAmount">
-                <div>Antall utførelser:</div>
-                <input type="number" onchange="goalAmount=this.value">
+                <input placeholder="Antall utførelser" type="number" onchange="goalAmount=this.value">
                 <button onclick="saveGoal(goalName, goalDescription, goalAmount)">Lagre</button>
             </div>
     </div>
