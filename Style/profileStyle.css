@@ -214,8 +214,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-background: rgb(121,184,184);
-background: linear-gradient(0deg, rgba(121,184,184,1) 0%, rgba(188,239,239,0.8562018557422969) 50%, rgba(121,184,184,1) 100%);
+    background: rgb(121,184,184);
+    background: linear-gradient(0deg, rgba(121,184,184,1) 0%, rgba(188,239,239,0.8562018557422969) 50%, rgba(121,184,184,1) 100%);
     border-radius: 20px;
     height: 30px;
     width: 0%;
@@ -227,10 +227,20 @@ background: linear-gradient(0deg, rgba(121,184,184,1) 0%, rgba(188,239,239,0.856
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: #272343 2px outset;
+    border: #e3f6f5 2px solid;
     background-color: #e3f6f5;
     border-radius: 20px;
     padding: 20px;
     justify-content: center;
     align-items: center;
+  }
+
+  .profile-newGoalAmount{
+    display: flex;
+    flex-direction: column;
+    button{
+      width: fit-content;
+      margin-top: 4px;
+      align-self: center;
+    }
   }
