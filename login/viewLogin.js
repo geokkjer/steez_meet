@@ -22,10 +22,7 @@ function viewLogin() {
                 <u>Glemt passord</u>
             </div>
             <div class="login-buttonLogin">
-                <button class="login-buttonToLogin" popovertarget="pop-login">Logg inn</button>
-                <div popover id="pop-login">
-                Greetings, ${username}
-                <button onclick="login(username,password)">On</button>
+                <button class="login-buttonToLogin" onclick="login(username,password)">Logg inn</button>
                 </div>
             </div>
             </div>
@@ -35,8 +32,6 @@ function viewLogin() {
 }
 
 function login(user, pass) {
-  console.log(user, pass);
-
   for (modeluser of model.data.users) {
     if (modeluser.userName == user && modeluser.password == pass) {
       model.app.currentPage = "home";
@@ -45,8 +40,6 @@ function login(user, pass) {
       updateView();
     } else if (modeluser.userName != user || modeluser.password != pass) {
       drawWrongInput();
-
-      console.log("Feil brukernavn eller passord :-P");
     }
   }
 }
