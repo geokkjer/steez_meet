@@ -6,158 +6,51 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
   }
   
   .addSlope-container{
     display: flex;
     flex-direction: column;
-    border: #272343 outset 2px;
-    width: 75%;
-    height: 60%;
-    padding: 2%;
-    background-color: #e3f6f5;
+    width: 70%;
+    height: 75%;
+    border: #272343 3px outset;
     border-radius: 20px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-color: #e3f6f5;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.3);
   }
   
   .addSlope-inputContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
-    grid-template-areas: 
-    "title title"
-    "name inputName"
-    "place inputPlace"
-    "difficulty inputDifficulty"
-    "description inputDescription"
-    "type inputType"
-    "comment inputComment"
-    "image inputImage"
-    "empty addButton"
-    ;
-  }
-  
-  .addSlope-title{
-    grid-area: title;
-    color: #272343;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .addSlope-name{
-    grid-area: name;
     display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: medium;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 3px;
   }
-  
-  .addSlope-inputName{
-    grid-area: inputName;
-    background-color: #f6fdfd;
-  
+
+  .addSlope-InputFieldText{
+    border-radius: 6px;
     line-height: 1.5;
-  }
-  
-  .addSlope-place{
-    grid-area: place;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: medium;
-    margin-bottom: 15px;
-  }
-  
-  .addSlope-inputPlace{
-    grid-area: inputPlace;
+    border: 2px outset #272343;
     background-color: #f6fdfd;
-  
-    line-height: 1.5;
+    padding: 14px;
+    margin: 2px;
+    height: 13px;
+    outline: none;
+    transition: 0.5s;
   }
-  
-  .addSlope-difficulty{
-    grid-area: difficulty;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: medium;
-    margin-bottom: 15px;
-  }
-  
-  .addSlope-inputDifficulty{
-    grid-area: inputDifficulty;
+
+.addSlope-InputFieldText:focus{
+  box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
+}
+
+  .addSlope-button{
+    margin-left: 23%;
     background-color: #f6fdfd;
-  
-    line-height: 1.5;
+    border: #272343 outset 2px;
   }
-  
-  .addSlope-description{
-    grid-area: description;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: medium;
-    margin-bottom: 15px;
-  }
-  
-  .addSlope-inputDescription{
-    grid-area: inputDescription;
+
+  .addSlope-inputFieldImage{
     background-color: #f6fdfd;
-  
-    line-height: 1.5;
-  }
-  
-  .addSlope-type{
-    grid-area: type;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: medium;
-    margin-bottom: 15px;
-  }
-  
-  .addSlope-inputType{
-    grid-area: inputType;
-    background-color: #f6fdfd;
-  
-    line-height: 1.5;
-  }
-  
-  .addSlope-comment{
-    grid-area: comment;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: medium;
-    margin-bottom: 15px;
-  }
-  
-  .addSlope-inputComment{
-    grid-area: inputComment;
-    background-color: #f6fdfd;
-    
-    line-height: 1.5;
-  }
-  
-  .addSlope-image{
-    grid-area: image;
-    display: flex;
-    justify-content: end;
-    align-items: center;    
-    font-size: medium;
-    margin-bottom: 15px;
-  }
-  
-  .addSlope-inputImage{
-    grid-area: inputImage;
-    background-color: #f6fdfd;
-    line-height: 1.5;
-  }
-  
-  .addSlope-addButtonContainer{
-    grid-area: addButton;
-  
+    border: 2px outset #272343;
   }

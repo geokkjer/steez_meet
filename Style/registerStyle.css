@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     /* height: 100vh; */
-    height: 100%;
+    height: 100vh;
   }
   
   .register-Container{
@@ -21,13 +21,14 @@
     margin: 40px;
     align-content: center;
     justify-content: center;
-    height: 40vh;
+    height: 60%;
     font-family: Arial, Helvetica, sans-serif;
-    border: #272343 solid 3px;
+    border: #272343 outset 3px;
     border-radius: 20px;
     padding: 70px;
-    width: 85vh;
+    width: 60%;
     background-color: #e3f6f5;
+    box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.3);
   }
   
   .register-InfoField{
@@ -57,7 +58,7 @@
   /*Dette er kun stil på denne knappen foreløpig. Endres når universal stil for knapper er satt*/
   .register-ButtonRegisterPage{
     background-color: #f6fdfd;
-    border: #272343 solid 2px;
+    border: #272343 outset 2px;
     margin: 0px;
   }
   
@@ -65,8 +66,20 @@
   .register-InputFieldText{
     border-radius: 6px;
     line-height: 1.5;
-    border: 2px solid #272343;
+    border: 2px outset #272343;
     background-color: #f6fdfd;
     padding: 14px;
     margin: 2px;
+    height: 13px;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .register-InputFieldText:focus{
+    box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
+  }
+
+  .register-inputFieldImage{
+    background-color: #f6fdfd;
+    border: 2px outset #272343;
   }

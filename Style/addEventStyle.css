@@ -11,97 +11,67 @@
   .newEvent-container{
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    height: 60vh;
+    width: 70%;
+    height: 75%;
     border: #272343 3px outset;
     border-radius: 20px;
     justify-content: center;
     align-items: center;
     background-color: #e3f6f5;
     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.3);
   }
   
   .newEvent-inputContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "name input1"
-    "date input2"
-    "hill input3"
-    "comment input4"
+    "name input"
+    "date input"
+    "hill input"
+    "comment input"
     "empty button"
     ;
-    gap: 5px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
   
   .newEvent-titleContainer{
     color: #272343;
+    margin: 10px;
   }
   
   .newEvent-name{
     grid-area: name;
   }
-  
-  .newEvent-inputName{
-    grid-area: input1;
-    border-radius: 6px;
-    line-height: 1.5;
-    border: 2px solid #272343;
-    background-color: #f6fdfd;
-    padding: 10px;
-    margin: 2px;
+
+  .newEvent-inputField{
+    grid-area: input;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 200%;
   }
   
-  .newEvent-date{
-    grid-area: date;
-  }
-  
-  .newEvent-inputDate{
-    grid-area: input2;
-    border-radius: 6px;
-    line-height: 1.5;
-    border: 2px solid #272343;
-    background-color: #f6fdfd;
-    padding: 10px;
-    margin: 2px;
-  }
-  
-  .newEvent-hill{
-    grid-area: hill;
-  }
-  
-  .newEvent-inputHill{
-    grid-area: input3;
-  }
-  
-  .newEvent-comment{
-    grid-area: comment;
-  }
-  
-  .newEvent-inputComment{
-    grid-area: input4;
-    border-radius: 6px;
-    line-height: 1.5;
-    border: 2px solid #272343;
-    background-color: #f6fdfd;
-    padding: 10px;
-    margin: 2px;
-  }
-  
-  .newEvent-addButton{
-    grid-area: button;
-    width: fit-content;
-    margin-left: 60%;
-    
-  }
-  
-  .newEvent-select{
-    background-color: #f6fdfd;
-    font-family: Arial, Helvetica, sans-serif;
-    border: #272343 2px outset;
-    border-radius: 6px;
-    width: 99%;
-    height: 99%;
-    padding: 10px;
-  }
+.newEvent-addButton{
+  align-self: flex-end;
+  background-color: #f6fdfd;
+  border: #272343 outset 2px;
+}
+
+.newEvent-inputStyling{
+  border-radius: 6px;
+  line-height: 1.5;
+  border: 2px outset #272343;
+  background-color: #f6fdfd;
+  padding: 10px;
+  margin: 2px;
+  outline: none;
+  transition: 0.5s;
+}
+
+.newEvent-inputStyling:focus{
+  box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
+}

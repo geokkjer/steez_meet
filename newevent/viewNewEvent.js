@@ -40,31 +40,29 @@ function showAddEvent() {
   let html = "";
   html += /*html*/ `
   <div class="newEvent-inputContainer">
-    <div class="newEvent-name">
-      <label>Navn:</label>
-    </div>
-      <input class="newEvent-inputName" type="text" onchange="model.input.newEvent.name = this.value">
-
-    <div class="newEvent-date">
-      <label>Dato:</label>
-    </div>
-      <input class="newEvent-inputDate" type="date" onchange="model.input.newEvent.date = this.value">
-
-    <div class="newEvent-hill">
-      <label>Bakke:</label>  
-    </div>
-      <div class="newEvent-inputHill">
-        <select class="newEvent-select" onchange="model.input.newEvent.slope = this.value">
-        <option value=""> Velg Bakke</option>
-        ${slopeOptions}
-        </select>
+    <div class="newEvent-inputField">
+      <div class="newEvent-name">
       </div>
+        <input class="newEvent-inputStyling" placeholder="Navn" type="text" onchange="model.input.newEvent.name = this.value">
 
-    <div class="newEvent-comment">
-      <label>Kommentar:</label>
+      <div class="newEvent-date">
+      </div>
+        <input class="newEvent-inputStyling" type="date" onchange="model.input.newEvent.date = this.value">
+
+      <div class="newEvent-hill"> 
+      </div>
+        <div class="newEvent-inputHill">
+          <select class="newEvent-select" onchange="model.input.newEvent.slope = this.value">
+          <option value=""> Velg Bakke</option>
+          ${slopeOptions}
+          </select>
+        </div>
+
+      <div class="newEvent-comment">
+      </div>
+        <input class="newEvent-inputStyling" placeholder="Kommentar" type="text" onchange= "model.input.newEvent.comment = this.value">
+      <button class="newEvent-addButton" onclick="addEvent()">Legg til</button>
     </div>
-      <input class="newEvent-inputComment" type="text" onchange= "model.input.newEvent.comment = this.value">
-    <button class="newEvent-addButton" onclick="addEvent()">Legg til</button>
   </div>
 
 
