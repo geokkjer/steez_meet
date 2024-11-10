@@ -1,6 +1,8 @@
 
 let registerUser = model.input.registerUser;
-
+function editData(){
+    sendUserData()
+}
 function checkUserData(){
 
     if(!registerUser.userName || !registerUser.firstName || !registerUser.lastName || !registerUser.email || !registerUser.password || !registerUser.confirmPassword || !registerUser.address || !registerUser.phoneNumber){
