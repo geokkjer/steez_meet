@@ -233,6 +233,13 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
+    input{
+      outline: none;
+      transition: 0.5s;
+    }
+    input:focus{
+      box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
+    }
   }
 
   .profile-newGoalAmount{

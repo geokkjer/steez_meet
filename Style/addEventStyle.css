@@ -75,3 +75,15 @@
 .newEvent-inputStyling:focus{
   box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
 }
+
+
+.newEvent-select{
+  background-color: #f6fdfd;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #272343 2px outset;
+  border-radius: 6px;
+  width: 99%;
+  height: 99%;
+  padding: 10px;
+}
+
