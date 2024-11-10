@@ -23,7 +23,7 @@ function viewProfile() {
             </div>
             <div class="profile-eventsAttending">
                 <b>Påmeldte arrangementer:</b>
-                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer">Avmeld</button></div>
+                <div>${model.data.events[0].name}<button class="profile-buttonPaddingContainer" onclick="unsubscribe()">Avmeld</button></div>
             </div>
         </div>
 
