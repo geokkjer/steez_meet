@@ -12,7 +12,7 @@ function viewRegister() {
                 Fornavn: <input class="register-InputFieldText" type="text" value="${currentUser.firstName}" onchange="${currentUser.firstName} = this.value"/>
                 Etternavn: <input class="register-InputFieldText" type="text" value="${currentUser.lastName}" onchange="${currentUser.lastName} = this.value"/>
                 Adresse: <input class="register-InputFieldText" type="text" value="${currentUser.address}" onchange="${currentUser.address} = this.value"/>
-                TLF: <input class="register-InputFieldText" type="number" value="${currentUser.phoneNumber} "onchange="${currentUser.phoneNumber} = this.value"/>
+                TLF: <input class="register-InputFieldText" type="tel" value="${currentUser.phoneNumber} "onchange="${currentUser.phoneNumber} = this.value"/>
                 Epost: <input class="register-InputFieldText" type="email" value="${currentUser.email} "onchange="${currentUser.email} = this.value"/>
                 Passord: <input class="register-InputFieldText" type="password" value="${currentUser.password} "onchange="${currentUser.password} = this.value"/>
                 Gjenta: <input class="register-InputFieldText" placeholder="Gjenta passord" type="password" value="${currentUser.password}" onchange="model.input.registerUser.confirmPassword = this.value"/>
@@ -36,7 +36,7 @@ function viewRegister() {
                 <input class="register-InputFieldText" placeholder="Fornavn" type="text" onchange="model.input.registerUser.firstName = this.value"/>
                 <input class="register-InputFieldText" placeholder="Etternavn" type="text" onchange="model.input.registerUser.lastName = this.value"/>
                 <input class="register-InputFieldText" placeholder="Adresse" type="text" onchange="model.input.registerUser.address = this.value"/>
-                <input class="register-InputFieldText" placeholder="Telefonnummer" type="number" onchange="model.input.registerUser.phoneNumber = this.value"/>
+                <input class="register-InputFieldText" placeholder="Telefonnummer" type="tel" onchange="model.input.registerUser.phoneNumber = this.value"/>
                 <input class="register-InputFieldText" placeholder="Email" type="email" onchange="model.input.registerUser.email = this.value"/>
                 <input class="register-InputFieldText" placeholder="Passord" type="password" onchange="model.input.registerUser.password = this.value"/>
                 <input class="register-InputFieldText" placeholder="Gjenta passord" type="password" onchange="model.input.registerUser.confirmPassword = this.value"/>
