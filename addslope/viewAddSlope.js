@@ -1,5 +1,4 @@
 function viewAddSlope(){
-
     addSlopeHtml = /*HTML*/`
     <div class="addSlope-outsideContainer">
         <div class="addSlope-container">
