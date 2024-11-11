@@ -37,3 +37,32 @@ function addNewId(){
 }
 
 
+
+/*<!DOCTYPE html>
+    <h1>Aktivitetsmelding</h1>
+    <div>
+        <p id="status">Du er påmeldt til aktiviteten.</p>
+        <button id="meldAvButton">Meld av fra aktiviteten</button>
+    </div>
+
+    <script>
+        // Funksjon som nullstiller aktiviteten
+        function nullstillAktivitet() {
+            // Finner elementet som viser status
+            const statusElement = document.getElementById('status');
+            
+            // Nullstiller teksten (setter den til standardmelding)
+            statusElement.textContent = "Du er ikke påmeldt til aktiviteten.";
+        }
+
+        // Legger til event listener på knappen
+        const meldAvButton = document.getElementById('meldAvButton');
+        meldAvButton.addEventListener('click', nullstillAktivitet);
+    </script>
+
+</body>
+</html>
+*/
+
+
+
