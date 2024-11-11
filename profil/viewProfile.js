@@ -63,8 +63,18 @@ function viewProfile() {
                     <option value="Tor Snøplanke">Tor Snøplanke</option>
                     <option value="Hoppalong Sprettnes">Hoppalong Sprettnes</option>
                     <option value="Terje Kolderup">Terje Kolderup</option>
-                    <option value="Kong Harald">Kong Harald</option>
-                    <option value="Lille Marius">Lille Marius</option>
+                    <option value="Eskil Domben">Eskil Domben</option>
+                    <option value="Geir Sollid">Geir Sollid</option>
+                    <option value="Anita Endresen Rowe">Anita Endresen Rowe</option>
+                    <option value="Marie Askjem">Marie Askjem</option>
+                    <option value="Linn Eidsten">Linn Eidsten</option>
+                    <option value="Stian Sundby">Stian Sundby</option>
+                    <option value="Martin Innvær">Martin Innvær</option>
+                    <option value="Ole Hagen">Ole Hagen</option>
+                    <option value="Ellen Ragne Fakset">Ellen Ragne Fakset</option>
+                    <option value="Natalia Leikis">Natalia Leikis</option>
+                    <option value="Ellie Marie Pedersen">Ellie Marie Pedersen</option>
+                    <option value="Erlend Guttulsrud Kristiansen">Erlend Guttulsrud Kristiansen</option>
                 </select>
                 <button class="profile-addButton" onclick="pickFriend()">+</button>
             </div>
@@ -73,7 +83,7 @@ function viewProfile() {
                 <div class="profile-myFriendsHeader">
                     <button onclick="sortFriends()">A - Z</button>
                 </div>
-                    <b>Mine venner:</b>
+                    <h3><b>Mine venner:</b></h3>
                 <ul id="friendList"></ul>
             </div>
         </div>
