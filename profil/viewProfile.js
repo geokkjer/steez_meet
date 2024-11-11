@@ -34,7 +34,7 @@ function viewProfile() {
             </div>
 
             <div class="profile-goalsDescriptionContainer">
-                <div>${model.data.users[0].goals.title}</div>
+                <div><b>${model.data.users[0].goals.title}</b></div>
                 <div>${model.data.users[0].goals.description}</div>
             </div>
 

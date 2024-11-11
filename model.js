@@ -114,7 +114,7 @@ const model = {
             lastName: "Snøplanke",
             email: "torsnoplanke@gmail.com",
             password: "pazz0rd333",
-            profilePicture: "img/flat-design-profile-icon-set.jpg",
+            profilePicture: "img/profile.png",
             address: "Snødalen 12",
             phoneNumber: 40536011,
             goals: {
