@@ -77,7 +77,7 @@ function getCommentsById(id) {
   let html = "";
   let slopeComments = model.data.events.find((x) => x.id == id).comment;
   for (let i = 0; i < slopeComments.length; i++) {
-    html += /*html*/ `${slopeComments[i].comment}`;
+    html += /*html*/ `<h2>${slopeComments[i].comment}</h2>`;
   }
   return html;
 }
