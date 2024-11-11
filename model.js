@@ -68,7 +68,7 @@ const model = {
             firstName: "Kjartan",
             lastName: "Salto",
             email: "kjartansalto@gmail.com",
-            password: "kjasalt!23",
+            password: "kjasalt",
             profilePicture: "img/profile.png",
             address: "Saltosvingen 23",
             phoneNumber: 48356902,
