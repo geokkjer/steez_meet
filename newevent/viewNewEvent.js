@@ -25,7 +25,7 @@ function showEvent() {
     <p>Kommentar: ${PrintComment(events[events.length-1].comment)}</p>
     </div>
     `;
-
+  
 return html;
 }
 function findSlopes(slopeId){
@@ -68,8 +68,8 @@ function showAddEvent() {
 
 `;
   return html;
+  
 }
-
 function PrintComment(input){
   let showComment = ""
   for(let i = 0; i < input.length; i++){
