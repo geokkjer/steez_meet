@@ -30,14 +30,12 @@ function addUserToEvent(eventId) {
       .find((x) => x.id == eventId)
       .members.includes(model.app.loggedInId)
   ) {
-    console.log("Er allered på lista");
   } else {
     model.data.events
       .find((x) => x.id == eventId)
       .members.push(model.app.loggedInId);
-      console.log('Blir lagt til i lista');
+      
       updateView();
   }
-  updateView();
 }
 
