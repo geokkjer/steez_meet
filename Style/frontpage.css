@@ -39,6 +39,7 @@
   
    .homeText{
      background-color: transparent !important;
+     text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 2px rgb(255, 255, 255), 0 0 0.1em rgb(202, 216, 255) !important;
      font-size: 23px !important;
      position: relative !important;
      bottom: 59% !important;
@@ -74,6 +75,7 @@
     border: #272343 outset 2px;
     z-index: 1;
     position: relative;
+    
     
   
   

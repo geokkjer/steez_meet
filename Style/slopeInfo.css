@@ -1,57 +1,6 @@
-#gridSlopeSite{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto;
-   
-   }
-    .gridInfo{
-     margin-bottom: 4%;
-     width: 87%;
-     height: 50%;
-     text-align: center;
-     font-size: 23px;
-     border-radius: 2rem;  
-     border: solid, black, 3px;
-     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
-     background-color: #e3f6f5;
-   }
-   .slopePhoto{
-     width: 70%;
-     height: 70%;
-     margin-left: 13%;
-     border: solid, black, 5px;
-     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
-     img{
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-   
-     }
-   }
-   #gridSlopeInfo{
-    display: flex;
-    gap: 10%
-    
-   }
-    .myComment{
-     margin-top: 5%;
-     width: 100%;
-     padding: 35px;
-     border: solid, rgb(0, 0, 0), 3px; 
-     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
-     border-radius: 0.5rem;
-     background-color: #e3f6f5;
-   }   
-   .publicInfo{
-     height: 50%;
-     width: 27%;
-     border-radius: 2rem; 
-     padding: 15px;
-     border: #272343 outset 3px;
-     background-color: #e3f6f5;
-     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
+
      
-   }#gridSlopeSite{
+   #gridSlopeSite{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: auto;
@@ -73,16 +22,17 @@
      width: 70%;
      height: 70%;
      border: #272343 outset 5px;
+     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
+     border-radius: 3px;
      img{
      height: 100%;
      width: 100%;
      object-fit: cover;
-   
      }
    }
    #gridSlopeInfo{
     display: flex;
-    gap: 10%
+    gap: 15.7%
     
    }
     .myComment{
@@ -92,6 +42,7 @@
      border: #272343 outset 3px;
      border-radius: 0.5rem;
      background-color: #e3f6f5;
+     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
    }   
    .publicInfo{
      height: 50%;
@@ -100,4 +51,5 @@
      padding: 15px;
      border: #272343 outset 3px;
      background-color: #e3f6f5;
+     box-shadow: -1px 1px 20px rgba(7, 89, 84, 0.3);
    }
