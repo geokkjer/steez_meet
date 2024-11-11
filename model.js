@@ -137,7 +137,7 @@ const model = {
             lastName: "Sprettnes",
             email: "hsprettnes@gmail.com",
             password: "ThePasswordSnow",
-            profilePicture: "img/profile.png",
+            profilePicture: "img/profile2.jpg",
             address: "Kaninveien 34",
             phoneNumber: 49123944,
             goals: {
