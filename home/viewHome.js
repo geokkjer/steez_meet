@@ -30,7 +30,7 @@ function drawActivities() {
             </div>
             <div class="column2">
                 <p><span>Når: </span>${activities[i].date}</p>
-                <p><span>Kommentarer: </span>${getCommentsById(
+                <p><span></span>${getCommentsById(
                   activities[i].id
                 )}</p>
             </div>
